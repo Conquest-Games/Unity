@@ -7,7 +7,7 @@ public class Building : MonoBehaviour
 
     public enum BuildingType
     {
-        QG, QG_Captured, Ville, MineDeFer, Caserne, TourDarcher
+        QG, QG_Captured, Ville, MineDeFer, Caserne, TourDarcher, None
     }
 
     protected BuildingType type;

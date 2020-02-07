@@ -344,15 +344,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe47c8488f8386b4c90588e6e63ce934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScrollSpeed: 150
-  ScrollEdge: 0.1
-  PanSpeed: 10
-  zoomRange: {x: -10, y: 100}
+  ScrollSpeed: 250
+  ScrollEdge: 0.01
+  PanSpeed: 100
+  zoomRange: {x: -10, y: 20}
   CurrentZoom: 0
   ZoomZpeed: 1
   ZoomRotation: 1
   zoomAngleRange: {x: 20, y: 70}
-  rotateSpeed: 10
+  rotateSpeed: 50
 --- !u!1 &2062990088
 GameObject:
   m_ObjectHideFlags: 0
