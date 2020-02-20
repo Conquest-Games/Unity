@@ -7,12 +7,12 @@ public class Building : MonoBehaviour
 
     #region DataEnums
 
-    protected enum BuildingType
+    public enum BuildingType
     {
         QG, QG_Captured, Ville, MineDeFer, Caserne, TourDarcher, None
     }
 
-    protected enum BuildingTeam
+    public enum BuildingTeam
     {
         Neutral, Neutral_Capturable, Blue, Red, Yellow, Green
     }
@@ -96,8 +96,9 @@ public class Building : MonoBehaviour
 
     #endregion
 
-    protected Batiment (BuildingType typeBatiment, int initialLvl, BuildingTeam batimentTeam)
+    protected void Batiment (BuildingType typeBatiment, int initialLvl, BuildingTeam batimentTeam)
     {
+        /*  Work in progress
         this.type = typeBatiment;
         this.team = batimentTeam;
         this.initialLevel = initialLvl;
@@ -114,10 +115,10 @@ public class Building : MonoBehaviour
                 this.orIncome = orIncomeList[ActualLevel];
                 this.maxHeals = healsListVille[actualLevel];
                 this.maxNeutralHeals = maxHeals / 2;
+                break;
 
 
             case BuildingType.MineDeFer:
-                
                 this.ferIncome = ferIncomeList[ActualLevel];
                 this.maxHeals = healsListMineDeFer[actualLevel];
                 this.maxNeutralHeals = maxHeals / 2;
@@ -145,7 +146,8 @@ public class Building : MonoBehaviour
                 return;
         }
 
-
+*/
+        
     }
 
     // Start is called before the first frame update
