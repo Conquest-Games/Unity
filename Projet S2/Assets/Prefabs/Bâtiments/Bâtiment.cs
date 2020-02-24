@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 namespace Building
 {
@@ -131,9 +130,9 @@ namespace Building
                 case BuildingType.Caserne:
 
                     this.spawnUnit = true;
-                    this.initialLevel = null;
-                    this.actualLevel = null;
-                    this.maxHeals = healsListCaserne[ActualLevel];
+                    this.initialLevel = 0;
+                    this.actualLevel = 0;
+                    this.maxHeals = healsListCaserne;
                     this.maxNeutralHeals = maxHeals / 2;
                     break;
 

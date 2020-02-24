@@ -1,17 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
-namespace Ville
+namespace Building
 {
 
-    public class VILLE : Building
+    public class VILLE : MonoBehaviour
     {
-        private int initLvl = 0;
-        private var team = Building.BuiltingTeam.Neutre;
+        private static int initLvl = 0;
+        private static Building.BuildingTeam team = Building.BuildingTeam.Neutral;
     
-        Building ville = new Building.Batiment(Building.BuildingType.Ville, initLvl, team);
+        Building ville = new Building(Building.BuildingType.Ville, initLvl, team);
 
         // Start is called before the first frame update
         void Start()

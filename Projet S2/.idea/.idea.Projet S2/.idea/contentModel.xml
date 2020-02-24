@@ -365,7 +365,6 @@
               <e p="NotCaptured" t="Include">
                 <e p="QGScript.cs" t="Include" />
               </e>
-              <e p="QGScript.cs" t="Include" />
             </e>
             <e p="Tour D'archer" t="Include">
               <e p="TourDarcherScript.cs" t="Include" />
