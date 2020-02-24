@@ -383,9 +383,21 @@
             </e>
             <e p="PlayerID.cs" t="Include" />
           </e>
-          <e p="Unités" t="Include">
+          <e p="Unit" t="Include">
+            <e p="Archer" t="Include">
+              <e p="Archer.cs" t="Include" />
+            </e>
+            <e p="Cavalry" t="Include">
+              <e p="Cavalry.cs" t="Include" />
+            </e>
+            <e p="Infantry" t="Include">
+              <e p="Infantry.cs" t="Include" />
+            </e>
             <e p="PathFinder" t="Include">
               <e p="PathFinder.cs" t="Include" />
+            </e>
+            <e p="SiegeWeapon" t="Include">
+              <e p="SiegeWeapon.cs" t="Include" />
             </e>
             <e p="Unit.cs" t="Include" />
           </e>
