@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Building
 {
 
-    public class VILLE : MonoBehaviour
+    public class VilleScript : MonoBehaviour
     {
         private static int initLvl = 0;
         private static Building.BuildingTeam team = Building.BuildingTeam.Neutral;
