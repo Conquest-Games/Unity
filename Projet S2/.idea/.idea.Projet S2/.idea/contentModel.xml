@@ -351,7 +351,25 @@
         <e p="Prefabs" t="Include">
           <e p="Bâtiments" t="Include">
             <e p="Bâtiment.cs" t="Include" />
+            <e p="Caserne" t="Include">
+              <e p="CaserneScript.cs" t="Include" />
+            </e>
+            <e p="MineDeFer" t="Include">
+              <e p="MineDeFerScript.cs" t="Include" />
+            </e>
             <e p="NewBehaviourScript.cs" t="Include" />
+            <e p="QG" t="Include">
+              <e p="Captured" t="Include">
+                <e p="QG_CapturedScript.cs" t="Include" />
+              </e>
+              <e p="NotCaptured" t="Include">
+                <e p="QGScript.cs" t="Include" />
+              </e>
+              <e p="QGScript.cs" t="Include" />
+            </e>
+            <e p="Tour D'archer" t="Include">
+              <e p="TourDarcherScript.cs" t="Include" />
+            </e>
             <e p="Villes" t="Include">
               <e p="VilleScript.cs" t="Include" />
             </e>
@@ -364,6 +382,12 @@
               <e p="Ressources.cs" t="Include" />
             </e>
             <e p="PlayerID.cs" t="Include" />
+          </e>
+          <e p="Unités" t="Include">
+            <e p="PathFinder" t="Include">
+              <e p="PathFinder.cs" t="Include" />
+            </e>
+            <e p="Unit.cs" t="Include" />
           </e>
         </e>
       </e>

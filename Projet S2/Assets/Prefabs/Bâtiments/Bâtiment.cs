@@ -11,12 +11,12 @@ namespace Building
 
         #region DataEnums
 
-        protected enum BuildingType
+        public enum BuildingType
         {
             QG, QG_Captured, Ville, MineDeFer, Caserne, TourDarcher, None
         }
 
-        protected enum BuildingTeam
+        public enum BuildingTeam
         {
             Neutral, Neutral_Capturable, Blue, Red, Yellow, Green
         }
@@ -100,7 +100,7 @@ namespace Building
 
         #endregion
 
-        protected Batiment(BuildingType typeBatiment, int initialLvl, BuildingTeam batimentTeam)
+        public Building(BuildingType typeBatiment, int initialLvl, BuildingTeam batimentTeam)
         {
             this.type = typeBatiment;
             this.team = batimentTeam;
@@ -118,6 +118,7 @@ namespace Building
                     this.orIncome = orIncomeList[ActualLevel];
                     this.maxHeals = healsListVille[ActualLevel];
                     this.maxNeutralHeals = maxHeals / 2;
+                    break;
 
 
                 case BuildingType.MineDeFer:
