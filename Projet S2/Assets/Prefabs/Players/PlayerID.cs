@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerID : MonoBehaviour
 {
-
+    /*
     #region Varriables
 
     int playerNumber;
@@ -72,6 +72,7 @@ public class PlayerID : MonoBehaviour
     }
 
     #endregion
+    */
 
     // Start is called before the first frame update
     void Start()
@@ -82,7 +83,7 @@ public class PlayerID : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        or += IncomeOr;
-        fer += IncomeFer;
+        //or += IncomeOr;
+        //fer += IncomeFer;
     }
 }
