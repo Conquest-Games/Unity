@@ -16,10 +16,12 @@ namespace Soldier
         #endregion
 
         public Infantry(SoldierTeam team)
-            : base(SoldierType.Pathfinder, team, da[0], hp[0], sp, 0)
+            : base(SoldierType.Infantry, team, da[0], hp[0], sp, 0)
         {
             
         }
+        
+        
         
         
         // Start is called before the first frame update

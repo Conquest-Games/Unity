@@ -350,7 +350,7 @@
         </e>
         <e p="Prefabs" t="Include">
           <e p="Bâtiments" t="Include">
-            <e p="Bâtiment.cs" t="Include" />
+            <e p="Building.cs" t="Include" />
             <e p="Caserne" t="Include">
               <e p="CaserneScript.cs" t="Include" />
             </e>

@@ -10,19 +10,18 @@ namespace Soldier
         #region Attributs
         
         private static int[] da = {10, 15, 20};
-        private static int[] hp = {5, 10, 15};
+        private static int[] inithp = {5, 10, 15};
         private static int sp = 10;
-        protected int lvl; 
+        protected int lvl;
         
         #endregion
 
         public PathFinder(SoldierTeam team)
-        : base(SoldierType.Pathfinder, team, da[0], hp[0], sp, 0)
+        : base(SoldierType.Pathfinder, team, da[0], inithp[0], sp, 0)
         {
             
         }
-        
-        
+
 
 
         // Start is called before the first frame update
