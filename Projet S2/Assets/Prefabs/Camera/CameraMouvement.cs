@@ -29,6 +29,11 @@ public class CameraMouvement : MonoBehaviour
     private Vector3 initialRotation;
 
     private int i = 0;
+
+    public void Lunch()
+    {
+        
+    }
     void Start()
     {
         initialPosition = transform.position;

@@ -376,6 +376,17 @@
           <e p="Camera" t="Include">
             <e p="CameraMouvement.cs" t="Include" />
           </e>
+          <e p="Menu principal" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="DebugLogs" t="Include">
+                <e p="ConsoleDebugLogs.cs" t="Include" />
+              </e>
+              <e p="Mouvement des bouttons" t="Include">
+                <e p="Mouvement.cs" t="Include" />
+              </e>
+              <e p="Quitter.cs" t="Include" />
+            </e>
+          </e>
           <e p="Players" t="Include">
             <e p="Player" t="Include">
               <e p="Ressources.cs" t="Include" />
