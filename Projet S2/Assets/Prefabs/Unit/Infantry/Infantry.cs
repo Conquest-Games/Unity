@@ -28,6 +28,7 @@ namespace Soldier
         void Start()
         {
 
+            ne
         }
 
         // Update is called once per frame
