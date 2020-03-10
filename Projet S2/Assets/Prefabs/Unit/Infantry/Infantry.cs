@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 namespace Soldier
@@ -7,6 +8,7 @@ namespace Soldier
     public class Infantry : Unit
     {
         #region Attributs
+
         
         private static int[] da = {10, 15, 20};
         private static int[] hp = {10, 20, 30};
@@ -27,8 +29,7 @@ namespace Soldier
         // Start is called before the first frame update
         void Start()
         {
-
-            ne
+        
         }
 
         // Update is called once per frame

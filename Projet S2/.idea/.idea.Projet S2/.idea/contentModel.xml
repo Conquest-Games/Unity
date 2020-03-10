@@ -384,11 +384,13 @@
               <e p="Mouvement des bouttons" t="Include">
                 <e p="Mouvement.cs" t="Include" />
               </e>
+              <e p="PunScript.cs" t="Include" />
               <e p="Quitter.cs" t="Include" />
             </e>
           </e>
           <e p="Players" t="Include">
             <e p="Player" t="Include">
+              <e p="PlayerNameInputField.cs" t="Include" />
               <e p="Ressources.cs" t="Include" />
             </e>
             <e p="PlayerID.cs" t="Include" />
@@ -402,7 +404,6 @@
             </e>
             <e p="Infantry" t="Include">
               <e p="Infantry.cs" t="Include" />
-              <e p="InfantrySpawn.cs" t="Include" />
             </e>
             <e p="PathFinder" t="Include">
               <e p="PathFinder.cs" t="Include" />
