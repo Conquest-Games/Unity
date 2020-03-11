@@ -4,6 +4,17 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Lobby" t="Include">
+          <e p="LobbyScript.cs" t="Include" />
+        </e>
+        <e p="Menu principal" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="ConsoleDebugLogs.cs" t="Include" />
+            <e p="Control.cs" t="Include" />
+            <e p="Mouvement.cs" t="Include" />
+            <e p="PunScript.cs" t="Include" />
+          </e>
+        </e>
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
             <e p="Code" t="Include">
@@ -375,18 +386,6 @@
           </e>
           <e p="Camera" t="Include">
             <e p="CameraMouvement.cs" t="Include" />
-          </e>
-          <e p="Menu principal" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="DebugLogs" t="Include">
-                <e p="ConsoleDebugLogs.cs" t="Include" />
-              </e>
-              <e p="Mouvement des bouttons" t="Include">
-                <e p="Mouvement.cs" t="Include" />
-              </e>
-              <e p="PunScript.cs" t="Include" />
-              <e p="Quitter.cs" t="Include" />
-            </e>
           </e>
           <e p="Players" t="Include">
             <e p="Player" t="Include">
