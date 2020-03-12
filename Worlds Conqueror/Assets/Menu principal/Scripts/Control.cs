@@ -8,8 +8,12 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Control : MonoBehaviour
-{ 
-    
+{
+    public void BackToMenu()
+    {
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene("Luncher");
+    }
     public void Lunch()
     {
         SceneManager.LoadScene("Lobby");

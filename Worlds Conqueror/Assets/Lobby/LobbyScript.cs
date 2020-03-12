@@ -8,6 +8,8 @@ public class LobbyScript : MonoBehaviour
     public Text NbPlayers;
     public Text CoInfos;
     
+    
+    
     // Start is called before the first frame update
     void Start()
     {
