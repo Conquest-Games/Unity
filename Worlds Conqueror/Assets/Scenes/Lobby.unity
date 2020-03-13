@@ -28093,6 +28093,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 855011267}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &855258678
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2134105535}
+    m_Modifications:
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -146.07999
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7599945
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -164.96997
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9500064
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.3122304
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 143.613
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 12400be96c3d04869a8449979e450a82,
+        type: 3}
+      propertyPath: m_Name
+      value: TourArcher
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12400be96c3d04869a8449979e450a82, type: 3}
+--- !u!4 &855258679 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 12400be96c3d04869a8449979e450a82,
+    type: 3}
+  m_PrefabInstance: {fileID: 855258678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &861375716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63304,6 +63379,7 @@ GameObject:
   - component: {fileID: 1929184566}
   - component: {fileID: 1929184565}
   - component: {fileID: 1929184568}
+  - component: {fileID: 1929184569}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -63411,6 +63487,27 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1929184569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929184564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe47c8488f8386b4c90588e6e63ce934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollSpeed: 15
+  ScrollEdge: 0.1
+  PanSpeed: 100
+  zoomRange: {x: -10, y: 100}
+  CurrentZoom: 0
+  ZoomZpeed: 1
+  ZoomRotation: 1
+  zoomAngleRange: {x: 20, y: 70}
+  rotateSpeed: 1
 --- !u!1001 &1930813760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70267,6 +70364,7 @@ Transform:
   - {fileID: 1533830484}
   - {fileID: 992295888}
   - {fileID: 1964139621}
+  - {fileID: 855258679}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

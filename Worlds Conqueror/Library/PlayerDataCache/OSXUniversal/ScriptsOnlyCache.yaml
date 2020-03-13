@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraMouvement
     - ConsoleDebugLogs
     - Control
     - GameControl.PlayerNameInputField
@@ -84,6 +85,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12208}
     - Class: 114
       Script: {instanceID: 12342}
+    - Class: 114
+      Script: {instanceID: 12682}
     - Class: 114
       Script: {instanceID: 12758}
     - Class: 114
