@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Building
+namespace WorldConqueror
 {
 
     public class Building : MonoBehaviour

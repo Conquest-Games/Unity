@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Soldier
+namespace WorldConqueror
 {
     public class Unit : MonoBehaviour
     {

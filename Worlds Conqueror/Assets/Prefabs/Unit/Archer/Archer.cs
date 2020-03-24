@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Soldier;
 using UnityEngine;
 
-namespace Soldier
+namespace WorldConqueror
 {
     public class Archer : Unit
     {
