@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerID : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    /*
+    
     #region Varriables
 
     int playerNumber;
@@ -49,7 +49,7 @@ public class PlayerID : MonoBehaviour
         }
     }
 
-    public Initialisate (int incomeOr, int incomeFer)
+    public void Initialisate (int incomeOr, int incomeFer)
     {
         this.or = 100;
         this.fer = 0;
@@ -72,7 +72,6 @@ public class PlayerID : MonoBehaviour
     }
 
     #endregion
-    */
 
     // Start is called before the first frame update
     void Start()
@@ -83,7 +82,6 @@ public class PlayerID : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //or += IncomeOr;
-        //fer += IncomeFer;
+        
     }
 }
