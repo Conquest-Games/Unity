@@ -2,86 +2,71 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace Joueur
 {
-    
-    #region Varriables
-
-    int playerNumber;
-    bool is_ingame;
-    bool is_computer;
-    int or;
-    int fer;
-
-    public int IncomeOr;
-    public int IncomeFer;
-
-    #endregion
-
-    #region Getters
-
-    public int Or
+    public class Player : MonoBehaviour
     {
-        get => or;
-    }
 
-    public int Fer
-    {
-        get => fer;
-    }
+        #region Varriables
 
-    #endregion
+        int or;
+        int fer;
+        int incomeFer;
+        int incomeOr;
 
-    #region Constructeurs
 
-    public Player (int number, int numberOfPlayer, int maxPlayer)
-    {
-        this.playerNumber = number;
-        this.is_computer = false;
-        this.is_ingame = true;
-        if (number > maxPlayer)
+        #endregion
+
+        #region Getters
+
+        public int Or
         {
-            this.is_ingame = false;
+            get => or;
         }
-        if (number > numberOfPlayer)
+
+        public int Fer
         {
-            this.is_computer = true;
+            get => fer;
         }
-    }
 
-    public void Initialisate (int incomeOr, int incomeFer)
-    {
-        this.or = 100;
-        this.fer = 0;
-        this.IncomeFer = incomeFer;
-        this.IncomeOr = incomeOr;
-    }
+        #endregion
 
-    #endregion
+        #region Constructeurs
 
-    #region Ressources Actions
+        public Player()
+        {
+            this.or = 100;
+            this.fer = 0;
+            this.incomeFer = 0;
+            this.incomeOr = 0;
+        }
 
-    public void RemoveOr(int costOr)
-    {
-        or -= costOr;
-    }
+        #endregion
 
-    public void RemoveFer(int costFer)
-    {
-        fer -= costFer;
-    }
+        #region Ressources Actions
 
-    #endregion
+        public void RemoveOr(int costOr)
+        {
+            or -= costOr;
+        }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+        public void RemoveFer(int costFer)
+        {
+            fer -= costFer;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        #endregion
+
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
