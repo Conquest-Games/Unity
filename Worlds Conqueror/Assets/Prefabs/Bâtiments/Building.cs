@@ -17,7 +17,7 @@ namespace Building
 
         public enum BuildingTeam
         {
-            Neutral, Neutral_Capturable, Blue, Red, Yellow, Green
+            Neutral, Neutral_Capturable, blue, red, yellow, green
         }
 
         #endregion

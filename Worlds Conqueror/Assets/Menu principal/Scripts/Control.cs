@@ -18,6 +18,11 @@ public class Control : MonoBehaviour
     {
         SceneManager.LoadScene("Lobby");
     }
+
+    public void LunchGame()
+    {
+        SceneManager.LoadScene("InGame");
+    }
     public void Exit()
     {
         Debug.Log("Le joueur a quitté le Jeux");

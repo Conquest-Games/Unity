@@ -40,11 +40,11 @@ public class CameraMouvement : MonoBehaviour
     {
 
         //move the camera
-        if (Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow) ||Input.mousePosition.x >= Screen.width * (1 - ScrollEdge))
+        if (Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector3.right * Time.deltaTime * PanSpeed, Space.Self);
         }
-        else if (Input.GetKey("q") || Input.GetKey(KeyCode.LeftArrow) || Input.mousePosition.x <= Screen.width * ScrollEdge)
+        else if (Input.GetKey("q") || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(Vector3.right * Time.deltaTime * -PanSpeed, Space.Self);
         }
@@ -53,11 +53,11 @@ public class CameraMouvement : MonoBehaviour
             //if 
         }
 
-        if (Input.GetKey("z") || Input.GetKey(KeyCode.UpArrow) || Input.mousePosition.y >= Screen.height * (1 - ScrollEdge))
+        if (Input.GetKey("z") || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(Vector3.forward * Time.deltaTime * PanSpeed, Space.Self);
         }
-        else if (Input.GetKey("s") || Input.GetKey(KeyCode.DownArrow) || Input.mousePosition.y <= Screen.height * ScrollEdge)
+        else if (Input.GetKey("s") || Input.GetKey(KeyCode.DownArrow))
         {
             transform.Translate(Vector3.forward * Time.deltaTime * -PanSpeed, Space.Self);
         }

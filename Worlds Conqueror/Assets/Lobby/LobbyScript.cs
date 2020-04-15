@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,20 +24,28 @@ public class LobbyScript : MonoBehaviour
         if (CoInfos.text == "Joined")
             CoInfos.text = "Connecté";
         else
-            CoInfos.text = "Connection....";
+            CoInfos.text = "Connection...";
         
         if (PhotonNetwork.InRoom)
         {
-            NbPlayers.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString();
-            if (NbPlayers.text == "1")
-                NbPlayers.text = "Player : 1";
-            else
-                NbPlayers.text = "Players : " + NbPlayers;
+            try
+            {
+                NbPlayers.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString();
+                if (NbPlayers.text == "1")
+                    NbPlayers.text = "Player : 1";
+                else
+                    NbPlayers.text = "Players : " + NbPlayers.text;
+            }
+            catch (Exception e)
+            {
+                
+            }
+            
         }
         
         else
         {
-            NbPlayers.text = "Player : 0";
+            NbPlayers.text = "Non connecté";
         }
     }
 }
