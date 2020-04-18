@@ -34,7 +34,9 @@ namespace WorldConqueror
         {
             get { return team; }
         }
-        
+
+        public int Speed => speed;
+
         #endregion
 
         
@@ -107,18 +109,10 @@ namespace WorldConqueror
                 }
             }
         }
-        
-        
-        // Start is called before the first frame update
-        void Start()
+
+        public void MoveRight()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            transform.Translate(Vector3.right * Time.deltaTime * 10, Space.Self);
         }
     }
 }

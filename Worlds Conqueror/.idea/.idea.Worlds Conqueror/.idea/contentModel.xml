@@ -19,6 +19,7 @@
             <e p="PunScript.cs" t="Include" />
           </e>
         </e>
+        <e p="MoveTest.cs" t="Include" />
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
             <e p="Code" t="Include">
@@ -394,7 +395,6 @@
           <e p="Players" t="Include">
             <e p="Player" t="Include">
               <e p="PlayerNameInputField.cs" t="Include" />
-              <e p="Ressources.cs" t="Include" />
             </e>
             <e p="Player.cs" t="Include" />
             <e p="PlayerConstructeur.cs" t="Include" />
