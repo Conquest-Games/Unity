@@ -28,5 +28,10 @@ public class Control : MonoBehaviour
         Debug.Log("Le joueur a quitté le Jeux");
         Application.Quit();
     }
-    
+
+    public void Map()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
 }

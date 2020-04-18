@@ -6,12 +6,6 @@ namespace Building
 {
     public class MineDeFerScript : MonoBehaviour
     {
-
-        private static int initLvl = 0;
-        private static Building.BuildingTeam team = Building.BuildingTeam.Neutral;
-
-        Building ville = new Building(Building.BuildingType.MineDeFer, initLvl, team);
-
         // Start is called before the first frame update
         void Start()
         {

@@ -45,14 +45,14 @@ namespace Joueur
 
         #region Ressources Actions
 
-        public void RemoveOr(int costOr)
+        public void AjoutOr(int costOr)
         {
-            or -= costOr;
+            or += costOr;
         }
 
-        public void RemoveFer(int costFer)
+        public void AjoutFer(int costFer)
         {
-            fer -= costFer;
+            fer += costFer;
         }
 
         #endregion

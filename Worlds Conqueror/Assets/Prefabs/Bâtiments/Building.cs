@@ -15,11 +15,6 @@ namespace Building
             QG, QG_Captured, Ville, MineDeFer, Caserne, TourDarcher, None
         }
 
-        public enum BuildingTeam
-        {
-            Neutral, Neutral_Capturable, blue, red, yellow, green
-        }
-
         #endregion
 
         #region DataLists
@@ -42,7 +37,6 @@ namespace Building
         #region Initialisateur
 
         private BuildingType type;
-        private BuildingTeam team;
         private int orIncome;
         private int ferIncome;
         private bool spawnUnit;
@@ -52,6 +46,7 @@ namespace Building
         private int maxNeutralHeals;
         private int heals;
         private int dommage;
+        public Joueur.Player team;
 
         #endregion
 
@@ -62,10 +57,6 @@ namespace Building
             get => type;
         }
 
-        public BuildingTeam Team
-        {
-            get => team;
-        }
 
         public int OrIncome
         {
@@ -99,10 +90,10 @@ namespace Building
 
         #endregion
 
-        public Building(BuildingType typeBatiment, int initialLvl, BuildingTeam batimentTeam)
+        public Building(BuildingType typeBatiment, int initialLvl, Joueur.Player joueur)
         {
             this.type = typeBatiment;
-            this.team = batimentTeam;
+            this.team = joueur;
             this.initialLevel = initialLvl;
             this.actualLevel = initialLevel;
 

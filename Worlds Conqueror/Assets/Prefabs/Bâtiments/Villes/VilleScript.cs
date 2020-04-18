@@ -7,11 +7,6 @@ namespace Building
 
     public class VilleScript : MonoBehaviour
     {
-        private static int initLvl = 0;
-        private static Building.BuildingTeam team = Building.BuildingTeam.Neutral;
-    
-        Building ville = new Building(Building.BuildingType.Ville, initLvl, team);
-
         // Start is called before the first frame update
         void Start()
         {
@@ -21,7 +16,7 @@ namespace Building
         // Update is called once per frame
         void Update()
         {
-
+            //Joueur.PlayerConstructeur.p1.RemoveOr(-10);
         }
     }
 }

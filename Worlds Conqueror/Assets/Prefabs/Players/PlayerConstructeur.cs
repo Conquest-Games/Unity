@@ -9,10 +9,10 @@ namespace Joueur
     {
         #region création des joueurs
 
-        Player p1 = new Player();
-        Player p2 = new Player();
-        Player p3 = new Player();
-        Player p4 = new Player();
+        public Player p1 = new Player();
+        public Player p2 = new Player();
+        public Player p3 = new Player();
+        public Player p4 = new Player();
 
         #endregion
 

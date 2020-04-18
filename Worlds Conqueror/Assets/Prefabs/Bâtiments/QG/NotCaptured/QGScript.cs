@@ -6,11 +6,6 @@ namespace Building
 {
     public class QGScript : MonoBehaviour
     {
-        private static int initLvl = 0;
-        private static Building.BuildingTeam team = Building.BuildingTeam.Neutral;
-
-        Building ville = new Building(Building.BuildingType.QG, initLvl, team);
-
         // Start is called before the first frame update
         void Start()
         {
