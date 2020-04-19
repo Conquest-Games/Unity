@@ -46,7 +46,6 @@ namespace Building
         private int maxNeutralHeals;
         private int heals;
         private int dommage;
-        public Joueur.Player team;
 
         #endregion
 
@@ -90,10 +89,9 @@ namespace Building
 
         #endregion
 
-        public Building(BuildingType typeBatiment, int initialLvl, Joueur.Player joueur)
+        public Building(BuildingType typeBatiment, int initialLvl)
         {
             this.type = typeBatiment;
-            this.team = joueur;
             this.initialLevel = initialLvl;
             this.actualLevel = initialLevel;
 
