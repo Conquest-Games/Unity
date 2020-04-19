@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 872
-  m_MinSize: {x: 677, y: 342}
-  m_MaxSize: {x: 12002, y: 8042}
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 56
+  controlID: 110
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 323
     height: 872
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 222
     height: 556
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 556
     width: 1597
     height: 316
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
@@ -216,10 +216,10 @@ MonoBehaviour:
     y: 0
     width: 1597
     height: 872
-  m_MinSize: {x: 402, y: 342}
-  m_MaxSize: {x: 8002, y: 8042}
+  m_MinSize: {x: 403, y: 342}
+  m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 57
+  controlID: 111
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,10 +241,10 @@ MonoBehaviour:
     y: 0
     width: 1597
     height: 556
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 58
+  controlID: 112
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -264,8 +264,8 @@ MonoBehaviour:
     y: 0
     width: 1375
     height: 556
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -338,20 +338,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Menu principal/Textures
+    - Assets/Prefabs/Unit/Infantry
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Menu principal/Textures
+  - Assets/Prefabs/Unit/Infantry
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/theo/Unity/Worlds Conqueror
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c5e0000
-    m_LastClickedID: 24092
-    m_ExpandedIDs: 00000000fa5d0000fc5d0000fe5d0000005e0000025e0000045e0000065e0000085e00000a5e00000c5e00000e5e0000105e0000125e0000145e000000ca9a3b
+    scrollPos: {x: 0, y: 337}
+    m_SelectedIDs: 5a590000
+    m_LastClickedID: 22874
+    m_ExpandedIDs: 00000000285800002a5800002c5800002e58000030580000325800003458000036580000385800003a5800003c5800003e580000405800004258000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,7 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fa5d0000fc5d0000fe5d0000005e0000025e0000045e0000065e0000085e00000a5e00000c5e00000e5e0000105e0000125e0000145e0000
+    m_ExpandedIDs: 00000000285800002a5800002c5800002e58000030580000325800003458000036580000385800003a5800003c5800003e5800004058000042580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -404,8 +404,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 28f90100
+    m_LastClickedInstanceID: 129320
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000d23900001c980000184b0400
     m_RenameOverlay:
@@ -423,7 +423,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -502,20 +502,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: a2ebfdffd4f2fdff44f3fdff9862feff1263feff2a65feffb065feffd065feff42e0feff964fffffacbfffffa6730000e8750000b67700007e7b000068800000609501002096010092970100cca00100
+      m_SelectedIDs: 4cfd0100
+      m_LastClickedID: 130380
+      m_ExpandedIDs: d684feff5c13ffff6486ffff6efbffff323b00001e410000404600000cf5010056f701002ef801007af90100defb010042fd010094fe0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Ville
-        m_OriginalName: Ville
+        m_Name: Infantry(Clone)
+        m_OriginalName: Infantry(Clone)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -36638
+        m_UserData: -96296
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -95.20945, y: 11.931145, z: -175.0639}
+    m_Target: {x: -119.89006, y: -90.212814, z: -18.855682}
     speed: 2
-    m_Value: {x: -95.20945, y: 11.931145, z: -175.0639}
+    m_Value: {x: -119.89006, y: -90.212814, z: -18.855682}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -612,13 +612,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2088194, y: 0.3863768, z: -0.090263605, w: 0.8938584}
+    m_Target: {x: 0.29090664, y: 0.04446996, z: -0.01353904, w: 0.9556343}
     speed: 2
-    m_Value: {x: 0.20881702, y: 0.3863724, z: -0.09026257, w: 0.8938481}
+    m_Value: {x: 0.2909031, y: 0.04446942, z: -0.013538876, w: 0.9556227}
   m_Size:
-    m_Target: 117.81167
+    m_Target: 211.32907
     speed: 2
-    m_Value: 117.81167
+    m_Value: 211.32907
   m_Ortho:
     m_Target: 0
     speed: 2
