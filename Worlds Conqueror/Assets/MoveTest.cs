@@ -5,15 +5,16 @@ using WorldConqueror;
 
 public class MoveTest : MonoBehaviour
 {
+    //public GameObject unit = GameObject.Find("Infantry");
     private bool on = false;
-    private Vector3 initialPosition;
     Unit TheOne = new Infantry(Unit.SoldierTeam.Blue);
 
 
     // Start is called before the first frame update
     void Start()
     {
-        initialPosition = transform.position;
+        Vector3 spawnPos = new Vector3(-138.4f, 2, -150);
+        //Instantiate(unit, spawnPos, Quaternion.identity);
     }
 
     // Update is called once per frame

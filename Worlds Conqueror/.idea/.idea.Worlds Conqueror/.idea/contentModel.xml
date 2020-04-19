@@ -409,6 +409,7 @@
             <e p="Infantry" t="Include">
               <e p="Infantry.cs" t="Include" />
             </e>
+            <e p="Mouvement.cs" t="Include" />
             <e p="PathFinder" t="Include">
               <e p="PathFinder.cs" t="Include" />
             </e>
