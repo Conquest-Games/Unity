@@ -41526,7 +41526,7 @@ GameObject:
   - component: {fileID: 1236268644}
   - component: {fileID: 1236268643}
   m_Layer: 0
-  m_Name: Enemy1Test (1)
+  m_Name: EnemyTest (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43043,7 +43043,7 @@ PrefabInstance:
     - target: {fileID: 3492051402916040335, guid: d6200883a72bbf341a05704de7548171,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4152553503662833972, guid: d6200883a72bbf341a05704de7548171,
         type: 3}
@@ -53795,7 +53795,7 @@ GameObject:
   - component: {fileID: 1616778800}
   - component: {fileID: 1616778799}
   m_Layer: 0
-  m_Name: Enemy1Test
+  m_Name: 'EnemyTest '
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

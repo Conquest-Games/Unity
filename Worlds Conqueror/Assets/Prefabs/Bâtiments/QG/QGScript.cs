@@ -25,7 +25,7 @@ namespace Building
         // Update is called once per frame
         void UpdateTarget()
         {
-            GameObject[] ennemies = GameObject.FindGameObjectsWithTag("Enemy");
+            GameObject[] ennemies = GameObject.FindGameObjectsWithTag("Enemy2");
             float shortestDistance = Mathf.Infinity;
             GameObject nearestEnemy = null;
 
