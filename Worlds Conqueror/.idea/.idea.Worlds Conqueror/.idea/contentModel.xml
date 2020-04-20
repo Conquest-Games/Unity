@@ -374,12 +374,8 @@
             </e>
             <e p="NewBehaviourScript.cs" t="Include" />
             <e p="QG" t="Include">
-              <e p="Captured" t="Include">
-                <e p="QG_CapturedScript.cs" t="Include" />
-              </e>
-              <e p="NotCaptured" t="Include">
-                <e p="QGScript.cs" t="Include" />
-              </e>
+              <e p="Bulet.cs" t="Include" />
+              <e p="QGScript.cs" t="Include" />
             </e>
             <e p="Tour D'archer" t="Include">
               <e p="TourDarcherScript.cs" t="Include" />
@@ -398,6 +394,7 @@
             <e p="Player.cs" t="Include" />
             <e p="PlayerConstructeur.cs" t="Include" />
           </e>
+          <e p="test.cs" t="Include" />
           <e p="Unit" t="Include">
             <e p="Archer" t="Include">
               <e p="Archer.cs" t="Include" />
@@ -408,14 +405,31 @@
             <e p="Infantry" t="Include">
               <e p="Infantry.cs" t="Include" />
             </e>
-            <e p="Mouvement.cs" t="Include" />
-            <e p="MoveTest.cs" t="Include" />
+            <e p="Mouvements" t="Include">
+              <e p="Blue" t="Include">
+                <e p="BlueToGreen.cs" t="Include" />
+                <e p="BlueToRed.cs" t="Include" />
+              </e>
+              <e p="Green" t="Include">
+                <e p="GreenToBlue.cs" t="Include" />
+                <e p="GreenToYellow.cs" t="Include" />
+              </e>
+              <e p="Red" t="Include">
+                <e p="RedToBlue.cs" t="Include" />
+                <e p="RedToYellow.cs" t="Include" />
+              </e>
+              <e p="Yellow" t="Include">
+                <e p="YellowToGreen.cs" t="Include" />
+                <e p="YellowToRed.cs" t="Include" />
+              </e>
+            </e>
             <e p="PathFinder" t="Include">
               <e p="PathFinder.cs" t="Include" />
             </e>
             <e p="SiegeWeapon" t="Include">
               <e p="SiegeWeapon.cs" t="Include" />
             </e>
+            <e p="Spawner.cs" t="Include" />
             <e p="Unit.cs" t="Include" />
           </e>
         </e>

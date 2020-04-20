@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
+using Photon.Pun.UtilityScripts;
 using UnityEngine;
 
 namespace WorldConqueror
@@ -14,7 +16,7 @@ namespace WorldConqueror
         private int speed;
         private int lvl; 
         private SoldierType type;
-        private SoldierTeam team;
+        private PunTeams.Team team;
         private bool isDead;
 
         public enum SoldierType
@@ -30,7 +32,7 @@ namespace WorldConqueror
         {
             get { return type; }
         }
-        public SoldierTeam Team
+        public PunTeams.Team Team
         {
             get { return team; }
         }
@@ -42,7 +44,7 @@ namespace WorldConqueror
         
 
 
-        public Unit(SoldierType type,SoldierTeam team, int damage, int hp, int speed, int lvl )
+        public Unit(SoldierType type,PunTeams.Team team, int damage, int hp, int speed, int lvl )
         {
             this.type = type;
             this.team = team;

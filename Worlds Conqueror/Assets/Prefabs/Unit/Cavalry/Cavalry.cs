@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun.UtilityScripts;
 using UnityEngine;
 
 namespace WorldConqueror
@@ -15,7 +16,7 @@ namespace WorldConqueror
 
         #endregion
 
-        public Cavalry(SoldierTeam team)
+        public Cavalry(PunTeams.Team team)
             : base(SoldierType.Pathfinder, team, da[0], hp[0], sp, 0)
         {
 

@@ -1513,7 +1513,7 @@ PrefabInstance:
     - target: {fileID: 2863039858397297558, guid: 00ad687253d7fad4cbbe312f29053a4d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -150
+      value: -132.1
       objectReference: {fileID: 0}
     - target: {fileID: 2863039858397297558, guid: 00ad687253d7fad4cbbe312f29053a4d,
         type: 3}
@@ -14606,7 +14606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442498759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -138.4, y: -20, z: -150}
+  m_LocalPosition: {x: -138.4, y: 0, z: -150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1425523308}
@@ -23315,16 +23315,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1335443725}
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 1425523315}
+        m_MethodName: SpawnRight
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &703380240
 MonoBehaviour:
@@ -42604,6 +42604,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442498760}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2649060871061146116, guid: d6200883a72bbf341a05704de7548171,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -42668,6 +42672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: viewIdField
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916153824757121565, guid: d6200883a72bbf341a05704de7548171,
+        type: 3}
+      propertyPath: viewIdField
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6200883a72bbf341a05704de7548171, type: 3}
@@ -42850,7 +42859,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1304493028}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1425523315}
+        m_MethodName: SpawnForward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1304493028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43967,7 +43987,6 @@ GameObject:
   - component: {fileID: 1335443724}
   - component: {fileID: 1335443723}
   - component: {fileID: 1335443722}
-  - component: {fileID: 1335443725}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -44023,19 +44042,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1335443725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335443721}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b592b4cc9634287924b7aeb269e794, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unit: {fileID: 1425523307}
 --- !u!1001 &1336414589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47127,6 +47133,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1293205116}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1425523315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425523307}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c7242909f96490f898c4a633b42755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 3492051402916040335, guid: d6200883a72bbf341a05704de7548171, type: 3}
 --- !u!1001 &1426132577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61284,7 +61303,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1860196620}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1425523315}
+        m_MethodName: SpawnLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1860196620
 MonoBehaviour:
   m_ObjectHideFlags: 0

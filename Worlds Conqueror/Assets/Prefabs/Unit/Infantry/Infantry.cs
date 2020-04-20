@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
+using Photon.Pun.UtilityScripts;
 using UnityEngine;
 
 namespace WorldConqueror
@@ -12,12 +13,12 @@ namespace WorldConqueror
         
         private static int[] da = {10, 15, 20};
         private static int[] hp = {10, 20, 30};
-        private static int sp = 5;
-        protected int lvl; 
+        public static int sp = 5;
+        protected int level; 
         
         #endregion
 
-        public Infantry(SoldierTeam team)
+        public Infantry(PunTeams.Team team)
             : base(SoldierType.Infantry, team, da[0], hp[0], sp, 0)
         {
             

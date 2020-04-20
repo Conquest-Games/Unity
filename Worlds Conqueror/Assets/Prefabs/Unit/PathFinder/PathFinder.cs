@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun.UtilityScripts;
 using UnityEngine;
 
 namespace WorldConqueror
@@ -16,7 +17,7 @@ namespace WorldConqueror
         
         #endregion
 
-        public PathFinder(SoldierTeam team)
+        public PathFinder(PunTeams.Team team)
         : base(SoldierType.Pathfinder, team, da[0], inithp[0], sp, 0)
         {
             
