@@ -21,8 +21,8 @@ namespace GameControl
                     color.Remove(PunTeams.Team.blue);
                 else if (player.GetTeam() == PunTeams.Team.red)
                     color.Remove(PunTeams.Team.red);
-                else if (player.GetTeam() == PunTeams.Team.green)
-                    color.Remove(PunTeams.Team.green);
+                else if (player.GetTeam() == PunTeams.Team.yellow)
+                    color.Remove(PunTeams.Team.yellow);
             }
 
             PhotonNetwork.LocalPlayer.SetTeam(color[color.Count - 1]);
