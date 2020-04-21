@@ -13,6 +13,7 @@
           <e p="LobbyScript.cs" t="Include" />
         </e>
         <e p="Menu principal" t="Include">
+          <e p="Pivot.cs" t="Include" />
           <e p="Scripts" t="Include">
             <e p="ConsoleDebugLogs.cs" t="Include" />
             <e p="Control.cs" t="Include" />
@@ -378,6 +379,7 @@
               <e p="QGScript.cs" t="Include" />
             </e>
             <e p="Tour D'archer" t="Include">
+              <e p="Arow.cs" t="Include" />
               <e p="TourDarcherScript.cs" t="Include" />
             </e>
             <e p="Villes" t="Include">
@@ -409,16 +411,20 @@
               <e p="Blue" t="Include">
                 <e p="BlueToGreen.cs" t="Include" />
                 <e p="BlueToRed.cs" t="Include" />
+                <e p="BlueToYellow.cs" t="Include" />
               </e>
               <e p="Green" t="Include">
                 <e p="GreenToBlue.cs" t="Include" />
+                <e p="GreenToRed.cs" t="Include" />
                 <e p="GreenToYellow.cs" t="Include" />
               </e>
               <e p="Red" t="Include">
                 <e p="RedToBlue.cs" t="Include" />
+                <e p="RedToGreen.cs" t="Include" />
                 <e p="RedToYellow.cs" t="Include" />
               </e>
               <e p="Yellow" t="Include">
+                <e p="YellowToBlue.cs" t="Include" />
                 <e p="YellowToGreen.cs" t="Include" />
                 <e p="YellowToRed.cs" t="Include" />
               </e>

@@ -12,7 +12,6 @@ namespace WorldConqueror
 
     public class YellowToRed: MonoBehaviour
     {
-        public bool on = true;
         public Unit ThisOne;
         private void Start()
         {
@@ -34,16 +33,13 @@ namespace WorldConqueror
         // Update is called once per frame
         void Update()
         {
-            if (on)
-            {
-                transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed, Space.Self);
-                if (transform.position.x < -138)
-                    on = false;
-                if (transform.position.x < 125 && transform.position.x > 110)
-                    transform.Translate(-Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
-                if (transform.position.x < -110 && transform.position.x > -125)
-                    transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
-            }
+            transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed, Space.Self);
+            if (transform.position.x < -138 && transform.position.z > 130)
+                Destroy(gameObject);
+            if (transform.position.x < 125 && transform.position.x > 110)
+                transform.Translate(-Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
+            if (transform.position.x < -110 && transform.position.x > -125)
+                transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
         }
     }
 }

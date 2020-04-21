@@ -12,7 +12,6 @@ namespace WorldConqueror
 
     public class RedToBlue : MonoBehaviour
     {
-        public bool on = true;
         public Unit ThisOne;
         private void Start()
         {
@@ -34,23 +33,20 @@ namespace WorldConqueror
         // Update is called once per frame
         void Update()
         {
-            if (on)
-            {
-                transform.Translate(-Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
-                if (transform.position.z < -150)
-                    on = false;
-                if (transform.position.z < 150 && transform.position.z > 120)
-                    transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
-                
-                if (transform.position.z < 60 && transform.position.z > 30)
-                    transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
-                
-                if (transform.position.z < -30 && transform.position.z > -60)
-                    transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
+            transform.Translate(-Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
+            if (transform.position.z < -150 && transform.position.x < -120)
+                Destroy(gameObject);
+            if (transform.position.z < 150 && transform.position.z > 120)
+                transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
 
-                if (transform.position.z < -120)
-                    transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
-            }
+            if (transform.position.z < 60 && transform.position.z > 30)
+                transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
+
+            if (transform.position.z < -30 && transform.position.z > -60)
+                transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
+
+            if (transform.position.z < -120)
+                transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
         }
     }
 }

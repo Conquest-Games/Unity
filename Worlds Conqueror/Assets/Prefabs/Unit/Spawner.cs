@@ -20,27 +20,27 @@ namespace WorldConqueror
                 case PunTeams.Team.red:
                 {
                     Vector3 spawnPosr = new Vector3(-138.4f, 2, 150);
-                    GameObject TheOner = Instantiate(unit, spawnPosr, Quaternion.identity);
+                    GameObject TheOner = PhotonNetwork.Instantiate(unit.name, spawnPosr, Quaternion.identity);
                     TheOner.AddComponent<RedToBlue>();
                     break;
                 }
                 case PunTeams.Team.yellow:
                 {
                     Vector3 spawnPosy = new Vector3(138.4f, 2, 150);
-                    GameObject TheOney = Instantiate(unit, spawnPosy, Quaternion.identity);
+                    GameObject TheOney = PhotonNetwork.Instantiate(unit.name, spawnPosy, Quaternion.identity);
                     TheOney.AddComponent<YellowToRed>();
                     break;
                 }
                 case PunTeams.Team.green:
                 {
                     Vector3 spawnPosg = new Vector3(138.4f, 2, -150);
-                    GameObject TheOneg = Instantiate(unit, spawnPosg, Quaternion.identity);
+                    GameObject TheOneg = PhotonNetwork.Instantiate(unit.name, spawnPosg, Quaternion.identity);
                     TheOneg.AddComponent<GreenToYellow>();
                     break;
                 }
                 default:
                     Vector3 spawnPos = new Vector3(-138.4f, 2, -150);
-                    GameObject TheOne = Instantiate(unit, spawnPos, Quaternion.identity);
+                    GameObject TheOne = PhotonNetwork.Instantiate(unit.name, spawnPos, Quaternion.identity);
                     TheOne.AddComponent<BlueToGreen>();
                     break;
             }
@@ -53,27 +53,27 @@ namespace WorldConqueror
                 case PunTeams.Team.red:
                 {
                     Vector3 spawnPosr = new Vector3(-138.4f, 2, 150);
-                    GameObject TheOner = Instantiate(unit, spawnPosr, Quaternion.identity);
+                    GameObject TheOner = PhotonNetwork.Instantiate(unit.name, spawnPosr, Quaternion.identity);
                     TheOner.AddComponent<RedToYellow>();
                     break;
                 }
                 case PunTeams.Team.yellow:
                 {
                     Vector3 spawnPosy = new Vector3(138.4f, 2, 150);
-                    GameObject TheOney = Instantiate(unit, spawnPosy, Quaternion.identity);
+                    GameObject TheOney = PhotonNetwork.Instantiate(unit.name, spawnPosy, Quaternion.identity);
                     TheOney.AddComponent<YellowToGreen>();
                     break;
                 }
                 case PunTeams.Team.green:
                 {
                     Vector3 spawnPosg = new Vector3(138.4f, 2, -150);
-                    GameObject TheOneg = Instantiate(unit, spawnPosg, Quaternion.identity);
+                    GameObject TheOneg = PhotonNetwork.Instantiate(unit.name, spawnPosg, Quaternion.identity);
                     TheOneg.AddComponent<GreenToBlue>();
                     break;
                 }
                 default:
                     Vector3 spawnPos = new Vector3(-138.4f, 2, -150);
-                    GameObject TheOne = Instantiate(unit, spawnPos, Quaternion.identity);
+                    GameObject TheOne = PhotonNetwork.Instantiate(unit.name, spawnPos, Quaternion.identity);
                     TheOne.AddComponent<BlueToRed>();
                     break;
             }
@@ -86,28 +86,28 @@ namespace WorldConqueror
                 case PunTeams.Team.red:
                 {
                     Vector3 spawnPosr = new Vector3(-138.4f, 2, 150);
-                    GameObject TheOner = Instantiate(unit, spawnPosr, Quaternion.identity);
-                    //TheOner.AddComponent<RedToGreen>();
+                    GameObject TheOner = PhotonNetwork.Instantiate(unit.name, spawnPosr, Quaternion.identity);
+                    TheOner.AddComponent<RedToGreen>();
                     break;
                 }
                 case PunTeams.Team.yellow:
                 {
                     Vector3 spawnPosy = new Vector3(138.4f, 2, 150);
-                    GameObject TheOney = Instantiate(unit, spawnPosy, Quaternion.identity);
-                    //TheOney.AddComponent<YellowToBlue>();
+                    GameObject TheOney = PhotonNetwork.Instantiate(unit.name, spawnPosy, Quaternion.identity);
+                    TheOney.AddComponent<YellowToBlue>();
                     break;
                 }
                 case PunTeams.Team.green:
                 {
                     Vector3 spawnPosg = new Vector3(138.4f, 2, -150);
-                    GameObject TheOneg = Instantiate(unit, spawnPosg, Quaternion.identity);
-                    //TheOneg.AddComponent<GreenToRed>();
+                    GameObject TheOneg = PhotonNetwork.Instantiate(unit.name, spawnPosg, Quaternion.identity);
+                    TheOneg.AddComponent<GreenToRed>();
                     break;
                 }
                 default:
                     Vector3 spawnPos = new Vector3(-138.4f, 2, -150);
-                    GameObject TheOne = Instantiate(unit, spawnPos, Quaternion.identity);
-                    //TheOne.AddComponent<BlueToYellow>();
+                    GameObject TheOne = PhotonNetwork.Instantiate(unit.name, spawnPos, Quaternion.identity);
+                    TheOne.AddComponent<BlueToYellow>();
                     break;
             }
         }

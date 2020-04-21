@@ -1,14 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Building.Building
+    - Arow
+    - Building.QGScript
     - Building.TourDarcherScript
+    - Bulet
     - CameraMouvement
     - ConsoleDebugLogs
     - Control
     - GameControl.GameConst
     - GameControl.PunScript
+    - Joueur.PlayerConstructeur
     - LobbyScript
+    - Pivot
     - WorldConqueror.Infantry
     - WorldConqueror.PlayerNameInputField
     - WorldConqueror.Spawner
@@ -55,6 +59,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
@@ -80,48 +86,64 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 84
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11688}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 12228}
+      Script: {instanceID: 12128}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12352}
+      Script: {instanceID: 12258}
     - Class: 114
-      Script: {instanceID: 12438}
+      Script: {instanceID: 12394}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12524}
     - Class: 114
-      Script: {instanceID: 12582}
+      Script: {instanceID: 12574}
     - Class: 114
-      Script: {instanceID: 12738}
+      Script: {instanceID: 12648}
     - Class: 114
-      Script: {instanceID: 13010}
+      Script: {instanceID: 12734}
     - Class: 114
-      Script: {instanceID: 13190}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 13324}
+      Script: {instanceID: 12834}
     - Class: 114
-      Script: {instanceID: 13562}
+      Script: {instanceID: 12918}
     - Class: 114
-      Script: {instanceID: 13628}
+      Script: {instanceID: 12942}
     - Class: 114
-      Script: {instanceID: 13658}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 249390}
+      Script: {instanceID: 13212}
+    - Class: 114
+      Script: {instanceID: 13486}
+    - Class: 114
+      Script: {instanceID: 13620}
+    - Class: 114
+      Script: {instanceID: 13856}
+    - Class: 114
+      Script: {instanceID: 13922}
+    - Class: 114
+      Script: {instanceID: 13952}
+    - Class: 114
+      Script: {instanceID: 27822}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -166,31 +188,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11688}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 12258}
     - Class: 114
-      Script: {instanceID: 12098}
+      Script: {instanceID: 12394}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 12582}
+      Script: {instanceID: 13486}
     - Class: 114
-      Script: {instanceID: 13190}
+      Script: {instanceID: 13566}
     - Class: 114
-      Script: {instanceID: 13270}
+      Script: {instanceID: 13914}
     - Class: 114
-      Script: {instanceID: 13620}
-    - Class: 114
-      Script: {instanceID: 13628}
-    - Class: 114
-      Script: {instanceID: 13658}
+      Script: {instanceID: 13952}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -245,73 +263,79 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11332}
+      Script: {instanceID: 11622}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11688}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 11758}
     - Class: 114
-      Script: {instanceID: 11866}
+      Script: {instanceID: 12014}
     - Class: 114
-      Script: {instanceID: 11964}
-    - Class: 114
-      Script: {instanceID: 12050}
-    - Class: 114
-      Script: {instanceID: 12098}
+      Script: {instanceID: 12158}
     - Class: 114
       Script: {instanceID: 12258}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 12352}
+      Script: {instanceID: 12394}
     - Class: 114
-      Script: {instanceID: 12376}
+      Script: {instanceID: 12554}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12574}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 12648}
     - Class: 114
-      Script: {instanceID: 12668}
+      Script: {instanceID: 12672}
     - Class: 114
-      Script: {instanceID: 12670}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 12760}
+      Script: {instanceID: 12880}
     - Class: 114
-      Script: {instanceID: 12772}
+      Script: {instanceID: 12966}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 12968}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13014}
+      Script: {instanceID: 13058}
     - Class: 114
-      Script: {instanceID: 13032}
+      Script: {instanceID: 13070}
     - Class: 114
-      Script: {instanceID: 13048}
+      Script: {instanceID: 13082}
     - Class: 114
-      Script: {instanceID: 13190}
+      Script: {instanceID: 13204}
     - Class: 114
-      Script: {instanceID: 13270}
+      Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 13408}
+      Script: {instanceID: 13328}
     - Class: 114
-      Script: {instanceID: 13562}
+      Script: {instanceID: 13344}
+    - Class: 114
+      Script: {instanceID: 13486}
+    - Class: 114
+      Script: {instanceID: 13566}
     - Class: 114
       Script: {instanceID: 13620}
     - Class: 114
-      Script: {instanceID: 13658}
-    - Class: 114
-      Script: {instanceID: 13694}
-    - Class: 114
       Script: {instanceID: 13702}
     - Class: 114
-      Script: {instanceID: 1181530}
+      Script: {instanceID: 13856}
+    - Class: 114
+      Script: {instanceID: 13914}
+    - Class: 114
+      Script: {instanceID: 13952}
+    - Class: 114
+      Script: {instanceID: 13990}
+    - Class: 114
+      Script: {instanceID: 13998}
+    - Class: 114
+      Script: {instanceID: 259172}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -343,6 +367,12 @@ ScriptsOnlyBuild:
     - Class: 225
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: RedToBlue
   - hash:
       serializedVersion: 2
       Hash: 80d2851602cb4bcb6f559596c5eb955b
@@ -511,6 +541,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Photon.Chat.UtilityScripts
     className: TextToggleIsOnTransition
+  - hash:
+      serializedVersion: 2
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: YellowToGreen
   - hash:
       serializedVersion: 2
       Hash: ee1dba1a186ac062d564e9eb73a1c56f
@@ -753,6 +789,12 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pivot
+  - hash:
+      serializedVersion: 2
       Hash: 4e9333594897a1fb8b136ad2eae996c7
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -793,6 +835,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: GreenToYellow
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -861,7 +909,7 @@ ScriptsOnlyBuild:
     className: PunCockpitEmbed
   - hash:
       serializedVersion: 2
-      Hash: e7ae220cc60980d2667cb152ca28db65
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: BlueToGreen
@@ -919,6 +967,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: BlueToRed
   - hash:
       serializedVersion: 2
       Hash: 8dc90e648ac06f43bdd31ac9fa8f4579
@@ -1263,6 +1317,12 @@ ScriptsOnlyBuild:
     className: SetRoomCustomPropertyUIForm
   - hash:
       serializedVersion: 2
+      Hash: cdd5f80e3b71639f497d9c13e5ecf8f3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: Spawner
+  - hash:
+      serializedVersion: 2
       Hash: 4fe8955e1c662935371b0936cafbb89b
     assemblyName: Assembly-CSharp.dll
     namespaceName: Photon.Chat.UtilityScripts
@@ -1467,6 +1527,12 @@ ScriptsOnlyBuild:
     className: FriendItem
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Arow
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1543,6 +1609,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Asteroids
     className: Asteroid
+  - hash:
+      serializedVersion: 2
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: YellowToRed
   - hash:
       serializedVersion: 2
       Hash: c0201dbecd85f700bcdff493a272631d
@@ -1887,7 +1959,7 @@ ScriptsOnlyBuild:
     className: CinemachineBrain
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: df3df775ebab07ea00f34d7cf66dbd52
     assemblyName: Assembly-CSharp.dll
     namespaceName: Building
     className: TourDarcherScript
@@ -1933,6 +2005,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: RedToYellow
   - hash:
       serializedVersion: 2
       Hash: b5c3dbcb94925c8b595ad16a62b44788
@@ -2019,58 +2097,40 @@ ScriptsOnlyBuild:
     className: LobbyTopPanel
   - hash:
       serializedVersion: 2
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: GreenToBlue
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: cdd5f80e3b71639f497d9c13e5ecf8f3
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
-    className: Spawner
+    className: BlueToYellow
   - hash:
       serializedVersion: 2
-      Hash: e7ae220cc60980d2667cb152ca28db65
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
-    className: BlueToRed
+    className: YellowToBlue
   - hash:
       serializedVersion: 2
-      Hash: e7ae220cc60980d2667cb152ca28db65
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
-    className: GreenToBlue
+    className: RedToGreen
   - hash:
       serializedVersion: 2
-      Hash: e7ae220cc60980d2667cb152ca28db65
+      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
-    className: RedToBlue
-  - hash:
-      serializedVersion: 2
-      Hash: e7ae220cc60980d2667cb152ca28db65
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: WorldConqueror
-    className: RedToYellow
-  - hash:
-      serializedVersion: 2
-      Hash: e7ae220cc60980d2667cb152ca28db65
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: WorldConqueror
-    className: YellowToRed
-  - hash:
-      serializedVersion: 2
-      Hash: e7ae220cc60980d2667cb152ca28db65
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: WorldConqueror
-    className: YellowToGreen
-  - hash:
-      serializedVersion: 2
-      Hash: e7ae220cc60980d2667cb152ca28db65
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: WorldConqueror
-    className: GreenToYellow
+    className: GreenToRed
   platform: 2
   scenePathNames:
   - Assets/Scenes/Luncher.unity

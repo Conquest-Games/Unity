@@ -55,6 +55,7 @@ namespace Joueur
         // Update is called once per frame
         void Update()
         {
+            /* En comm à cause d'erreurs de compilations
             #region Text update
 
             p1Or.text = p1.Or.ToString();
@@ -69,7 +70,7 @@ namespace Joueur
             p4Or.text = p4.Or.ToString();
             p4Fer.text = p4.Fer.ToString();
 
-            #endregion
+            #endregion*/
         }
     }
 }
