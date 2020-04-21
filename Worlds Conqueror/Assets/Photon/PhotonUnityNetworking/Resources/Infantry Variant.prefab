@@ -87,6 +87,16 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8467299631789049650, guid: d6200883a72bbf341a05704de7548171,
+        type: 3}
+      propertyPath: m_Name
+      value: Infantry Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467299631789049650, guid: d6200883a72bbf341a05704de7548171,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8916153824757121565, guid: d6200883a72bbf341a05704de7548171,
         type: 3}
       propertyPath: viewIdField
