@@ -61620,6 +61620,7 @@ GameObject:
   - component: {fileID: 1836978798}
   - component: {fileID: 1836978800}
   - component: {fileID: 1836978799}
+  - component: {fileID: 1836978801}
   m_Layer: 0
   m_Name: Fer Compteur
   m_TagString: Untagged
@@ -61677,7 +61678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!222 &1836978800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61686,6 +61687,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836978797}
   m_CullTransparentMesh: 0
+--- !u!114 &1836978801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836978797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1992744d228774eaa484fd66735ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p1Or: {fileID: 2146310247}
+  p1fer: {fileID: 1836978799}
 --- !u!4 &1837718061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1491252890217960664, guid: 2fcba566c9133d148916624fe7efc472,
@@ -71936,18 +71951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1992744d228774eaa484fd66735ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1: {fileID: 0}
-  p2: {fileID: 0}
-  p3: {fileID: 0}
-  p4: {fileID: 0}
   p1Or: {fileID: 2146310247}
-  p1Fer: {fileID: 1836978799}
-  p2Or: {fileID: 0}
-  p2Fer: {fileID: 0}
-  p3Or: {fileID: 0}
-  p3Fer: {fileID: 0}
-  p4Or: {fileID: 0}
-  p4Fer: {fileID: 0}
+  p1fer: {fileID: 1836978799}
 --- !u!114 &2146310247
 MonoBehaviour:
   m_ObjectHideFlags: 0
