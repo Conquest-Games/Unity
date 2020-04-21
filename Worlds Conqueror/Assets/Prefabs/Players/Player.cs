@@ -9,10 +9,10 @@ namespace Joueur
 
         #region Varriables
 
-        int or;
-        int fer;
-        int incomeFer;
-        int incomeOr;
+        private int or;
+        private int fer;
+        private int incomeFer;
+        private int incomeOr;
 
 
         #endregion
@@ -35,10 +35,10 @@ namespace Joueur
 
         public Player()
         {
-            this.or = 100;
-            this.fer = 0;
-            this.incomeFer = 0;
-            this.incomeOr = 0;
+            or = 100;
+            fer = 0;
+            incomeFer = 0;
+            incomeOr = 0;
         }
 
         #endregion
