@@ -9,6 +9,12 @@ public class OpenLink : MonoBehaviour
         Application.OpenURL("https://worldsconqueror.000webhostapp.com/#");
     }
 
+
+    public void Discord()
+    {
+        Application.OpenURL("https://discord.gg/jCcJw22");
+    }
+
     // Start is called before the first frame update
     void Start()
     {

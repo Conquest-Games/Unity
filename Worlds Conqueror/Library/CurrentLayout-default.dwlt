@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 58
+  controlID: 132
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 417
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 59
+  controlID: 82
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 60
+  controlID: 56
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -338,20 +338,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Menu principal/Scripts
+    - Assets/Photon/PhotonUnityNetworking/Resources
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Menu principal/Scripts
+  - Assets/Photon/PhotonUnityNetworking/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Travail\Unity\Worlds Conqueror
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 2afc0000
-    m_LastClickedID: 64554
-    m_ExpandedIDs: 0000000026fc000028fc00002afc00002cfc00002efc000030fc000032fc000034fc000036fc000038fc00003afc00003cfc00003efc000000ca9a3b
+    scrollPos: {x: 0, y: 202}
+    m_SelectedIDs: 0ec60000
+    m_LastClickedID: 50702
+    m_ExpandedIDs: 0000000028c500002ac500002cc500002ec5000030c5000032c5000034c5000036c5000038c500003ac500003cc500003ec5000040c5000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,7 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000026fc000028fc00002afc00002cfc00002efc000030fc000032fc000034fc000036fc000038fc00003afc00003cfc00003efc0000
+    m_ExpandedIDs: 0000000028c500002ac500002cc500002ec5000030c5000032c5000034c5000036c5000038c500003ac500003cc500003ec5000040c50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,9 +502,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: f6350000
       m_LastClickedID: 0
-      m_ExpandedIDs: 54d8fbffa608fdff6a26fdffd88efeffd2a30100faa50100f2c60200b4c70200e2c70200
+      m_ExpandedIDs: 60fbffff963800001a3900005a390000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 338.6651, y: 206.12097, z: 250.13116}
+    m_Target: {x: 449.3601, y: 237.33752, z: 328.93042}
     speed: 2
-    m_Value: {x: 338.6651, y: 206.12097, z: 250.13116}
+    m_Value: {x: 449.3601, y: 237.33752, z: 328.93042}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -612,13 +612,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1344928, y: -0.03775296, z: 0.0051215473, w: -0.99019736}
+    m_Target: {x: -0.08539488, y: 0.002383296, z: -0.00021150368, w: -0.996361}
     speed: 2
-    m_Value: {x: -0.13449074, y: -0.037752382, z: 0.005121469, w: -0.9901823}
+    m_Value: {x: -0.08240429, y: -0.0006059148, z: 0.000042863132, w: -0.9965988}
   m_Size:
-    m_Target: 920.3236
+    m_Target: 882.0624
     speed: 2
-    m_Value: 920.3236
+    m_Value: 844.07886
   m_Ortho:
     m_Target: 0
     speed: 2
