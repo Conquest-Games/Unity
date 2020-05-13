@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Building;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
@@ -35,7 +36,10 @@ namespace WorldConqueror
         {
             transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
             if (transform.position.z > 150 && transform.position.x > 120)
+            {
                 Destroy(gameObject);
+                GameObject.Find("QG_Jaune").GetComponent<QGScript>().life -= ThisOne.UnitDamage;
+            }
             if (transform.position.z > -150 && transform.position.z < -120)
                 transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
 

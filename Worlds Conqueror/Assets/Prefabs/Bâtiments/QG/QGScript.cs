@@ -6,6 +6,8 @@ namespace Building
 {
     public class QGScript : MonoBehaviour
     {
+        public bool dead = false;
+        public int life = 20;
         private Transform target;
         public float range = 60f;
 
@@ -63,6 +65,24 @@ namespace Building
             }
 
             fireCountdown -= Time.deltaTime;
+
+            if (life <= 0 && !dead)
+            {
+                dead = true;
+                Destroy(gameObject);
+                GameObject.Find("Unités").SetActive(false);
+                GameObject.Find("Interface Ressource").SetActive(false);
+                GameObject.Find("UnitMenu").SetActive(false);
+                GameObject.Find("InfantryEnnemiChoice").SetActive(false);
+                GameObject.Find("Loose").SetActive(true);
+
+
+            }
+        }
+
+        void TakeDamage(int amount)
+        {
+            life -= amount;
         }
 
         void Shoot()

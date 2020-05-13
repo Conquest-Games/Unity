@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1368460759}
+      - m_Target: {fileID: 0}
         m_MethodName: DebugMultijoueur
         m_Mode: 1
         m_Arguments:
@@ -3553,7 +3553,7 @@ GameObject:
   - component: {fileID: 1368460757}
   - component: {fileID: 1368460756}
   - component: {fileID: 1368460755}
-  - component: {fileID: 1368460759}
+  - component: {fileID: 1368460758}
   m_Layer: 5
   m_Name: Un joueur
   m_TagString: Untagged
@@ -3624,8 +3624,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1368460759}
-        m_MethodName: DebugUnJoueur
+      - m_Target: {fileID: 1368460758}
+        m_MethodName: LunchGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3671,7 +3671,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368460753}
   m_CullTransparentMesh: 0
---- !u!114 &1368460759
+--- !u!114 &1368460758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3680,7 +3680,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1368460753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d56772ddcbe71bb4eab813fc5034292d, type: 3}
+  m_Script: {fileID: 11500000, guid: 31c258a5eddc48046ace64860505f396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1396740774

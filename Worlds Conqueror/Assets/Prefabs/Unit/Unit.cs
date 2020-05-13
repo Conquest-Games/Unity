@@ -39,6 +39,8 @@ namespace WorldConqueror
 
         public int Speed => speed;
 
+        public int UnitDamage => damage;
+
         #endregion
 
         

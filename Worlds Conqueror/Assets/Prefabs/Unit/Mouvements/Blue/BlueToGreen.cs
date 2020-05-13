@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Building;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
@@ -33,9 +34,12 @@ namespace WorldConqueror
         // Update is called once per frame
         void Update()
         {
-            transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed, Space.Self); 
-            if (transform.position.x > 138 && transform.position.z < -130) 
+            transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed, Space.Self);
+            if (transform.position.x > 138 && transform.position.z < -130)
+            {
                 Destroy(gameObject);
+                GameObject.Find("QG_Vert").GetComponent<QGScript>().life -= ThisOne.UnitDamage;
+            }
             if (transform.position.x > -125 && transform.position.x < -110) 
                 transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
             if (transform.position.x > 110 && transform.position.x < 125) 
