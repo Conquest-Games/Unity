@@ -7,6 +7,10 @@ TagManager:
   - Player1
   - Enemy
   - Enemy2
+  - Red
+  - Yellow
+  - Green
+  - Blue
   layers:
   - Default
   - TransparentFX

@@ -23,7 +23,7 @@ namespace Building
         
         void UpdateTarget()
         {
-            GameObject[] ennemies = GameObject.FindGameObjectsWithTag("Enemy");
+            GameObject[] ennemies = GameObject.FindGameObjectsWithTag("Blue");
             float shortestDistance = Mathf.Infinity;
             GameObject nearestEnemy = null;
 

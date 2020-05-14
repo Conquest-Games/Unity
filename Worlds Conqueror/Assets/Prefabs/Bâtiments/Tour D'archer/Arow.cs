@@ -35,7 +35,12 @@ public class Arow : MonoBehaviour
     
     void HitTarget()
     {
-        Destroy(gameObject); 
-        Destroy(target.gameObject); // One shoot
+        Destroy(gameObject);
+        
+        CombatScript e = target.GetComponent<CombatScript>();
+        if (e != null)
+        {
+            e.TakeDammage(40);
+        }
     }
 }

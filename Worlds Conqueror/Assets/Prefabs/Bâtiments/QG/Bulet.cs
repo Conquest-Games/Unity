@@ -36,6 +36,11 @@ public class Bulet : MonoBehaviour
     void HitTarget()
     {
         Destroy(gameObject); 
-        Destroy(target.gameObject); // One shoot
+        
+        CombatScript e = target.GetComponent<CombatScript>();
+        if (e != null)
+        {
+            e.TakeDammage(50);
+        }
     }
 }
