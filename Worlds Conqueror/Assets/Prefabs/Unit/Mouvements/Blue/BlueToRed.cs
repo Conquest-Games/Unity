@@ -41,20 +41,29 @@ namespace WorldConqueror
                 GameObject.Find("QG_Rouge").GetComponent<QGScript>().life -= ThisOne.UnitDamage;
             }
 
-            if (transform.position.z > -150 && transform.position.z < -120)
+            if (transform.position.z > -150 && transform.position.z < -149)
             {
-                transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
-                //Work in progress: transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 30, 0));
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 30, 0));
             }
+            
+            if (transform.position.z > -121 && transform.position.z < -119)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
 
-            if (transform.position.z > -60 && transform.position.z < -30)
-                transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
+            if (transform.position.z > -61 && transform.position.z < -59)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -30, 0));
+            
+            if (transform.position.z > -31 && transform.position.z < -29)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
+            
+            if (transform.position.z > 29 && transform.position.z < 31)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 30, 0));
 
-            if (transform.position.z > 30 && transform.position.z < 60)
-                transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
 
-            if (transform.position.z > 120)
-                transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
+            if (transform.position.z > 59 && transform.position.z < 61)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
+
+            if (transform.position.z > 119 && transform.position.z < 121)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -30, 0));
 
         }
     }

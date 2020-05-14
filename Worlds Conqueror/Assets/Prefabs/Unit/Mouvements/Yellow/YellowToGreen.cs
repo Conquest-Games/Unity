@@ -34,23 +34,34 @@ namespace WorldConqueror
         // Update is called once per frame
         void Update()
         {
-            transform.Translate(-Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
+            transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
             if (transform.position.z < -150 && transform.position.x > 120)
             {
                 Destroy(gameObject);
                 GameObject.Find("QG_Vert").GetComponent<QGScript>().life -= ThisOne.UnitDamage;
             }
-            if (transform.position.z < 150 && transform.position.z > 120)
-                transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
 
-            if (transform.position.z < 60 && transform.position.z > 30)
-                transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
+            if (transform.position.z < 151 && transform.position.z > 149)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
 
-            if (transform.position.z < -30 && transform.position.z > -60)
-                transform.Translate(-Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
+            if (transform.position.z > -121 && transform.position.z < -119)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
 
-            if (transform.position.z < -120)
-                transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed * 0.5f, Space.Self);
+            if (transform.position.z > -61 && transform.position.z < -59)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 50, 0));
+
+            if (transform.position.z > -31 && transform.position.z < -29)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
+
+            if (transform.position.z > 29 && transform.position.z < 31)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 210, 0));
+
+
+            if (transform.position.z > 59 && transform.position.z < 61)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
+
+            if (transform.position.z > 119 && transform.position.z < 121)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 150, 0));
         }
     }
 }

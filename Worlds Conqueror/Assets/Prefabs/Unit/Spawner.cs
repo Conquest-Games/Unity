@@ -12,6 +12,7 @@ namespace WorldConqueror
     public class Spawner : MonoBehaviour
     {
         public GameObject unit;
+        
 
         public void SpawnRight()
         {

@@ -33,19 +33,23 @@ namespace WorldConqueror
 
         // Update is called once per frame
         void Update()
-        {
+        {            
+            transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
             if (transform.position.x > 138 && transform.position.z > 130)
             {
                 Destroy(gameObject);
                 GameObject.Find("QG_Jaune").GetComponent<QGScript>().life -= ThisOne.UnitDamage;
             }
-            if (transform.position.x > -34.6 && transform.position.x < 69.2)
-                transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed);
-            else
-            {
-                transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
-                transform.Translate(Vector3.right * Time.deltaTime * ThisOne.Speed * 0.576f);
-            }
+            if (transform.position.z > -150 && transform.position.z < -145)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 30, 0));
+
+            if (transform.position.z > 29 && transform.position.x < -34)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 90, 0));
+            
+            if (transform.position.x > 69 && transform.position.x < 71)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 30, 0));
+
+
         }
     }
 }
