@@ -10,10 +10,10 @@ namespace Joueur
 
         #region Varriables
 
-        private int or = 100;
-        private int fer = 0;
-        private int incomeFer = 100;
-        private int incomeOr = 500;
+        private static int or = 100;
+        private static int fer = 0;
+        private static int incomeFer = 10;
+        private static int incomeOr = 50;
 
         #endregion
 
@@ -69,7 +69,7 @@ namespace Joueur
         }
 
         //Retire cout et renvoi true si le cout est inferieurs au ressourcers, sinon renvoi false et le nom de la ressource qui manque
-        public (bool, string) Cout(int costOr, int costFer = 0)
+        public static (bool, string) Cout(int costOr, int costFer = 0)
         {
             if (or < costOr && fer < costFer)
             {
