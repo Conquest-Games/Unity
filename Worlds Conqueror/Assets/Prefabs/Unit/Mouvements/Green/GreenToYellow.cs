@@ -40,11 +40,9 @@ namespace WorldConqueror
                 Destroy(gameObject);
                 GameObject.Find("QG_Jaune").GetComponent<QGScript>().life -= ThisOne.UnitDamage;
             }
-            if (transform.position.z > -150 && transform.position.z < -149)
-            {
+            if (transform.position.z > -155 && transform.position.z < -145)
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -30, 0));
-            }
-            
+
             if (transform.position.z > -121 && transform.position.z < -119)
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
 
