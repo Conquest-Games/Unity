@@ -23,7 +23,34 @@ namespace Building
         
         void UpdateTarget()
         {
-            GameObject[] ennemies = GameObject.FindGameObjectsWithTag("Blue");
+            GameObject[] ennemiesG = GameObject.FindGameObjectsWithTag("Green");
+            GameObject[] ennemiesR = GameObject.FindGameObjectsWithTag("Red");
+            GameObject[] ennemiesY = GameObject.FindGameObjectsWithTag("Yellow");
+			GameObject[] ennemiesB = GameObject.FindGameObjectsWithTag("Blue");
+            GameObject[] ennemies = new GameObject[ennemiesG.Length + ennemiesR.Length + ennemiesY.Length + ennemiesB.Length];
+
+            int c = 0;
+            for (int i = 0; i < ennemiesG.Length; i++)
+            {
+                ennemies[c] = ennemiesG[i];
+                c += 1;
+            }
+            for (int j = 0; j < ennemiesR.Length; j++)
+            {
+                ennemies[c] = ennemiesR[j];
+                c += 1;
+            }
+            for (int k = 0; k < ennemiesY.Length; k++)
+            {
+                ennemies[c] = ennemiesY[k];
+                c += 1;
+            }
+			for (int l = 0; l < ennemiesB.Length; l++)
+			{
+				ennemies[c] = ennemiesB[l];
+				c += 1;
+			}
+
             float shortestDistance = Mathf.Infinity;
             GameObject nearestEnemy = null;
 
