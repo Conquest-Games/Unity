@@ -10,8 +10,8 @@ namespace Joueur
 
         #region Varriables
 
-        private static int or = 100;
-        private static int fer = 0;
+        private static float or = 100;
+        private static float fer = 0;
         private static int incomeFer = 10;
         private static int incomeOr = 50;
 
@@ -26,34 +26,20 @@ namespace Joueur
 
         #endregion
 
-        #region Getters
-
-        public int Or
-        {
-            get => or;
-        }
-
-        public int Fer
-        {
-            get => fer;
-        }
-
-        #endregion
-
         #region Ressources Actions
 
         //Actualise les ressource avec l'income de chaque ressource
         public void AddIncome()
         {
-            if (or + incomeOr >= 9999)
+            if (or + incomeOr * 0.05f >= 9999)
                 or = 9999;
             else
-                or += incomeOr;
+                or += incomeOr * 0.05f;
 
-            if (fer + incomeFer >= 9999)
+            if (fer + incomeFer * 0.05f >= 9999)
                 fer = 9999;
             else
-                fer += incomeFer;
+                fer += incomeFer * 0.05f;
         }
 
         //Ajoute amount a Or
@@ -93,12 +79,12 @@ namespace Joueur
         // Start is called before the first frame update
         void Start()
         {
-            InvokeRepeating("AddIncome", 0f, 1);
+            InvokeRepeating("AddIncome", 1f, 0.05f);
 
             #region Text update
 
-            pOr.text = or.ToString();
-            pFer.text = fer.ToString();
+            pOr.text = ((int) or).ToString();
+            pFer.text = ((int) fer).ToString();
             pOrIncome.text = "+" + incomeOr.ToString() + "/s";
             pFerIncome.text = "+" + incomeFer.ToString() + "/s";
 
@@ -110,8 +96,8 @@ namespace Joueur
         {
             #region Text update
 
-            pOr.text = or.ToString();
-            pFer.text = fer.ToString();
+            pOr.text = ((int) or).ToString();
+            pFer.text = ((int) fer).ToString();
             pOrIncome.text = "+" + incomeOr.ToString() + "/s";
             pFerIncome.text = "+" + incomeFer.ToString() + "/s";
 

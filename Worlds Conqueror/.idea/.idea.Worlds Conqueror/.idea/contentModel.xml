@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="InGame" t="Include">
+          <e p="AI.cs" t="Include" />
           <e p="GameConst.cs" t="Include" />
         </e>
         <e p="Lobby" t="Include">
@@ -378,6 +379,10 @@
             <e p="QG" t="Include">
               <e p="Bulet.cs" t="Include" />
               <e p="QGScript.cs" t="Include" />
+              <e p="QGScriptBlue.cs" t="Include" />
+              <e p="QGScriptGreen.cs" t="Include" />
+              <e p="QGScriptRed.cs" t="Include" />
+              <e p="QGScriptYellow.cs" t="Include" />
             </e>
             <e p="Tour D'archer" t="Include">
               <e p="Arow.cs" t="Include" />
@@ -405,6 +410,7 @@
               <e p="Cavalry.cs" t="Include" />
             </e>
             <e p="Infantry" t="Include">
+              <e p="CombatScript.cs" t="Include" />
               <e p="Infantry.cs" t="Include" />
             </e>
             <e p="Mouvements" t="Include">
@@ -437,6 +443,8 @@
             </e>
             <e p="Spawner.cs" t="Include" />
             <e p="Unit.cs" t="Include" />
+            <e p="UnitControlleur.cs" t="Include" />
+            <e p="UnitStats.cs" t="Include" />
           </e>
         </e>
       </e>

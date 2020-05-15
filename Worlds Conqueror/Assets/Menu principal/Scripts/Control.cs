@@ -6,32 +6,45 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using WorldConqueror;
 
-public class Control : MonoBehaviour
+namespace WorldConqueror
 {
-    public void BackToMenu()
+    public class Control : MonoBehaviour
     {
-        PhotonNetwork.Disconnect();
-        SceneManager.LoadScene("Luncher");
-    }
-    public void Lunch()
-    {
-        SceneManager.LoadScene("Lobby");
-    }
+        public static bool alone = false;
 
-    public void LunchGame()
-    {
-        SceneManager.LoadScene("InGame");
-    }
-    public void Exit()
-    {
-        Debug.Log("Le joueur a quitté le Jeux");
-        Application.Quit();
-    }
 
-    public void Map()
-    {
-        SceneManager.LoadScene("SampleScene");
-    }
+        public void SetAlone()
+        {
+            alone = true;
+        }
+        public void BackToMenu()
+        {
+            PhotonNetwork.Disconnect();
+            SceneManager.LoadScene("Luncher");
+        }
 
+        public void Lunch()
+        {
+            SceneManager.LoadScene("Lobby");
+        }
+
+        public void LunchGame()
+        {
+            SceneManager.LoadScene("InGame");
+        }
+
+        public void Exit()
+        {
+            Debug.Log("Le joueur a quitté le Jeux");
+            Application.Quit();
+        }
+
+        public void Map()
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+
+    }
 }
