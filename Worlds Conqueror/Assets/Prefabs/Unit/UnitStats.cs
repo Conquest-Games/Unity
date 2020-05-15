@@ -8,7 +8,7 @@ namespace WorldConqueror
     {
         public enum SolderType
         {
-            Pathfinder, Infantry, Archer, Cavalery, SiegeWeapon
+            Infantry, Archery, Cavalery, SiegeWeapon
         }
 
         #region Prix
@@ -46,7 +46,7 @@ namespace WorldConqueror
                     if (level < 0)
                         return InfantryPrice[0];
                     return InfantryPrice[level];
-                case SolderType.Archer:
+                case SolderType.Archery:
                     if (level >= 4)
                         return ArcheryPrice[3];
                     if (level < 0)
@@ -75,7 +75,7 @@ namespace WorldConqueror
             {
                 case SolderType.Infantry:
                     return InfantryLevel;
-                case SolderType.Archer:
+                case SolderType.Archery:
                     return ArcheryLevel;
                 case SolderType.Cavalery:
                     return CavaleryLevel;
@@ -94,7 +94,7 @@ namespace WorldConqueror
             {
                 case SolderType.Infantry:
                     return InfantryPriceUpgrade[level];
-                case SolderType.Archer:
+                case SolderType.Archery:
                     return ArcheryPriceUpgrade[level];
                 case SolderType.Cavalery:
                     return CavaleryPriceUpgrade[level];
@@ -112,7 +112,7 @@ namespace WorldConqueror
                 case SolderType.Infantry:
                     InfantryLevel++;
                     return;
-                case SolderType.Archer:
+                case SolderType.Archery:
                     ArcheryLevel++;
                     return;
                 case SolderType.Cavalery:
