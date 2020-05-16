@@ -721,6 +721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2863039858397297558}
   - component: {fileID: -1440563489354281676}
+  - component: {fileID: 6491573484608921425}
   m_Layer: 0
   m_Name: Tour D'archer
   m_TagString: Untagged
@@ -768,6 +769,19 @@ MonoBehaviour:
   fireRate: 1
   firePoint: {fileID: 0}
   arrow: {fileID: 6991464157184956881, guid: 8db24ae45c5d1ce41ad36eb65e40fc31, type: 3}
+--- !u!114 &6491573484608921425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8317132174665900484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f283a5dd8144a22469cfa4bfd54ec88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 200
 --- !u!1 &8877882877698024150
 GameObject:
   m_ObjectHideFlags: 0

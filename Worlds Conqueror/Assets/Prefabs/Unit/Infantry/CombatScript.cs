@@ -7,11 +7,11 @@ public class CombatScript : MonoBehaviour
 	public int hp = 100;
     
 	public void TakeDammage(int amount)
-	{
-		hp -= amount;
-		if (hp <= 0)
-		{
-			Destroy(gameObject);
-		}
-	}
+     	{
+     		hp -= amount;
+     		if (hp <= 0)
+     		{
+     			Destroy(gameObject);
+     		}
+     	}
 }

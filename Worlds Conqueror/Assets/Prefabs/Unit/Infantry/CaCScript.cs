@@ -5,6 +5,7 @@ using UnityEngine;
 public class CaCScript : MonoBehaviour
 {
 	private Transform target;
+	private Transform targetbat;
     public float range = 3f;
 
     public float fireRate = 1f;
@@ -14,6 +15,7 @@ public class CaCScript : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 2f);
+        InvokeRepeating("BatTarget", 0f, 2f);
     }
 
 	void UpdateTarget()
@@ -98,6 +100,33 @@ public class CaCScript : MonoBehaviour
         }
     }
 
+	void BatTarget()
+	{
+		GameObject[] batiments = GameObject.FindGameObjectsWithTag("Neutral");
+		
+		float shortestDistance = Mathf.Infinity;
+		GameObject nearestBat = null;
+
+		foreach (GameObject bat in batiments)
+		{
+			float distanceToBat = Vector3.Distance(transform.position, bat.transform.position);
+			if (distanceToBat < shortestDistance)
+			{
+				shortestDistance = distanceToBat;
+				nearestBat = bat;
+			}
+		}
+
+		if (nearestBat != null && shortestDistance <= range)
+		{
+			targetbat = nearestBat.transform;
+		}
+		else
+		{
+			targetbat = null;
+		}
+	}
+
     // Update is called once per frame
     void Update()
     {
@@ -105,10 +134,16 @@ public class CaCScript : MonoBehaviour
             {
                 return;
             }
+        
+        if (targetbat == null)
+        {
+	        return;
+        }
             
         if (fireCountdown <= 0f)
         {
-            Shoot();
+	        Shoot();
+	        Capture();
             fireCountdown = 1 / fireRate;
         }
 
@@ -123,6 +158,15 @@ public class CaCScript : MonoBehaviour
             e.TakeDammage(100);
         }
     }
+
+	void Capture()
+	{
+		CaptureScript ee = targetbat.GetComponent<CaptureScript>();
+		if (ee != null)
+		{
+			ee.TakeDammag(100, "Blue");
+		}
+	}
 
 	private void OnDrawGizmosSelected()
     {

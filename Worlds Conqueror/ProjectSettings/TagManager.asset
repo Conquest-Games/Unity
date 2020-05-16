@@ -4,13 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Player1
-  - Enemy
-  - Enemy2
   - Red
   - Yellow
   - Green
   - Blue
+  - Neutral
+  - Enemy
   layers:
   - Default
   - TransparentFX

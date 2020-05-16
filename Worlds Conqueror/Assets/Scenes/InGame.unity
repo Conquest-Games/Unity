@@ -10520,6 +10520,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tour D'archer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8317132174665900484, guid: 00ad687253d7fad4cbbe312f29053a4d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Neutral
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00ad687253d7fad4cbbe312f29053a4d, type: 3}
 --- !u!4 &266812033 stripped
@@ -16069,7 +16074,7 @@ PrefabInstance:
     - target: {fileID: 2863039858397297558, guid: 00ad687253d7fad4cbbe312f29053a4d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.44902
+      value: -13.6
       objectReference: {fileID: 0}
     - target: {fileID: 2863039858397297558, guid: 00ad687253d7fad4cbbe312f29053a4d,
         type: 3}
@@ -16140,6 +16145,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tour D'archer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317132174665900484, guid: 00ad687253d7fad4cbbe312f29053a4d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Neutral
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00ad687253d7fad4cbbe312f29053a4d, type: 3}
@@ -30513,6 +30523,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tour D'archer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317132174665900484, guid: 00ad687253d7fad4cbbe312f29053a4d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Neutral
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00ad687253d7fad4cbbe312f29053a4d, type: 3}
@@ -70777,6 +70792,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tour D'archer (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317132174665900484, guid: 00ad687253d7fad4cbbe312f29053a4d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Neutral
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00ad687253d7fad4cbbe312f29053a4d, type: 3}
