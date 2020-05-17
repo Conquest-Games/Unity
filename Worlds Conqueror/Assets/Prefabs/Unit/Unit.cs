@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace WorldConqueror
 {
     public class Unit : MonoBehaviour
     {
-        
+
         #region Attributs
 
         private int damage = 0;
         private int hp = 0;
+        private int Maxhp = 0;
         private float speed = 0f;
         private float attackSpeed = 1f;
-        public int lvl; 
+        public int lvl;
         private SoldierType type;
         private PunTeams.Team team;
         private bool isDead;
+
+        public Text Level;
+        public Text Hp;
 
         public enum SoldierType
         {
@@ -67,9 +72,7 @@ namespace WorldConqueror
 
         #endregion
 
-        #region truc a modifier
-
-        public Unit(SoldierType type,PunTeams.Team team)
+        public Unit(SoldierType type, PunTeams.Team team)
         {
             this.type = type;
             this.team = team;
@@ -81,24 +84,28 @@ namespace WorldConqueror
                 case (SoldierType.Infantry):
                     this.damage = InfantryDommage[lvl];
                     this.hp = InfantryHeal[lvl];
+                    this.Maxhp = InfantryHeal[lvl];
                     this.attackSpeed = InfantryAttackSpeed[lvl];
                     this.speed = InfantrySpeed[lvl];
                     break;
                 case (SoldierType.Archer):
                     this.damage = ArcheryDommage[lvl];
                     this.hp = ArcheryHeal[lvl];
+                    this.Maxhp = ArcheryHeal[lvl];
                     this.attackSpeed = ArcheryAttackSpeed[lvl];
                     this.speed = ArcherySpeed[lvl];
                     break;
                 case (SoldierType.Cavalry):
                     this.damage = CavaleryDommage[lvl];
                     this.hp = CavaleryHeal[lvl];
+                    this.Maxhp = CavaleryHeal[lvl];
                     this.attackSpeed = CavaleryAttackSpeed[lvl];
                     this.speed = CavalerySpeed[lvl];
                     break;
                 case (SoldierType.SiegeWeapon):
                     this.damage = SiegeWeaponDommage[lvl];
                     this.hp = SiegeWeaponHeal[lvl];
+                    this.Maxhp = SiegeWeaponHeal[lvl];
                     this.attackSpeed = SiegeWeaponAttackSpeed[lvl];
                     this.speed = SiegeWeaponSpeed[lvl];
                     break;
@@ -121,7 +128,7 @@ namespace WorldConqueror
                 hp = 0;
                 isDead = true;
             }
-            
+
         }
 
         public void Attack(Unit unit, Building.Building building)
@@ -139,7 +146,7 @@ namespace WorldConqueror
                         || building.Team == Building.Building.BuildingTeam.Neutral_Capturable)
                         fonction qui inflige des dégats aux batiments
                 }
-                   */ 
+                   */
             }
             else
             {
@@ -148,11 +155,11 @@ namespace WorldConqueror
                     if (unit == null)
                     {
                         //if (building != null)
-                            //foncntion de degats sur batiments
+                        //foncntion de degats sur batiments
                     }
                     else
                     {
-                        unit.Damage(damage/3);
+                        unit.Damage(damage / 3);
                     }
                 }
                 else
@@ -170,8 +177,49 @@ namespace WorldConqueror
             }
         }
 
-        #endregion
+        private void UpdateText()
+        {
+            switch(team)
+            {
+                case PunTeams.Team.red:
+                    {
+                        Level.color = Color.red;
+                        Hp.color = Color.red;
+                        break;
+                    }
+                case PunTeams.Team.yellow:
+                    {
+                        Level.color = Color.yellow;
+                        Hp.color = Color.yellow;
+                        break;
+                    }
+                case PunTeams.Team.green:
+                    {
+                        Level.color = Color.green;
+                        Hp.color = Color.green;
+                        break;
+                    }
+                case PunTeams.Team.blue:
+                    {
+                        Level.color = Color.blue;
+                        Hp.color = Color.blue;
+                        break;
+                    }
+            }
 
-        
+            Level.text = lvl.ToString();
+            Hp.text = hp.ToString() + " / " + Maxhp.ToString();
+        }
+
+        void Start()
+        {
+            UpdateText();
+        }
+
+        void Update()
+        {
+            Level.text = lvl.ToString();
+            Hp.text = hp.ToString() + " / " + Maxhp.ToString();
+        }
     }
 }

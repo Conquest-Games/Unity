@@ -10979,6 +10979,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160a82c9a501146d69e6f6254168f190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lvl: 0
+  Level: {fileID: 0}
+  Hp: {fileID: 0}
 --- !u!114 &5151395361393621589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10991,6 +10994,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d23b4d592da4d22ad57e1954196428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lvl: 0
+  Level: {fileID: 0}
+  Hp: {fileID: 0}
 --- !u!114 &7919157147423774123
 MonoBehaviour:
   m_ObjectHideFlags: 0

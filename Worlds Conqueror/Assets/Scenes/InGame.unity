@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 14522988}
   - component: {fileID: 14522989}
   m_Layer: 0
-  m_Name: Prix2
+  m_Name: Prix2Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15000,7 +15000,7 @@ GameObject:
   - component: {fileID: 379014593}
   - component: {fileID: 379014594}
   m_Layer: 0
-  m_Name: Prix3
+  m_Name: Prix3Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30299,7 +30299,7 @@ GameObject:
   - component: {fileID: 791255206}
   - component: {fileID: 791255205}
   m_Layer: 0
-  m_Name: Prix1
+  m_Name: Prix1Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55713,7 +55713,7 @@ GameObject:
   - component: {fileID: 1503867537}
   - component: {fileID: 1503867536}
   m_Layer: 0
-  m_Name: Prix4
+  m_Name: Prix4Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63485,14 +63485,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InfantryLevel0: {fileID: 5573254144714132731, guid: 2d6a8a015b68a42d1a640d733bdfb302,
     type: 3}
-  InfantryLevel1: {fileID: 0}
-  InfantryLevel2: {fileID: 0}
-  InfantryLevel3: {fileID: 0}
+  InfantryLevel1: {fileID: 1532504682388841222, guid: 2ebc45433351a8c4a960d0e5c4d91aca,
+    type: 3}
+  InfantryLevel2: {fileID: 2360203639860210950, guid: 7af2ac273301dd24b9fb39a84a433e09,
+    type: 3}
+  InfantryLevel3: {fileID: 7147319496017396590, guid: 4c296f1fd57cdc145a4590c2bc87e614,
+    type: 3}
   ArcheryLevel0: {fileID: 905735713244970688, guid: 8a19c27ace106475f9beb9d51f143253,
     type: 3}
-  ArcheryLevel1: {fileID: 0}
-  ArcheryLevel2: {fileID: 0}
-  ArcheryLevel3: {fileID: 0}
+  ArcheryLevel1: {fileID: 2062016155645275910, guid: 6d86546aeec869444ab49c1bd2f85062,
+    type: 3}
+  ArcheryLevel2: {fileID: 1143666193440490228, guid: 221cd099c48ee554cacc09f62bd038d9,
+    type: 3}
+  ArcheryLevel3: {fileID: 1239062652447429566, guid: e3730480c82396642843b139d36efe38,
+    type: 3}
   CavaleryLevel0: {fileID: 0}
   CavaleryLevel1: {fileID: 0}
   CavaleryLevel2: {fileID: 0}

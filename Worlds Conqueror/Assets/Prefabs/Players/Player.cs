@@ -10,7 +10,7 @@ namespace Joueur
 
         #region Varriables
 
-        private static float or = 100;
+        private static float or = 0;
         private static float fer = 0;
         private static int incomeFer = 10;
         private static int incomeOr = 50;
@@ -74,11 +74,18 @@ namespace Joueur
             return (true, "");
         }
 
+        private void Reset()
+        {
+            or = 100;
+            fer = 0;
+        }
+
         #endregion
 
         // Start is called before the first frame update
         void Start()
         {
+            Reset();
             InvokeRepeating("AddIncome", 1f, 0.05f);
 
             #region Text update
