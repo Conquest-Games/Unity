@@ -386,6 +386,7 @@
             </e>
             <e p="Tour D'archer" t="Include">
               <e p="Arow.cs" t="Include" />
+              <e p="CaptureScript.cs" t="Include" />
               <e p="TourDarcherScript.cs" t="Include" />
             </e>
             <e p="Villes" t="Include">
@@ -410,6 +411,7 @@
               <e p="Cavalry.cs" t="Include" />
             </e>
             <e p="Infantry" t="Include">
+              <e p="CaCScript.cs" t="Include" />
               <e p="CombatScript.cs" t="Include" />
               <e p="Infantry.cs" t="Include" />
             </e>

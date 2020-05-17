@@ -6,6 +6,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using Photon.Realtime;
+using UnityEditor.SceneManagement;
 using WorldConqueror;
 
 namespace WorldConqueror
@@ -13,6 +14,7 @@ namespace WorldConqueror
 
     public class BlueToGreen : MonoBehaviour
     {
+        public bool fight = false;
         public Unit ThisOne;
         private void Start()
         {
@@ -34,7 +36,8 @@ namespace WorldConqueror
         // Update is called once per frame
         void Update()
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
+            if (!fight)
+                transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
             if (transform.position.x > 138 && transform.position.z < -130)
             {
                 Destroy(gameObject);

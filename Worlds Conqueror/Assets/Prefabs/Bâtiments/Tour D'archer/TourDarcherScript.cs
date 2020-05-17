@@ -93,7 +93,9 @@ namespace Building
 
         void Shoot()
         {
-            GameObject arrowGO = (GameObject)Instantiate(arrow, firePoint.position, firePoint.rotation);
+            //pour instantier et que cela soit visible par tous, faut utiliser Photon.PUN.PhotonNetwork.instantiate
+            //et que l'objet en question soit dans le dossier Ressources de photonUnityNetworking
+            GameObject arrowGO = Instantiate(arrow, firePoint.position, firePoint.rotation);
             Arow arow = arrowGO.GetComponent<Arow>();
 
             if (arow != null)

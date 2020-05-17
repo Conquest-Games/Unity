@@ -39,7 +39,7 @@ namespace WorldConqueror
             int siegeWeapon = UnitStats.GetPriceUpgrade(
                 UnitStats.SolderType.SiegeWeapon, UnitStats.GetLevel(
                     UnitStats.SolderType.SiegeWeapon));
-
+/*
             if (infantry == -1)
                 priceUpgradeInfantry.text = "MAX";
             else
@@ -59,7 +59,7 @@ namespace WorldConqueror
                 priceUpgradeSiegeWeapon.text = "MAX";
             else
                 priceUpgradeSiegeWeapon.text = siegeWeapon.ToString();
-
+*/ //cause trop de messages d'erreurs
 
             priceSpawnInfantry.text = UnitStats.GetPrice(UnitStats.SolderType.Infantry).ToString();
             priceSpawnArchery.text = UnitStats.GetPrice(UnitStats.SolderType.Archery).ToString();
