@@ -7,17 +7,8 @@ namespace WorldConqueror
 {
     public class SiegeWeapon : Unit
     {
-        #region Attributs
-        
-        private static int[] da = {30, 60, 90};
-        private static int[] hp = {15, 30, 50};
-        private static int sp = 5;
-        protected int lvl; 
-        
-        #endregion
-
         public SiegeWeapon(PunTeams.Team team)
-            : base(SoldierType.Pathfinder, team, da[0], hp[0], sp, 0)
+            : base(SoldierType.SiegeWeapon, team)
         {
             
         }

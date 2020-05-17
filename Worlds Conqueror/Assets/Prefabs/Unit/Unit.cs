@@ -11,10 +11,11 @@ namespace WorldConqueror
         
         #region Attributs
 
-        private int damage;
-        private int hp;
-        private int speed;
-        private int lvl; 
+        private int damage = 0;
+        private int hp = 0;
+        private float speed = 0f;
+        private float attackSpeed = 1f;
+        public int lvl; 
         private SoldierType type;
         private PunTeams.Team team;
         private bool isDead;
@@ -29,32 +30,82 @@ namespace WorldConqueror
             Blue, Red, Yellow, Green
         }
 
-        public SoldierType Type
-        {
-            get { return type; }
-        }
+
+
         public PunTeams.Team Team
         {
             get { return team; }
         }
 
-        public int Speed => speed;
+        public float Speed => speed;
 
         public int UnitDamage => damage;
 
         #endregion
 
+        #region Stats
+
+        static int[] InfantryDommage = { 10, 15, 20, 30 };
+        static int[] ArcheryDommage = { 20, 30, 40, 60 };
+        static int[] CavaleryDommage = { 10, 15, 20, 30 };
+        static int[] SiegeWeaponDommage = { 50, 100, 150, 200 };
+
+        static float[] InfantryAttackSpeed = { 1.6f, 1.4f, 1.2f, 1f };
+        static float[] ArcheryAttackSpeed = { 1.5f, 1.4f, 1.3f, 1.2f };
+        static float[] CavaleryAttackSpeed = { 0.7f, 0.6f, 0.5f, 0.4f };
+        static float[] SiegeWeaponAttackSpeed = { 10f, 9f, 8f, 7f };
+
+        static float[] InfantrySpeed = { 1.5f, 1.75f, 2f, 2.5f };
+        static float[] ArcherySpeed = { 1.5f, 1.75f, 2f, 2.5f };
+        static float[] CavalerySpeed = { 3.5f, 4f, 4.5f, 5.5f };
+        static float[] SiegeWeaponSpeed = { 1f, 1.2f, 1.3f, 1.5f };
+
+        static int[] InfantryHeal = { 50, 65, 80, 100 };
+        static int[] ArcheryHeal = { 25, 30, 35, 40 };
+        static int[] CavaleryHeal = { 35, 45, 55, 75 };
+        static int[] SiegeWeaponHeal = { 50, 100, 150, 200 };
+
+        #endregion
+
         #region truc a modifier
 
-        public Unit(SoldierType type,PunTeams.Team team, int damage, int hp, int speed, int lvl )
+        public Unit(SoldierType type,PunTeams.Team team)
         {
             this.type = type;
             this.team = team;
-            this.damage = damage;
-            this.hp = hp;
-            this.speed = speed;
-            this.lvl = lvl;
             isDead = false;
+
+
+            switch (type)
+            {
+                case (SoldierType.Infantry):
+                    this.damage = InfantryDommage[lvl];
+                    this.hp = InfantryHeal[lvl];
+                    this.attackSpeed = InfantryAttackSpeed[lvl];
+                    this.speed = InfantrySpeed[lvl];
+                    break;
+                case (SoldierType.Archer):
+                    this.damage = ArcheryDommage[lvl];
+                    this.hp = ArcheryHeal[lvl];
+                    this.attackSpeed = ArcheryAttackSpeed[lvl];
+                    this.speed = ArcherySpeed[lvl];
+                    break;
+                case (SoldierType.Cavalry):
+                    this.damage = CavaleryDommage[lvl];
+                    this.hp = CavaleryHeal[lvl];
+                    this.attackSpeed = CavaleryAttackSpeed[lvl];
+                    this.speed = CavalerySpeed[lvl];
+                    break;
+                case (SoldierType.SiegeWeapon):
+                    this.damage = SiegeWeaponDommage[lvl];
+                    this.hp = SiegeWeaponHeal[lvl];
+                    this.attackSpeed = SiegeWeaponAttackSpeed[lvl];
+                    this.speed = SiegeWeaponSpeed[lvl];
+                    break;
+                default:
+                    return;
+
+            }
         }
 
         public void MoveRight()

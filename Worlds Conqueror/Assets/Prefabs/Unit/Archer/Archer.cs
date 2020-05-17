@@ -7,17 +7,8 @@ namespace WorldConqueror
 {
     public class Archer : Unit
     {
-        #region Attributs
-
-        private static int[] da = {15, 20, 25};
-        private static int[] hp = {5, 10, 15};
-        private static int sp = 5;
-        protected int lvl;
-
-        #endregion
-
         public Archer(PunTeams.Team team)
-            : base(SoldierType.Pathfinder, team, da[0], hp[0], sp, 0)
+            : base(SoldierType.Pathfinder, team)
         {
 
         }

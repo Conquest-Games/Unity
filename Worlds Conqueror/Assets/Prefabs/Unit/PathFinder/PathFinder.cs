@@ -8,17 +8,8 @@ namespace WorldConqueror
 {
     public class PathFinder : Unit
     {
-        #region Attributs
-        
-        private static int[] da = {10, 15, 20};
-        private static int[] inithp = {5, 10, 15};
-        private static int sp = 10;
-        protected int lvl;
-        
-        #endregion
-
         public PathFinder(PunTeams.Team team)
-        : base(SoldierType.Pathfinder, team, da[0], inithp[0], sp, 0)
+        : base(SoldierType.Pathfinder, team)
         {
             
         }
