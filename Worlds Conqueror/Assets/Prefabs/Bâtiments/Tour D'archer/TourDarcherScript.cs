@@ -8,6 +8,7 @@ namespace Building
     {
         private Transform target;
         public float range = 15f;
+        public int dammage = 40;
 
         public float fireRate = 1f;
         private float fireCountdown = 0f;
@@ -126,7 +127,7 @@ namespace Building
 
             if (arow != null)
             {
-                arow.Search(target);
+                arow.Search(target, dammage);
             }
         }
 

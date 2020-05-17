@@ -28,7 +28,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de03f7314949dc489cf98f8a92e2fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
+  range: 25
+  dammage: 40
   fireRate: 1
   firePoint: {fileID: 2318334555125904814}
   arrow: {fileID: 6991464157184956881, guid: 8db24ae45c5d1ce41ad36eb65e40fc31, type: 3}

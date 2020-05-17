@@ -6,7 +6,8 @@ public class RangeScript : MonoBehaviour
 {
     private Transform target;
     public float range = 15f;
-
+    public int dammage = 40;
+    
     public float fireRate = 1f;
     private float fireCountdown = 0f;
 
@@ -127,7 +128,7 @@ public class RangeScript : MonoBehaviour
 
         if (arow != null)
         {
-            arow.Search(target);
+            arow.Search(target, dammage);
         }
     }
 

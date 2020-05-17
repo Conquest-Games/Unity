@@ -5,11 +5,13 @@ using UnityEngine;
 public class Arow : MonoBehaviour
 {
     private Transform target;
+    private int dmg;
     public float speed = 70f;
 
-    public void Search(Transform _target)
+    public void Search(Transform _target, int dammage)
     {
         target = _target;
+        dmg = dammage;
     }
 
     // Update is called once per frame
@@ -43,7 +45,7 @@ public class Arow : MonoBehaviour
         CombatScript e = target.GetComponent<CombatScript>();
         if (e != null)
         {
-            e.TakeDammage(40);
+            e.TakeDammage(dmg);
         }
     }
 }

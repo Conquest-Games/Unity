@@ -10,6 +10,7 @@ namespace Building
         public int life = 20;
         private Transform target;
         public float range = 60f;
+        public int dammage = 50;
 
         public float fireRate = 1f;
         private float fireCountdown = 0f;
@@ -113,7 +114,7 @@ namespace Building
 
             if (bulet != null)
             {
-                bulet.Search(target);
+                bulet.Search(target, dammage);
             }
         }
 
