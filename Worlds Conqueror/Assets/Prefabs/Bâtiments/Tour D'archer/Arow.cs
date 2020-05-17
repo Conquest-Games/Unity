@@ -31,6 +31,9 @@ public class Arow : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+        
+        //rotation
+        transform.LookAt(target);
     }
     
     void HitTarget()

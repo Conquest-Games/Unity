@@ -22,6 +22,11 @@ PrefabInstance:
       propertyPath: m_SynchronizeVelocity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1329247311962890644, guid: d6200883a72bbf341a05704de7548171,
+        type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2649060871061146116, guid: d6200883a72bbf341a05704de7548171,
         type: 3}
       propertyPath: m_LocalPosition.x

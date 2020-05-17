@@ -164,7 +164,7 @@ public class CaCScript : MonoBehaviour
 		CaptureScript ee = targetbat.GetComponent<CaptureScript>();
 		if (ee != null)
 		{
-			ee.TakeDammag(100, "Blue");
+			ee.TakeDammag(100, transform.tag);
 		}
 	}
 

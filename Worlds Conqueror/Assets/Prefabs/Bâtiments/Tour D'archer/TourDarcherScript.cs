@@ -23,11 +23,37 @@ namespace Building
         
         void UpdateTarget()
         {
-            GameObject[] ennemiesG = GameObject.FindGameObjectsWithTag("Green");
-            GameObject[] ennemiesR = GameObject.FindGameObjectsWithTag("Red");
-            GameObject[] ennemiesY = GameObject.FindGameObjectsWithTag("Yellow");
-			GameObject[] ennemiesB = GameObject.FindGameObjectsWithTag("Blue");
-            GameObject[] ennemies = new GameObject[ennemiesG.Length + ennemiesR.Length + ennemiesY.Length + ennemiesB.Length];
+            int l = 0;
+            GameObject[] ennemiesG = new GameObject[0];
+            GameObject[] ennemiesR = new GameObject[0];
+            GameObject[] ennemiesB = new GameObject[0];
+            GameObject[] ennemiesY = new GameObject[0];
+            if (transform.tag != "Green")
+            {
+                GameObject[] ennemiesG2 = GameObject.FindGameObjectsWithTag("Green");
+                ennemiesG = ennemiesG2;
+                l += ennemiesG.Length;
+            }
+            if (transform.tag != "Red")
+            {
+                GameObject[] ennemiesR2 = GameObject.FindGameObjectsWithTag("Red");
+                ennemiesR = ennemiesR2;
+                l += ennemiesR.Length;
+            }
+            if (transform.tag != "Yellow")
+            {
+                GameObject[] ennemiesY2 = GameObject.FindGameObjectsWithTag("Yellow");
+                ennemiesY = ennemiesY2;
+                l += ennemiesY.Length;
+            }
+            if (transform.tag != "Blue")
+            {
+                GameObject[] ennemiesB2 = GameObject.FindGameObjectsWithTag("Blue");
+                ennemiesB = ennemiesB2;
+                l += ennemiesB.Length;
+            }
+
+            GameObject[] ennemies = new GameObject[l];
 
             int c = 0;
             for (int i = 0; i < ennemiesG.Length; i++)
@@ -45,9 +71,9 @@ namespace Building
                 ennemies[c] = ennemiesY[k];
                 c += 1;
             }
-			for (int l = 0; l < ennemiesB.Length; l++)
+			for (int m = 0; m < ennemiesB.Length; m++)
 			{
-				ennemies[c] = ennemiesB[l];
+				ennemies[c] = ennemiesB[m];
 				c += 1;
 			}
 
