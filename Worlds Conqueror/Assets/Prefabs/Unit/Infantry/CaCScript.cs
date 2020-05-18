@@ -7,6 +7,7 @@ public class CaCScript : MonoBehaviour
 	private Transform target;
 	private Transform targetbat;
     public float range = 3f;
+    public int dmg = 10;
 
     public float fireRate = 1f;
     private float fireCountdown = 0f;
@@ -153,7 +154,7 @@ public class CaCScript : MonoBehaviour
         CombatScript e = target.GetComponent<CombatScript>();
         if (e != null)
         {
-            e.TakeDammage(50);
+            e.TakeDammage(dmg);
         }
     }
 
@@ -162,7 +163,7 @@ public class CaCScript : MonoBehaviour
 		CaptureScript eee = target.GetComponent<CaptureScript>();
 		if (eee != null)
 		{
-			eee.TakeDammag(50, transform.tag);
+			eee.TakeDammag(dmg, transform.tag);
 		}
 	}
 
@@ -171,7 +172,7 @@ public class CaCScript : MonoBehaviour
 		CaptureScript ee = targetbat.GetComponent<CaptureScript>();
 		if (ee != null)
 		{
-			ee.TakeDammag(50, transform.tag);
+			ee.TakeDammag(dmg, transform.tag);
 		}
 	}
 	

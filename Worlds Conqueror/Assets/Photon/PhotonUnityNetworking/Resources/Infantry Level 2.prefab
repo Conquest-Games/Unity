@@ -72,6 +72,11 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6148637961890223525, guid: 2d6a8a015b68a42d1a640d733bdfb302,
+        type: 3}
+      propertyPath: dmg
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7562505317773443224, guid: 2d6a8a015b68a42d1a640d733bdfb302,
         type: 3}
       propertyPath: lvl

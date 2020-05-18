@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8857308590833940213, guid: 8a19c27ace106475f9beb9d51f143253,
+        type: 3}
+      propertyPath: dammage
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: -3043818115880312480, guid: 8a19c27ace106475f9beb9d51f143253,
         type: 3}
       propertyPath: viewIdField
@@ -20,7 +25,7 @@ PrefabInstance:
     - target: {fileID: 905735713244970688, guid: 8a19c27ace106475f9beb9d51f143253,
         type: 3}
       propertyPath: m_Name
-      value: Archer Level 3 Variant
+      value: Archer Level 3
       objectReference: {fileID: 0}
     - target: {fileID: 4301976914843637985, guid: 8a19c27ace106475f9beb9d51f143253,
         type: 3}

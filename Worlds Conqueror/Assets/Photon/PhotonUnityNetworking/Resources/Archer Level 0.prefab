@@ -29,7 +29,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 30
-  dammage: 40
+  dammage: 20
   fireRate: 1
   firePoint: {fileID: 2318334555125904814}
   arrow: {fileID: 6991464157184956881, guid: 8db24ae45c5d1ce41ad36eb65e40fc31, type: 3}
