@@ -22,12 +22,10 @@ namespace WorldConqueror
         private PunTeams.Team team;
         private bool isDead;
 
-        public Text Level;
-        public Text Hp;
 
         public enum SoldierType
         {
-            Pathfinder, Infantry, Archer, Cavalry, SiegeWeapon
+            Ninja, Infantry, Archer, Cavalry, SiegeWeapon
         }
 
         public enum SoldierTeam
@@ -35,7 +33,7 @@ namespace WorldConqueror
             Blue, Red, Yellow, Green
         }
 
-
+        public GameObject Level;
 
         public PunTeams.Team Team
         {
@@ -51,24 +49,34 @@ namespace WorldConqueror
         #region Stats
 
         static int[] InfantryDommage = { 10, 15, 20, 30 };
-        static int[] ArcheryDommage = { 20, 30, 40, 60 };
+        static int[] ArcheryDommage = { 15, 25, 35, 50 };
         static int[] CavaleryDommage = { 10, 15, 20, 30 };
         static int[] SiegeWeaponDommage = { 50, 100, 150, 200 };
+        static int[] NinjaDommage = { 5, 10, 15, 20 };
+
+        static int InfantryRange = 10;
+        static int ArcheryRange = 30;
+        static int CavaleryRange = 15;
+        static int SiegeWeaponRange = 45;
+        static int NinjaRange = 10;
 
         static float[] InfantryAttackSpeed = { 1.6f, 1.4f, 1.2f, 1f };
         static float[] ArcheryAttackSpeed = { 1.5f, 1.4f, 1.3f, 1.2f };
         static float[] CavaleryAttackSpeed = { 0.7f, 0.6f, 0.5f, 0.4f };
         static float[] SiegeWeaponAttackSpeed = { 10f, 9f, 8f, 7f };
+        static float[] NinjaAttackSpeed = { 0.7f, 0.6f, 0.5f, 0.4f };
 
         static float[] InfantrySpeed = { 5f, 6f, 7f, 8f };
         static float[] ArcherySpeed = { 5f, 6f, 7f, 8f };
         static float[] CavalerySpeed = { 8f, 9f, 10f, 11f };
         static float[] SiegeWeaponSpeed = { 2.5f, 3f, 3.5f, 4f };
+        static float[] NinjaSpeed = { 6.5f, 7.5f, 8.5f, 10f };
 
         static int[] InfantryHeal = { 50, 65, 80, 100 };
         static int[] ArcheryHeal = { 25, 30, 35, 40 };
         static int[] CavaleryHeal = { 35, 45, 55, 75 };
         static int[] SiegeWeaponHeal = { 50, 100, 150, 200 };
+        static int[] NinjaHeal = { 30, 35, 40, 50 };
 
         #endregion
 
@@ -109,6 +117,13 @@ namespace WorldConqueror
                     this.attackSpeed = SiegeWeaponAttackSpeed[lvl];
                     this.speed = SiegeWeaponSpeed[lvl];
                     break;
+                case (SoldierType.Ninja):
+                    this.damage = NinjaDommage[lvl];
+                    this.hp = NinjaHeal[lvl];
+                    this.Maxhp = NinjaHeal[lvl];
+                    this.attackSpeed = NinjaAttackSpeed[lvl];
+                    this.speed = NinjaSpeed[lvl];
+                    break;
                 default:
                     return;
 
@@ -133,7 +148,7 @@ namespace WorldConqueror
 
         public void Attack(Unit unit, Building.Building building)
         {
-            if (type == SoldierType.Pathfinder)
+            if (type == SoldierType.Ninja)
             {
                 if (building == null)
                 {
@@ -183,32 +198,27 @@ namespace WorldConqueror
             {
                 case PunTeams.Team.red:
                     {
-                        Level.color = Color.red;
-                        Hp.color = Color.red;
+                        Level.GetComponent<TextMesh>().color = Color.red;
                         break;
                     }
                 case PunTeams.Team.yellow:
                     {
-                        Level.color = Color.yellow;
-                        Hp.color = Color.yellow;
+                        Level.GetComponent<TextMesh>().color = Color.yellow;
                         break;
                     }
                 case PunTeams.Team.green:
                     {
-                        Level.color = Color.green;
-                        Hp.color = Color.green;
+                        Level.GetComponent<TextMesh>().color = Color.green;
                         break;
                     }
-                case PunTeams.Team.blue:
+                default:
                     {
-                        Level.color = Color.blue;
-                        Hp.color = Color.blue;
+                        Level.GetComponent<TextMesh>().color = Color.cyan;
                         break;
                     }
             }
 
-            Level.text = lvl.ToString();
-            Hp.text = hp.ToString() + " / " + Maxhp.ToString();
+            Level.GetComponent<TextMesh>().text = lvl.ToString() + ": " + hp.ToString() + " / " + Maxhp.ToString();
         }
 
         void Start()
@@ -218,8 +228,7 @@ namespace WorldConqueror
 
         void Update()
         {
-            //Level.text = lvl.ToString();
-            //Hp.text = hp.ToString() + " / " + Maxhp.ToString();
+            Level.GetComponent<TextMesh>().text = lvl.ToString() + ": " + hp.ToString() + " / " + Maxhp.ToString();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace WorldConqueror
     public class Archer : Unit
     {
         public Archer(PunTeams.Team team)
-            : base(SoldierType.Pathfinder, team)
+            : base(SoldierType.Ninja, team)
         {
 
         }

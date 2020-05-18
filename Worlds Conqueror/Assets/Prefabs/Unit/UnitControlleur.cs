@@ -14,16 +14,19 @@ namespace WorldConqueror
         public Text priceUpgradeArchery;
         public Text priceUpgradeCavalery;
         public Text priceUpgradeSiegeWeapon;
+        public Text priceUpgradeNinja;
 
         public Text priceSpawnInfantry;
         public Text priceSpawnArchery;
         public Text priceSpawnCavalery;
         public Text priceSpawnSiegeWeapon;
+        public Text priceSpawnNinja;
 
         public GameObject pieceInfantry;
         public GameObject pieceArchery;
         public GameObject pieceCavalery;
         public GameObject pieceSiegeWeapon;
+        public GameObject pieceNinja;
 
         private void UpdateTexte()
         {
@@ -39,6 +42,9 @@ namespace WorldConqueror
             int siegeWeapon = UnitStats.GetPriceUpgrade(
                 UnitStats.SolderType.SiegeWeapon, UnitStats.GetLevel(
                     UnitStats.SolderType.SiegeWeapon));
+            int ninja = UnitStats.GetPriceUpgrade(
+                UnitStats.SolderType.Ninja, UnitStats.GetLevel(
+                    UnitStats.SolderType.Ninja));
 
             if (infantry == -1)
                 priceUpgradeInfantry.text = "MAX";
@@ -60,11 +66,17 @@ namespace WorldConqueror
             else
                 priceUpgradeSiegeWeapon.text = siegeWeapon.ToString();
 
+            if (ninja == -1)
+                priceUpgradeNinja.text = "MAX";
+            else
+                priceUpgradeNinja.text = ninja.ToString();
+
 
             priceSpawnInfantry.text = UnitStats.GetPrice(UnitStats.SolderType.Infantry).ToString();
             priceSpawnArchery.text = UnitStats.GetPrice(UnitStats.SolderType.Archery).ToString();
             priceSpawnCavalery.text = UnitStats.GetPrice(UnitStats.SolderType.Cavalery).ToString();
             priceSpawnSiegeWeapon.text = UnitStats.GetPrice(UnitStats.SolderType.SiegeWeapon).ToString();
+            priceSpawnNinja.text = UnitStats.GetPrice(UnitStats.SolderType.Ninja).ToString();
         }
 
         #endregion
@@ -92,6 +104,11 @@ namespace WorldConqueror
                 pieceSiegeWeapon.SetActive(false);
             else
                 pieceSiegeWeapon.SetActive(true);
+
+            if (priceUpgradeNinja.text == "MAX")
+                pieceNinja.SetActive(false);
+            else
+                pieceNinja.SetActive(true);
 
         }
 
@@ -130,6 +147,11 @@ namespace WorldConqueror
             Upgrade(UnitStats.SolderType.SiegeWeapon);
         }
 
+        public void UpgradeNinja()
+        {
+            Upgrade(UnitStats.SolderType.Ninja);
+        }
+
         #endregion
 
         // Start is called before the first frame update
@@ -142,8 +164,8 @@ namespace WorldConqueror
         // Update is called once per frame
         void Update()
         {
-            //UpdateTexte();
-            //UpdatePiece();
+            UpdateTexte();
+            UpdatePiece();
         }
     }
 }

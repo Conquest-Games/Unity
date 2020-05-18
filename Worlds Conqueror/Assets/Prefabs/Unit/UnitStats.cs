@@ -8,7 +8,7 @@ namespace WorldConqueror
     {
         public enum SolderType
         {
-            Infantry, Archery, Cavalery, SiegeWeapon
+            Infantry, Archery, Cavalery, SiegeWeapon, Ninja
         }
 
         #region Prix
@@ -17,11 +17,13 @@ namespace WorldConqueror
         public static readonly int[] ArcheryPrice = { 30, 40, 50, 60 };
         public static readonly int[] CavaleryPrice = { 50, 65, 80, 100 };
         public static readonly int[] SiegeWeaponPrice = { 50, 75, 100, 125 };
+        public static readonly int[] NinjaPrice = { 10, 15, 20, 30 };
 
         public static readonly int[] InfantryPriceUpgrade = { 100, 200, 500 };
         public static readonly int[] ArcheryPriceUpgrade = { 100, 200, 500 };
         public static readonly int[] CavaleryPriceUpgrade = { 100, 200, 500 };
         public static readonly int[] SiegeWeaponPriceUpgrade = { 100, 200, 500 };
+        public static readonly int[] NinjaPriceUpgrade = { 100, 200, 500 };
 
         #endregion
 
@@ -31,6 +33,7 @@ namespace WorldConqueror
         static int ArcheryLevel = 0;
         static int CavaleryLevel = 0;
         static int SiegeWeaponLevel = 0;
+        static int NinjaLevel = 0;
 
         #endregion
 
@@ -64,6 +67,13 @@ namespace WorldConqueror
                     if (level < 0)
                         return SiegeWeaponPrice[0];
                     return SiegeWeaponPrice[level];
+                case SolderType.Ninja:
+                    if (level >= 4)
+                        return NinjaPrice[3];
+                    if (level < 0)
+                        return NinjaPrice[0];
+                    return NinjaPrice[level];
+
                 default:
                     return 0;
             }
@@ -81,6 +91,8 @@ namespace WorldConqueror
                     return CavaleryLevel;
                 case SolderType.SiegeWeapon:
                     return SiegeWeaponLevel;
+                case SolderType.Ninja:
+                    return NinjaLevel;
                 default:
                     return 0;
             }
@@ -100,6 +112,8 @@ namespace WorldConqueror
                     return CavaleryPriceUpgrade[level];
                 case SolderType.SiegeWeapon:
                     return SiegeWeaponPriceUpgrade[level];
+                case SolderType.Ninja:
+                    return NinjaPriceUpgrade[level];
                 default:
                     return 0;
             }
@@ -120,6 +134,9 @@ namespace WorldConqueror
                     return;
                 case SolderType.SiegeWeapon:
                     SiegeWeaponLevel++;
+                    return;
+                case SolderType.Ninja:
+                    NinjaLevel++;
                     return;
                 default:
                     return;

@@ -101,7 +101,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Level
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1151258645040591578}
     - target: {fileID: 5776609509583506257, guid: d6200883a72bbf341a05704de7548171,
         type: 3}
       propertyPath: Hp
@@ -254,3 +254,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6200883a72bbf341a05704de7548171, type: 3}
+--- !u!1 &1151258645040591578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3973264048522279187, guid: d6200883a72bbf341a05704de7548171,
+    type: 3}
+  m_PrefabInstance: {fileID: 4096526589250882505}
+  m_PrefabAsset: {fileID: 0}

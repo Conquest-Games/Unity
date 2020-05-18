@@ -23,8 +23,8 @@ namespace WorldConqueror
                 ThisOne = new Cavalry(PhotonNetwork.LocalPlayer.GetTeam());
             else if(nam == "SiegeWeapon")
                 ThisOne = new SiegeWeapon(PhotonNetwork.LocalPlayer.GetTeam());
-            else if(nam == "PathFinder")
-                ThisOne = new PathFinder(PhotonNetwork.LocalPlayer.GetTeam());
+            else if(nam == "Ninja")
+                ThisOne = new Ninja(PhotonNetwork.LocalPlayer.GetTeam());
             else
                 ThisOne = new Infantry(PhotonNetwork.LocalPlayer.GetTeam());
 

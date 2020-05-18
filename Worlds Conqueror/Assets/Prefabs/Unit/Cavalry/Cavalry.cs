@@ -8,7 +8,7 @@ namespace WorldConqueror
     public class Cavalry : Unit
     {
         public Cavalry(PunTeams.Team team)
-            : base(SoldierType.Pathfinder, team)
+            : base(SoldierType.Cavalry, team)
         {
 
         }

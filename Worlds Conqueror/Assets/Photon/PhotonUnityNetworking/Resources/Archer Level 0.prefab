@@ -99,7 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvl: 0
   Level: {fileID: 0}
-  Hp: {fileID: 0}
 --- !u!114 &-1066604582987559531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvl: 0
   Level: {fileID: 0}
-  Hp: {fileID: 0}
 --- !u!1001 &3660539204553522714
 PrefabInstance:
   m_ObjectHideFlags: 0

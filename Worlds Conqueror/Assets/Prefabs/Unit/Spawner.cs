@@ -15,6 +15,7 @@ namespace WorldConqueror
         private int ArcheryLevel = UnitStats.GetLevel(UnitStats.SolderType.Archery);
         private int CavaleryLevel = UnitStats.GetLevel(UnitStats.SolderType.Cavalery);
         private int SiegeWeaponLevel = UnitStats.GetLevel(UnitStats.SolderType.SiegeWeapon);
+        private int NinjaLevel = UnitStats.GetLevel(UnitStats.SolderType.Ninja);
 
         public GameObject InfantryLevel0;
         public GameObject InfantryLevel1;
@@ -36,10 +37,16 @@ namespace WorldConqueror
         public GameObject SiegeWeaponLevel2;
         public GameObject SiegeWeaponLevel3;
 
+        public GameObject NinjaLevel0;
+        public GameObject NinjaLevel1;
+        public GameObject NinjaLevel2;
+        public GameObject NinjaLevel3;
+
         private GameObject Infantry;
         private GameObject Archery;
         private GameObject Cavalery;
         private GameObject SiegeWeapon;
+        private GameObject Ninja;
 
         public void ActualiseLevel()
         {
@@ -107,6 +114,23 @@ namespace WorldConqueror
                     break;
                 case (3):
                     SiegeWeapon = SiegeWeaponLevel3;
+                    break;
+                default:
+                    break;
+            }
+            switch (NinjaLevel)
+            {
+                case (0):
+                    Ninja = NinjaLevel0;
+                    break;
+                case (1):
+                    Ninja = NinjaLevel1;
+                    break;
+                case (2):
+                    Ninja = NinjaLevel2;
+                    break;
+                case (3):
+                    Ninja = NinjaLevel3;
                     break;
                 default:
                     break;
@@ -611,12 +635,137 @@ namespace WorldConqueror
 
         #endregion
 
+        #region Ninja
+
+        public void SpawnNinjaLeft()
+        {
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Ninja));
+            if (!achete)
+                return;
+            switch (PhotonNetwork.LocalPlayer.GetTeam())
+            {
+                case PunTeams.Team.red:
+                    {
+                        Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
+                        GameObject TheOner = PhotonNetwork.Instantiate(Ninja.name, spawnPosr, Quaternion.identity);
+                        TheOner.AddComponent<RedToYellow>();
+                        TheOner.tag = "Red";
+                        break;
+                    }
+                case PunTeams.Team.yellow:
+                    {
+                        Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
+                        GameObject TheOney = PhotonNetwork.Instantiate(Ninja.name, spawnPosy, Quaternion.identity);
+                        TheOney.AddComponent<YellowToGreen>();
+                        TheOney.tag = "Yellow";
+                        break;
+                    }
+                case PunTeams.Team.green:
+                    {
+                        Vector3 spawnPosg = new Vector3(138.4f, 0, -150);
+                        GameObject TheOneg = PhotonNetwork.Instantiate(Ninja.name, spawnPosg, Quaternion.identity);
+                        TheOneg.AddComponent<GreenToBlue>();
+                        TheOneg.tag = "Green";
+                        break;
+                    }
+                default:
+                    Vector3 spawnPos = new Vector3(-138.4f, 0, -150);
+                    GameObject TheOne = PhotonNetwork.Instantiate(Ninja.name, spawnPos, Quaternion.identity);
+                    TheOne.AddComponent<BlueToRed>();
+                    TheOne.tag = "Blue";
+                    break;
+            }
+        }
+
+        public void SpawnNinjaRight()
+        {
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Ninja));
+            if (!achete)
+                return;
+            switch (PhotonNetwork.LocalPlayer.GetTeam())
+            {
+                case PunTeams.Team.red:
+                    {
+                        Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
+                        GameObject TheOner = PhotonNetwork.Instantiate(Ninja.name, spawnPosr, Quaternion.identity);
+                        TheOner.AddComponent<RedToBlue>();
+                        TheOner.tag = "Red";
+                        break;
+                    }
+                case PunTeams.Team.yellow:
+                    {
+                        Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
+                        GameObject TheOney = PhotonNetwork.Instantiate(Ninja.name, spawnPosy, Quaternion.identity);
+                        TheOney.AddComponent<YellowToRed>();
+                        TheOney.tag = "Yellow";
+                        break;
+                    }
+                case PunTeams.Team.green:
+                    {
+                        Vector3 spawnPosg = new Vector3(138.4f, 0, -150);
+                        GameObject TheOneg = PhotonNetwork.Instantiate(Infantry.name, spawnPosg, Quaternion.identity);
+                        TheOneg.AddComponent<GreenToYellow>();
+                        TheOneg.tag = "Green";
+                        break;
+                    }
+                default:
+                    Vector3 spawnPos = new Vector3(-138.4f, 0, -150);
+                    GameObject TheOne = PhotonNetwork.Instantiate(Ninja.name, spawnPos, Quaternion.identity);
+                    TheOne.AddComponent<BlueToGreen>();
+                    TheOne.tag = "Blue";
+                    break;
+            }
+        }
+
+        public void SpawnNinjaForward()
+        {
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Ninja));
+            if (!achete)
+                return;
+            switch (PhotonNetwork.LocalPlayer.GetTeam())
+            {
+                case PunTeams.Team.red:
+                    {
+                        Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
+                        GameObject TheOner = PhotonNetwork.Instantiate(Ninja.name, spawnPosr, Quaternion.identity);
+                        TheOner.AddComponent<RedToGreen>();
+                        TheOner.tag = "Red";
+                        break;
+                    }
+                case PunTeams.Team.yellow:
+                    {
+                        Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
+                        GameObject TheOney = PhotonNetwork.Instantiate(Ninja.name, spawnPosy, Quaternion.identity);
+                        TheOney.AddComponent<YellowToBlue>();
+                        TheOney.tag = "Yellow";
+                        break;
+                    }
+                case PunTeams.Team.green:
+                    {
+                        Vector3 spawnPosg = new Vector3(138.4f, 0, -150);
+                        GameObject TheOneg = PhotonNetwork.Instantiate(Ninja.name, spawnPosg, Quaternion.identity);
+                        TheOneg.AddComponent<GreenToRed>();
+                        TheOneg.tag = "Green";
+                        break;
+                    }
+                default:
+                    Vector3 spawnPos = new Vector3(-138.4f, 0, -150);
+                    GameObject TheOne = PhotonNetwork.Instantiate(Ninja.name, spawnPos, Quaternion.identity);
+                    TheOne.AddComponent<BlueToYellow>();
+                    TheOne.tag = "Blue";
+                    break;
+            }
+        }
+
+        #endregion
+
         void Start()
         {
             InfantryLevel = UnitStats.GetLevel(UnitStats.SolderType.Infantry);
             ArcheryLevel = UnitStats.GetLevel(UnitStats.SolderType.Archery);
             CavaleryLevel = UnitStats.GetLevel(UnitStats.SolderType.Cavalery);
             SiegeWeaponLevel = UnitStats.GetLevel(UnitStats.SolderType.SiegeWeapon);
+            NinjaLevel = UnitStats.GetLevel(UnitStats.SolderType.Ninja);
 
             ActualiseLevel();
         }
@@ -627,6 +776,7 @@ namespace WorldConqueror
             ArcheryLevel = UnitStats.GetLevel(UnitStats.SolderType.Archery);
             CavaleryLevel = UnitStats.GetLevel(UnitStats.SolderType.Cavalery);
             SiegeWeaponLevel = UnitStats.GetLevel(UnitStats.SolderType.SiegeWeapon);
+            NinjaLevel = UnitStats.GetLevel(UnitStats.SolderType.Ninja);
 
             ActualiseLevel();
         }
