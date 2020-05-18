@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 namespace Building
 {
@@ -109,7 +110,7 @@ namespace Building
 
         void Shoot()
         {
-            GameObject bulletGO = (GameObject) Instantiate(bullet, firePoint.position, firePoint.rotation);
+            GameObject bulletGO = (GameObject) PhotonNetwork.Instantiate(bullet.name, firePoint.position, firePoint.rotation);
             Bulet bulet = bulletGO.GetComponent<Bulet>();
 
             if (bulet != null)

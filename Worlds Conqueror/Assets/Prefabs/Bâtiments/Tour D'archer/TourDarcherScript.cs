@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 namespace Building
 {
@@ -120,9 +121,7 @@ namespace Building
 
         void Shoot()
         {
-            //pour instantier et que cela soit visible par tous, faut utiliser Photon.PUN.PhotonNetwork.instantiate
-            //et que l'objet en question soit dans le dossier Ressources de photonUnityNetworking
-            GameObject arrowGO = Instantiate(arrow, firePoint.position, firePoint.rotation);
+            GameObject arrowGO = PhotonNetwork.Instantiate(arrow.name, firePoint.position, firePoint.rotation);
             Arow arow = arrowGO.GetComponent<Arow>();
 
             if (arow != null)

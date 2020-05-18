@@ -139,8 +139,9 @@ public class CaCScript : MonoBehaviour
 	        if (targetbat != null)
 		        Capture();
 	        else if (target != null)
-		        Shoot();
-	        
+		        Shoot(); //rajouter un try pour pas une erreur quand c un batiment ou une unité
+				ShootBat();
+
 	        fireCountdown = 1 / fireRate;
         }
 
@@ -152,16 +153,25 @@ public class CaCScript : MonoBehaviour
         CombatScript e = target.GetComponent<CombatScript>();
         if (e != null)
         {
-            e.TakeDammage(100);
+            e.TakeDammage(50);
         }
     }
+
+	void ShootBat()
+	{
+		CaptureScript eee = target.GetComponent<CaptureScript>();
+		if (eee != null)
+		{
+			eee.TakeDammag(50, transform.tag);
+		}
+	}
 
 	void Capture()
 	{
 		CaptureScript ee = targetbat.GetComponent<CaptureScript>();
 		if (ee != null)
 		{
-			ee.TakeDammag(100, transform.tag);
+			ee.TakeDammag(50, transform.tag);
 		}
 	}
 	

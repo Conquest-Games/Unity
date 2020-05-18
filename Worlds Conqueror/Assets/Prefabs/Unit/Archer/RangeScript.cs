@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class RangeScript : MonoBehaviour
 {
@@ -142,10 +143,16 @@ public class RangeScript : MonoBehaviour
         if (fireCountdown <= 0f)
         {
             if (targetbat != null)
-                Capture();
+			{
+                ShootBat();
+				Capture();
+			}
             else if (target != null)
-                Shoot();
-	        
+			{
+                Shoot(); //rajouter un try pour pas une erreur quand c un batiment ou une unité
+			    ShootBat();
+			}
+		       
             fireCountdown = 1 / fireRate;
         }
 
@@ -154,9 +161,7 @@ public class RangeScript : MonoBehaviour
     
     void Shoot()
     {
-        //pour instantier et que cela soit visible par tous, faut utiliser Photon.PUN.PhotonNetwork.instantiate
-        //et que l'objet en question soit dans le dossier Ressources de photonUnityNetworking
-        GameObject arrowGO = Instantiate(arrow, firePoint.position, firePoint.rotation);
+        GameObject arrowGO = PhotonNetwork.Instantiate(arrow.name, firePoint.position, firePoint.rotation);
         Arow arow = arrowGO.GetComponent<Arow>();
 
         if (arow != null)
@@ -164,6 +169,17 @@ public class RangeScript : MonoBehaviour
             arow.Search(target, dammage);
         }
     }
+
+	void ShootBat()
+	{
+		GameObject arrowGO = PhotonNetwork.Instantiate(arrow.name, firePoint.position, firePoint.rotation);
+        Arow arow = arrowGO.GetComponent<Arow>();
+
+        if (arow != null)
+        {
+            arow.Search(target, dammage);
+        }
+	}
 
     void Capture()
     {

@@ -49,11 +49,17 @@ public class Arow : MonoBehaviour
     
     void HitTarget()
     {
-        Destroy(gameObject);
+        Destroy(gameObject); // try catch parsuqe sinon théo est pas content
         CombatScript e = target.GetComponent<CombatScript>();
         if (e != null)
         {
             e.TakeDammage(dmg);
         }
+		
+		CaptureScript eee = target.GetComponent<CaptureScript>();
+		if (eee != null)
+		{
+			eee.TakeDammag(50, transform.tag);
+		}
     }
 }
