@@ -28,6 +28,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de03f7314949dc489cf98f8a92e2fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetbat: {fileID: 0}
   range: 25
   dammage: 40
   fireRate: 1
@@ -98,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvl: 0
+  Level: {fileID: 0}
+  Hp: {fileID: 0}
 --- !u!114 &-1066604582987559531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvl: 0
+  Level: {fileID: 0}
+  Hp: {fileID: 0}
 --- !u!1001 &3660539204553522714
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -52,7 +52,7 @@ public class CaCScript : MonoBehaviour
 			ennemiesG = ennemiesG2;
 			l += ennemiesG.Length;
 		}
-		
+
 		GameObject[] ennemies = new GameObject[l];
 
         int c = 0;
@@ -76,8 +76,8 @@ public class CaCScript : MonoBehaviour
 			ennemies[c] = ennemiesB[m];
 			c += 1;
 		}
-		
-        float shortestDistance = Mathf.Infinity;
+
+		float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
         foreach (GameObject enemy in ennemies)
@@ -130,21 +130,18 @@ public class CaCScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target == null)
-            {
-                return;
-            }
-        
-        if (targetbat == null)
-        {
+        if (target == null && targetbat == null)
 	        return;
-        }
-            
+	    
+        
         if (fireCountdown <= 0f)
         {
-	        Shoot();
-	        Capture();
-            fireCountdown = 1 / fireRate;
+	        if (targetbat != null)
+		        Capture();
+	        else if (target != null)
+		        Shoot();
+	        
+	        fireCountdown = 1 / fireRate;
         }
 
         fireCountdown -= Time.deltaTime;
@@ -167,6 +164,7 @@ public class CaCScript : MonoBehaviour
 			ee.TakeDammag(100, transform.tag);
 		}
 	}
+	
 
 	private void OnDrawGizmosSelected()
     {

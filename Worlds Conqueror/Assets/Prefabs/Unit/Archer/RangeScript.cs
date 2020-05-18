@@ -5,6 +5,7 @@ using UnityEngine;
 public class RangeScript : MonoBehaviour
 {
     private Transform target;
+    private Transform targetbat;
     public float range = 15f;
     public int dammage = 40;
     
@@ -18,6 +19,7 @@ public class RangeScript : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 2f); //appeler la fonction tt les 2s
+        InvokeRepeating("BatTarget", 0f, 2f);
     }
 
     void UpdateTarget()
@@ -101,18 +103,49 @@ public class RangeScript : MonoBehaviour
             target = null;
         }
     }
+    
+    void BatTarget()
+    {
+        GameObject[] batiments = GameObject.FindGameObjectsWithTag("Neutral");
+		
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestBat = null;
+
+        foreach (GameObject bat in batiments)
+        {
+            float distanceToBat = Vector3.Distance(transform.position, bat.transform.position);
+            if (distanceToBat < shortestDistance)
+            {
+                shortestDistance = distanceToBat;
+                nearestBat = bat;
+            }
+        }
+
+        if (nearestBat != null && shortestDistance <= range)
+        {
+            targetbat = nearestBat.transform;
+        }
+        else
+        {
+            targetbat = null;
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (target == null)
+        if (target == null && targetbat == null)
         {
             return;
         }
-            
+        
         if (fireCountdown <= 0f)
         {
-            Shoot();
+            if (targetbat != null)
+                Capture();
+            else if (target != null)
+                Shoot();
+	        
             fireCountdown = 1 / fireRate;
         }
 
@@ -132,6 +165,15 @@ public class RangeScript : MonoBehaviour
         }
     }
 
+    void Capture()
+    {
+        CaptureScript ee = targetbat.GetComponent<CaptureScript>();
+        if (ee != null)
+        {
+            ee.TakeDammag(dammage, transform.tag);
+        }
+    }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, range);

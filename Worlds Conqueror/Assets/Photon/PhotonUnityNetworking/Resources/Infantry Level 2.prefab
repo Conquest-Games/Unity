@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 5573254144714132731, guid: 2d6a8a015b68a42d1a640d733bdfb302,
         type: 3}
       propertyPath: m_Name
-      value: Infantry Level 2 Variant
+      value: Infantry Level 2
       objectReference: {fileID: 0}
     - target: {fileID: 6142828859953602146, guid: 2d6a8a015b68a42d1a640d733bdfb302,
         type: 3}

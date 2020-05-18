@@ -60,10 +60,10 @@ namespace WorldConqueror
         static float[] CavaleryAttackSpeed = { 0.7f, 0.6f, 0.5f, 0.4f };
         static float[] SiegeWeaponAttackSpeed = { 10f, 9f, 8f, 7f };
 
-        static float[] InfantrySpeed = { 1.5f, 1.75f, 2f, 2.5f };
-        static float[] ArcherySpeed = { 1.5f, 1.75f, 2f, 2.5f };
-        static float[] CavalerySpeed = { 3.5f, 4f, 4.5f, 5.5f };
-        static float[] SiegeWeaponSpeed = { 1f, 1.2f, 1.3f, 1.5f };
+        static float[] InfantrySpeed = { 5f, 6f, 7f, 8f };
+        static float[] ArcherySpeed = { 5f, 6f, 7f, 8f };
+        static float[] CavalerySpeed = { 8f, 9f, 10f, 11f };
+        static float[] SiegeWeaponSpeed = { 2.5f, 3f, 3.5f, 4f };
 
         static int[] InfantryHeal = { 50, 65, 80, 100 };
         static int[] ArcheryHeal = { 25, 30, 35, 40 };
@@ -218,8 +218,8 @@ namespace WorldConqueror
 
         void Update()
         {
-            Level.text = lvl.ToString();
-            Hp.text = hp.ToString() + " / " + Maxhp.ToString();
+            //Level.text = lvl.ToString();
+            //Hp.text = hp.ToString() + " / " + Maxhp.ToString();
         }
     }
 }

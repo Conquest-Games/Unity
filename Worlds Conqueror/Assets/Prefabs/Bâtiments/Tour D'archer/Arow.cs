@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Arow : MonoBehaviour
 {
+    //private Transform targetbat;
     private Transform target;
+    //private string tag;
     private int dmg;
     public float speed = 70f;
 
@@ -14,7 +16,14 @@ public class Arow : MonoBehaviour
         dmg = dammage;
     }
 
-    // Update is called once per frame
+    /*public void SearchBat(Transform _target, int dammage, string tag)
+    {
+        targetbat = _target;
+        dmg = dammage;
+        tag = this.tag;
+    }*/
+
+// Update is called once per frame
     void Update()
     {
         if (target == null)
@@ -41,7 +50,6 @@ public class Arow : MonoBehaviour
     void HitTarget()
     {
         Destroy(gameObject);
-        
         CombatScript e = target.GetComponent<CombatScript>();
         if (e != null)
         {

@@ -142,8 +142,8 @@ namespace WorldConqueror
         // Update is called once per frame
         void Update()
         {
-            UpdateTexte();
-            UpdatePiece();
+            //UpdateTexte();
+            //UpdatePiece();
         }
     }
 }
