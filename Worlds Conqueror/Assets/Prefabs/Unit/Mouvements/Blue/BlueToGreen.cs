@@ -6,8 +6,6 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using Photon.Realtime;
-using UnityEditor.SceneManagement;
-using WorldConqueror;
 
 namespace WorldConqueror
 {

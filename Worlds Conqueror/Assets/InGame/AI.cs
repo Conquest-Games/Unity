@@ -10,11 +10,12 @@ namespace WorldConqueror
     {
         private int count = 100;
 
-        private int choice = Random.Range(0, 100);
+        private int choice;
 
         // Start is called before the first frame update
         void Start()
         {
+            choice = Random.Range(0, 100);
             if (Control.alone)
                 InvokeRepeating("Spawn", 0f, 2f);
             else
