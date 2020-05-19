@@ -37,7 +37,7 @@ namespace Building
         protected int[] healsListVille = { 200, 400, 800 };
         protected int[] healsListMineDeFer = { 250, 500, 1000 };
         protected int[] healsListTourDarcher = { 150, 300, 600 };
-        protected int healsListCaserne = 500;
+        protected int[] healsListCaserne = { 500, 750, 1000 };
         protected int[] healsListQG = { 1000, 2000, 5000 };
         protected int[] healsListQG_Captured = { 500, 1000, 1500 };
 
@@ -113,6 +113,10 @@ namespace Building
                     this.maxHeals = healsListMineDeFer[ActualLevel];
                     break;
 
+                case BuildingType.Caserne:
+                    this.maxHeals = healsListCaserne[actualLevel];
+                    break;
+
                 case BuildingType.TourDarcher:
 
                     this.dommage = dommageList[ActualLevel];
@@ -164,7 +168,7 @@ namespace Building
                     this.spawnUnit = true;
                     this.initialLevel = 0;
                     this.actualLevel = 0;
-                    this.maxHeals = healsListCaserne;
+                    this.maxHeals = healsListCaserne[actualLevel];
                     this.maxNeutralHeals = maxHeals / 2;
                     break;
 
@@ -279,6 +283,10 @@ namespace Building
         void Start()
         {
             Initiate();
+            if (actualLevel > 2)
+                actualLevel = 2;
+            else if (actualLevel < 0)
+                actualLevel = 0;
             ActualiseLevel();
             UpdateText();
             InvokeRepeating("HealBuilding", 1f, 1f);
@@ -290,6 +298,12 @@ namespace Building
         void Update()
         {
             UpdateStats();
+
+            if (actualLevel > 2)
+                actualLevel = 2;
+            else if (actualLevel < 0)
+                actualLevel = 0;
+
             ActualiseLevel();
             UpdateText();
         }

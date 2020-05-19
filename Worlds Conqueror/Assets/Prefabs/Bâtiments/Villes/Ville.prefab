@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  initialLevel: 1
+  initialLevel: 0
   CeBatiment: {fileID: 9093219494293988309}
   Level1: {fileID: 7186375193828207351}
   Level2: {fileID: 6509146321453341500}
