@@ -13,7 +13,6 @@ namespace WorldConqueror
 
     public class BlueToRed : MonoBehaviour
     {
-        public bool fight = false;
         public Unit ThisOne;
         private void Start()
         {
@@ -35,7 +34,7 @@ namespace WorldConqueror
         // Update is called once per frame
         void Update()
         {
-            if (!fight)
+            if (!gameObject.GetComponent<Unit>().fight)
                 transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
             if (transform.position.z > 150 && transform.position.x < -120)
             {

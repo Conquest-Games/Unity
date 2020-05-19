@@ -21,6 +21,10 @@ namespace WorldConqueror
         private SoldierType type;
         private PunTeams.Team team;
         private bool isDead;
+        
+        
+        public bool fight = false;
+
 
 
         public enum SoldierType

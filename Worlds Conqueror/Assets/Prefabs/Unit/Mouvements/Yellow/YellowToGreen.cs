@@ -34,7 +34,8 @@ namespace WorldConqueror
         // Update is called once per frame
         void Update()
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
+            if (!gameObject.GetComponent<Unit>().fight)
+                transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
             if (transform.position.z < -150 && transform.position.x > 120)
             {
                 Destroy(gameObject);

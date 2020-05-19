@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvl: 0
+  fight: 0
   Level: {fileID: 0}
 --- !u!114 &-1066604582987559531
 MonoBehaviour:
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvl: 0
+  fight: 0
   Level: {fileID: 0}
 --- !u!1001 &3660539204553522714
 PrefabInstance:

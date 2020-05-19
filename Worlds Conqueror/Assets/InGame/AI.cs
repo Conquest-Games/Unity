@@ -32,23 +32,19 @@ namespace WorldConqueror
         public void Spawn()
         {
             choice = Random.Range(0, 100);
+            Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
 
             if (choice < 20)
             {
-                Debug.Log("infantry spawned"); 
-                Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
-                GameObject TheOney = PhotonNetwork.Instantiate("Infantry Variant", spawnPosy, Quaternion.identity);
+                GameObject TheOney = PhotonNetwork.Instantiate("Infantry Level 2", spawnPosy, Quaternion.identity);
                 TheOney.AddComponent<YellowToBlue>();
                 TheOney.tag = "Yellow";
             }
             else if (choice < 35)
             {
-                Debug.Log("archer spawned");
-
-                //spawn archer
-                /*GameObject TheOney = PhotonNetwork.Instantiate("Archer Variant", spawnPosy, Quaternion.identity);
+                GameObject TheOney = PhotonNetwork.Instantiate("Archer Level 2", spawnPosy, Quaternion.identity);
                 TheOney.AddComponent<YellowToBlue>();
-                TheOney.tag = "Yellow";*/
+                TheOney.tag = "Yellow";
             }
             else if (choice < 45)
             {
