@@ -150,7 +150,7 @@ namespace WorldConqueror
 
         }
 
-        public void Attack(Unit unit, Building.Building building)
+        /*public void Attack(Unit unit, Building.Building building)
         {
             if (type == SoldierType.Ninja)
             {
@@ -165,7 +165,7 @@ namespace WorldConqueror
                         || building.Team == Building.Building.BuildingTeam.Neutral_Capturable)
                         fonction qui inflige des dégats aux batiments
                 }
-                   */
+                   
             }
             else
             {
@@ -194,7 +194,7 @@ namespace WorldConqueror
                     }
                 }
             }
-        }
+        }*/
 
         private void UpdateText()
         {

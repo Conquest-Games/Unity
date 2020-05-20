@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Pun.UtilityScripts;
+using Building;
 
 namespace Joueur
 {
@@ -14,6 +17,7 @@ namespace Joueur
         private static float fer = 0;
         private static int incomeFer = 10;
         private static int incomeOr = 50;
+        private string tag;
 
         #endregion
 
@@ -80,6 +84,21 @@ namespace Joueur
             fer = 0;
         }
 
+        private void ActualiseIncomes()
+        {
+            incomeOr = 0;
+            incomeFer = 0;
+
+            GameObject[] batiments = GameObject.FindGameObjectsWithTag(tag);
+            Debug.Log(batiments.Length.ToString());
+
+            foreach (GameObject i in batiments)
+            {
+                incomeFer += i.GetComponent<BuildingScript>().FerIncome;
+                incomeOr += i.GetComponent<BuildingScript>().OrIncome;
+            }
+        }
+
         #endregion
 
         // Start is called before the first frame update
@@ -87,6 +106,23 @@ namespace Joueur
         {
             Reset();
             InvokeRepeating("AddIncome", 1f, 0.05f);
+            switch (PhotonNetwork.LocalPlayer.GetTeam())
+            {
+                case PunTeams.Team.red:
+                    this.tag = "Red";
+                    break;
+                case PunTeams.Team.yellow:
+                    this.tag = "Yellow";
+                    break;
+                case PunTeams.Team.green:
+                    this.tag = "Green";
+                    break;
+                default:
+                    this.tag = "Blue";
+                    break;
+            }
+            ActualiseIncomes();
+
 
             #region Text update
 
@@ -101,6 +137,7 @@ namespace Joueur
         // Update is called once per frame
         void Update()
         {
+            ActualiseIncomes();
             #region Text update
 
             pOr.text = ((int) or).ToString();

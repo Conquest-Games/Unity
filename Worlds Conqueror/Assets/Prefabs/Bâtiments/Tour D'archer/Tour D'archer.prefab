@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364796841660079650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 13, z: 0}
+  m_LocalPosition: {x: 0, y: 16, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1976887346989261726}
@@ -118,11 +118,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215179911003757755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: -1}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7277375487573066996}
   - {fileID: 4192794306865154200}
+  - {fileID: 8702335490206314453}
   m_Father: {fileID: 80175686473282033}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -148,9 +149,11 @@ GameObject:
   m_Component:
   - component: {fileID: 80175686473282033}
   - component: {fileID: 7153646638596478675}
+  - component: {fileID: 6892232140385704827}
+  - component: {fileID: 4490225454601764913}
   m_Layer: 0
   m_Name: Tour D'archer
-  m_TagString: Blue
+  m_TagString: Neutral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,8 +194,168 @@ MonoBehaviour:
   Level1: {fileID: 5618099026140780533}
   Level2: {fileID: 6265401728531105973}
   Level3: {fileID: 5929522921314228400}
+  UpgradeBouton: {fileID: 6391072476461608404}
   TextLevel: {fileID: 8376043509591852080}
   HpLevel: {fileID: 364796841660079650}
+  orIncome: 0
+  ferIncome: 0
+  spawnUnit: 0
+  actualLevel: 0
+  maxHeals: 0
+  maxNeutralHeals: 0
+  heals: 0
+  dommage: 0
+  range: 0
+--- !u!114 &6892232140385704827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493970782574813300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e877beed5f0564d9b8f454fa9f7eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Batiment: {fileID: 2493970782574813300}
+--- !u!114 &4490225454601764913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493970782574813300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4007ad1fece83c546b307fa3ff4db923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TourDArcher: {fileID: 2493970782574813300}
+  fireRate: 1
+  firePoint: {fileID: 0}
+  arrow: {fileID: 6991464157184956881, guid: 8db24ae45c5d1ce41ad36eb65e40fc31, type: 3}
+--- !u!1 &6391072476461608404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8702335490206314453}
+  - component: {fileID: 3446929153016877166}
+  - component: {fileID: 889776328863474562}
+  - component: {fileID: 1600621730429475203}
+  - component: {fileID: 6605220269420072946}
+  m_Layer: 0
+  m_Name: Upgrade Boutton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8702335490206314453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6391072476461608404}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 13, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 1976887346989261726}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &3446929153016877166
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6391072476461608404}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!102 &889776328863474562
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6391072476461608404}
+  m_Text: Upgrade
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 1
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294902015
+--- !u!114 &1600621730429475203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6391072476461608404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deead0f270375914e925f28208655797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetAUpgrade: {fileID: 2493970782574813300}
+--- !u!65 &6605220269420072946
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6391072476461608404}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.8, y: 1.4523438, z: 0}
+  m_Center: {x: 0, y: -0.7261719, z: 0}
 --- !u!1 &8376043509591852080
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8376043509591852080}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 16, z: 0}
+  m_LocalPosition: {x: 0, y: 19, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1976887346989261726}
@@ -368,7 +531,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tour D'archer lvl2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8244605795686359088, guid: ca9d6a7829373da438654b0c7029225b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244605795686359088, guid: ca9d6a7829373da438654b0c7029225b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -3278581571932663903, guid: ca9d6a7829373da438654b0c7029225b, type: 3}
+    - {fileID: 8903802318891918749, guid: ca9d6a7829373da438654b0c7029225b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ca9d6a7829373da438654b0c7029225b, type: 3}
 --- !u!1 &6265401728531105973 stripped
 GameObject:
@@ -397,7 +572,7 @@ PrefabInstance:
     - target: {fileID: 2863039858397297558, guid: 00ad687253d7fad4cbbe312f29053a4d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 2863039858397297558, guid: 00ad687253d7fad4cbbe312f29053a4d,
         type: 3}
@@ -464,7 +639,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tour D'archer lvl1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6491573484608921425, guid: 00ad687253d7fad4cbbe312f29053a4d, type: 3}
+    - {fileID: -1440563489354281676, guid: 00ad687253d7fad4cbbe312f29053a4d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00ad687253d7fad4cbbe312f29053a4d, type: 3}
 --- !u!1 &5618099026140780533 stripped
 GameObject:
@@ -489,6 +666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tour D'archer lvl3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681015012230736082, guid: c5f3053e129b9f942a4056c42190b0db,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6491719194318595763, guid: c5f3053e129b9f942a4056c42190b0db,
         type: 3}

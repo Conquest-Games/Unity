@@ -7,9 +7,12 @@ namespace Building
 {
     public class TourDarcherScript : MonoBehaviour
     {
+        public GameObject TourDArcher;
+
         private Transform target;
-        public float range = 15f;
-        public int dammage = 40;
+
+        private float range = 0;
+        private int dammage = 0;
 
         public float fireRate = 1f;
         private float fireCountdown = 0f;
@@ -20,6 +23,9 @@ namespace Building
         // Start is called before the first frame update
         void Start()
         {
+            range = TourDArcher.GetComponent<BuildingScript>().range;
+            dammage = TourDArcher.GetComponent<BuildingScript>().dommage;
+
             InvokeRepeating("UpdateTarget", 0f, 2f); //appeler la fonction tt les 2s
         }
         
@@ -105,6 +111,9 @@ namespace Building
         // Update is called once per frame
         void Update()
         {
+            range = TourDArcher.GetComponent<BuildingScript>().range;
+            dammage = TourDArcher.GetComponent<BuildingScript>().dommage;
+
             if (target == null)
             {
                 return;
