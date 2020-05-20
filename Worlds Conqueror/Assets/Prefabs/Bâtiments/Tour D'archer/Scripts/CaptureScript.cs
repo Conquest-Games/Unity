@@ -11,7 +11,18 @@ public class CaptureScript : MonoBehaviour
         hp -= amount;
         if (hp <= 0)
         {
-            IsCaptured(s);
+            if (transform.name == "QG_Vert" || transform.name == "QG_Bleu" || transform.name == "QG_Rouge" || transform.name == "QG_Jaune")
+            {
+                GameOver e = transform.GetComponent<GameOver>();
+                if (e != null)
+                {
+                    e.EndGame = true;
+                }
+            }
+            else
+            {
+                IsCaptured(s);
+            }
         }
     }
 
