@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 70
+  tagg: 
 --- !u!114 &-3913244640545938180
 MonoBehaviour:
   m_ObjectHideFlags: 0

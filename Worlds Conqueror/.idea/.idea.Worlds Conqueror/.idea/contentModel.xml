@@ -369,13 +369,6 @@
         <e p="Prefabs" t="Include">
           <e p="Bâtiments" t="Include">
             <e p="Building.cs" t="Include" />
-            <e p="Caserne" t="Include">
-              <e p="CaserneScript.cs" t="Include" />
-            </e>
-            <e p="MineDeFer" t="Include">
-              <e p="MineDeFerScript.cs" t="Include" />
-            </e>
-            <e p="NewBehaviourScript.cs" t="Include" />
             <e p="QG" t="Include">
               <e p="Bulet.cs" t="Include" />
               <e p="QGScript.cs" t="Include" />
@@ -385,12 +378,11 @@
               <e p="QGScriptYellow.cs" t="Include" />
             </e>
             <e p="Tour D'archer" t="Include">
-              <e p="Arow.cs" t="Include" />
-              <e p="CaptureScript.cs" t="Include" />
-              <e p="TourDarcherScript.cs" t="Include" />
-            </e>
-            <e p="Villes" t="Include">
-              <e p="VilleScript.cs" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="Arow.cs" t="Include" />
+                <e p="CaptureScript.cs" t="Include" />
+                <e p="TourDarcherScript.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Camera" t="Include">
@@ -402,6 +394,7 @@
             </e>
             <e p="Player.cs" t="Include" />
           </e>
+          <e p="RotationText.cs" t="Include" />
           <e p="test.cs" t="Include" />
           <e p="Unit" t="Include">
             <e p="Archer" t="Include">
@@ -439,10 +432,11 @@
               </e>
             </e>
             <e p="Ninja" t="Include">
+              <e p="FigthNinjaScript.cs" t="Include" />
               <e p="Ninja.cs" t="Include" />
             </e>
-            <e p="RotationText.cs" t="Include" />
             <e p="SiegeWeapon" t="Include">
+              <e p="CataStrophe.cs" t="Include" />
               <e p="SiegeWeapon.cs" t="Include" />
             </e>
             <e p="Spawner.cs" t="Include" />

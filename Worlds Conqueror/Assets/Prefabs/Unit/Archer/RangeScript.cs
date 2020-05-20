@@ -155,13 +155,13 @@ namespace WorldConqueror
                 if (targetbat != null)
                 {
                     ShootBat();
-                    Capture();
                 }
                 else if (target != null)
                 {
                     try
                     {
                         Shoot(); 
+
                         ShootBat();
                     }
                     catch (Exception e)
@@ -195,18 +195,23 @@ namespace WorldConqueror
 
             if (arow != null)
             {
-                arow.Search(target, dammage);
+                arow.Search(target, 0);
+                CaptureScript ee = target.GetComponent<CaptureScript>();
+                if (ee != null)
+                {
+                    ee.TakeDammag(dammage, transform.tag);
+                }
             }
         }
 
-        void Capture()
+        /*void Capture()
         {
             CaptureScript ee = targetbat.GetComponent<CaptureScript>();
             if (ee != null)
             {
                 ee.TakeDammag(dammage, transform.tag);
             }
-        }
+        }*/
 
         private void OnDrawGizmosSelected()
         {

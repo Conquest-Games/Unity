@@ -156,14 +156,13 @@ namespace WorldConqueror
 					try
 					{
 						Shoot();
-
 						ShootBat();
+
 					}
 					catch (Exception e)
 					{
 
 					}
-
 				}
 
 				fireCountdown = 1 / fireRate;

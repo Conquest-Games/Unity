@@ -74,7 +74,7 @@ namespace WorldConqueror
         static float[] ArcherySpeed = { 5f, 6f, 7f, 8f };
         static float[] CavalerySpeed = { 8f, 9f, 10f, 11f };
         static float[] SiegeWeaponSpeed = { 2.5f, 3f, 3.5f, 4f };
-        static float[] NinjaSpeed = { 6.5f, 7.5f, 8.5f, 10f };
+        static float[] NinjaSpeed = {6.5f, 7.5f, 8.5f, 10f };
 
         static int[] InfantryHeal = { 50, 65, 80, 100 };
         static int[] ArcheryHeal = { 25, 30, 35, 40 };

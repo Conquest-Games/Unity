@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,18 +10,18 @@ public class Arow : MonoBehaviour
     //private string tag;
     private int dmg;
     public float speed = 70f;
-
+    public string tagg;
     public void Search(Transform _target, int dammage)
     {
         target = _target;
         dmg = dammage;
     }
 
-    /*public void SearchBat(Transform _target, int dammage, string tag)
+    /*public void SearchBat(Transform _target, int dammage, string s)
     {
-        targetbat = _target;
+        target = _target;
         dmg = dammage;
-        tag = this.tag;
+        tagg = s;
     }*/
 
 // Update is called once per frame
@@ -49,17 +50,21 @@ public class Arow : MonoBehaviour
     
     void HitTarget()
     {
-        Destroy(gameObject); // try catch parsuqe sinon théo est pas content
-        CombatScript e = target.GetComponent<CombatScript>();
-        if (e != null)
+        Destroy(gameObject); // try catch parsuqe sinon théo est pas content: MDR
+
+        try
         {
-            e.TakeDammage(dmg);
+            CombatScript e = target.GetComponent<CombatScript>();
+            if (e != null)
+            {
+                e.TakeDammage(dmg);
+            }
+            
         }
-		
-		CaptureScript eee = target.GetComponent<CaptureScript>();
-		if (eee != null)
-		{
-			eee.TakeDammag(50, transform.tag);
-		}
+        catch (Exception e)
+        {
+            
+        }
+
     }
 }
