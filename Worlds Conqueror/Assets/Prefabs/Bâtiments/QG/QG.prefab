@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 8915648661819420190}
   - component: {fileID: 1864687966631741756}
   - component: {fileID: 2666211215281898644}
+  - component: {fileID: 6996544180290767571}
   m_Layer: 0
   m_Name: QG
   m_TagString: Neutral
@@ -240,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6357452453069275035}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 20}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8074335331974674085}
@@ -293,6 +294,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Batiment: {fileID: 6357452453069275035}
+--- !u!114 &6996544180290767571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6357452453069275035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30363499ae3bcb42b4d54905b76a0b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CeBatiment: {fileID: 6357452453069275035}
+  dead: 0
+  fireRate: 1
+  firePoint: {fileID: 0}
+  bullet: {fileID: 8329637170989231371, guid: 05d0ff4acb1ff59409d6af09608a2d02, type: 3}
 --- !u!1 &7672805370303333204
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7672805370303333204}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: -2, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2186504314067852059}
@@ -604,7 +622,7 @@ PrefabInstance:
     - target: {fileID: 82729453186185047, guid: fe21da2b9cc44874381ff1224434612d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 82729453186185047, guid: fe21da2b9cc44874381ff1224434612d,
         type: 3}

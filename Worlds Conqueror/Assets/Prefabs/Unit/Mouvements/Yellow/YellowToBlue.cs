@@ -40,7 +40,7 @@ namespace WorldConqueror
             if (transform.position.x < -138 && transform.position.z < -130)
             {
                 Destroy(gameObject);
-                GameObject.Find("QG_Bleu").GetComponent<QGScript>().life -= ThisOne.UnitDamage;
+                GameObject.Find("QG_Bleu").GetComponent<BuildingScript>().heals -= ThisOne.UnitDamage;
             }
             if (transform.position.z < 155 && transform.position.z > 145)
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -150, 0));

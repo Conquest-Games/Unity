@@ -90,7 +90,6 @@ namespace Joueur
             incomeFer = 0;
 
             GameObject[] batiments = GameObject.FindGameObjectsWithTag(tag);
-            Debug.Log(batiments.Length.ToString());
 
             foreach (GameObject i in batiments)
             {

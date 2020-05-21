@@ -14,6 +14,9 @@ public class CaptureScript : MonoBehaviour
         {
             if (transform.name == "QG_Vert" || transform.name == "QG_Bleu" || transform.name == "QG_Rouge" || transform.name == "QG_Jaune")
             {
+                if (Batiment.GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG)
+                    Batiment.GetComponent<BuildingScript>().type = Building.BuildingScript.BuildingType.QG_Captured;
+
                 GameOver e = transform.GetComponent<GameOver>();
                 if (e != null)
                 {

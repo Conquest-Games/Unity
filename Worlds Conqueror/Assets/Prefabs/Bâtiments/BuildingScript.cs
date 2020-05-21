@@ -31,9 +31,10 @@ namespace Building
         public GameObject TextLevel;
         public GameObject HpLevel;
 
-        protected int[] orIncomeList = { 1, 2, 3 };
-        protected int[] orQGIncomeList = { 4, 8, 12 };
+        protected int[] orIncomeList = { 5, 10, 20 };
+        protected int[] orQGIncomeList = { 10, 20, 30 };
         protected int[] ferIncomeList = { 1, 2, 3 };
+        protected int[] ferQGIncomeList = { 2, 4, 8 };
         protected int[] dommageList = { 10, 15, 25 };
         protected int[] dommageQGList = { 20, 30, 50 };
 
@@ -44,7 +45,8 @@ namespace Building
         protected int[] healsListQG = { 1000, 2000, 5000 };
         protected int[] healsListQG_Captured = { 500, 1000, 1500 };
 
-        protected float[] RangeTourDarcher = { 15f, 30f, 45f };
+        protected float[] rangeTourDarcher = { 15f, 30f, 45f };
+        protected float[] rangeQG = { 25f, 50f, 75f };
 
         protected int[] upgradePrice = { 200, 500 };
 
@@ -132,7 +134,7 @@ namespace Building
 
                     this.dommage = dommageList[ActualLevel];
                     this.maxHeals = healsListTourDarcher[ActualLevel];
-                    this.range = RangeTourDarcher[ActualLevel];
+                    this.range = rangeTourDarcher[ActualLevel];
                     this.dommage = dommageList[ActualLevel];
                     this.maxNeutralHeals = maxHeals / 2;
                     break;
@@ -143,6 +145,8 @@ namespace Building
 
                     this.spawnUnit = true;
                     this.orIncome = orQGIncomeList[ActualLevel];
+                    this.ferIncome = ferQGIncomeList[actualLevel];
+                    this.range = rangeQG[actualLevel];
                     this.dommage = dommageQGList[ActualLevel];
                     break;
 
@@ -192,6 +196,7 @@ namespace Building
                     this.maxHeals = healsListCaserne[actualLevel];
                     this.maxNeutralHeals = maxHeals / 2;
                     this.dommage = dommageList[ActualLevel];
+                    this.range = rangeTourDarcher[actualLevel];
                     break;
 
                 case BuildingType.QG:
@@ -200,7 +205,11 @@ namespace Building
 
                     this.spawnUnit = true;
                     this.orIncome = orQGIncomeList[ActualLevel];
+                    this.ferIncome = ferQGIncomeList[actualLevel];
+                    this.range = rangeQG[actualLevel];
                     this.dommage = dommageQGList[ActualLevel];
+                    this.maxHeals = healsListCaserne[actualLevel];
+                    this.maxNeutralHeals = maxHeals / 2;
                     break;
 
                 default:
@@ -210,7 +219,7 @@ namespace Building
             }
 
             if (gameObject.tag == "Neutral")
-                heals = maxNeutralHeals;
+                this.heals = maxNeutralHeals;
             else
                  this.heals = maxHeals;
 
@@ -220,7 +229,7 @@ namespace Building
         private void ActualiseLevel()
         {
             if (CeBatiment.tag == "Neutral")
-                actualLevel = initialLevel;
+                this.actualLevel = this.initialLevel;
             switch (actualLevel)
             {
                 case 0:
@@ -355,6 +364,10 @@ namespace Building
         // Update is called once per frame
         void Update()
         {
+            if (heals <= 0 && type ==BuildingType.QG)
+                type = BuildingType.QG_Captured;
+
+
             if (actualLevel > 2)
                 actualLevel = 2;
             else if (actualLevel < 0)
