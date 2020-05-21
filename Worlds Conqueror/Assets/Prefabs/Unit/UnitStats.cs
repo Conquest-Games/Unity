@@ -29,11 +29,11 @@ namespace WorldConqueror
 
         #region Levels
 
-        static int InfantryLevel = 0;
-        static int ArcheryLevel = 0;
-        static int CavaleryLevel = 0;
-        static int SiegeWeaponLevel = 0;
-        static int NinjaLevel = 0;
+        public static int InfantryLevel = 0;
+        public static int ArcheryLevel = 0;
+        public static int CavaleryLevel = 0;
+        public static int SiegeWeaponLevel = 0;
+        public static int NinjaLevel = 0;
 
         #endregion
 
@@ -141,6 +141,15 @@ namespace WorldConqueror
                 default:
                     return;
             }
+        }
+
+        void start()
+        {
+            InfantryLevel = 0;
+            ArcheryLevel = 0;
+            NinjaLevel = 0;
+            CavaleryLevel = 0;
+            SiegeWeaponLevel = 0;
         }
     }
 }

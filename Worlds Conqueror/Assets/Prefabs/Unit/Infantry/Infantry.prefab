@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2327593788007321686}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -50,7 +50,7 @@ Transform:
   - {fileID: 8467299631418498385}
   - {fileID: 8467299631954283306}
   - {fileID: 8467299632011643624}
-  m_Father: {fileID: 1117262601212255681}
+  m_Father: {fileID: 8056123155992500942}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3973264048522279187
@@ -164,6 +164,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c364737c02e4abb40945dd15225ae5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6714349382203498047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8056123155992500942}
+  m_Layer: 0
+  m_Name: Infantry Texture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8056123155992500942
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6714349382203498047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8630951816170505533}
+  m_Father: {fileID: 1117262601212255681}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8467299630588748797
 GameObject:
   m_ObjectHideFlags: 0
@@ -11080,13 +11116,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1117262601212255681}
   - component: {fileID: 5776609509583506257}
-  - component: {fileID: 5151395361393621589}
+  - component: {fileID: -1329247311962890644}
   - component: {fileID: 7919157147423774123}
   - component: {fileID: 3725685251765417516}
   - component: {fileID: -2239781366675746753}
   - component: {fileID: -519238293289821409}
-  - component: {fileID: -413563414575958208}
-  - component: {fileID: -1329247311962890644}
   - component: {fileID: 1716850996140609020}
   m_Layer: 0
   m_Name: Infantry
@@ -11106,8 +11140,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8630951816170505533}
   - {fileID: 583200448918462195}
+  - {fileID: 8056123155992500942}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11128,9 +11162,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160a82c9a501146d69e6f6254168f190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
   lvl: 0
+  hp: 0
+  Maxhp: 0
+  damage: 0
+  attackSpeed: 0
+  speed: 0
+  range: 0
+  fight: 0
   Level: {fileID: 3973264048522279187}
---- !u!114 &5151395361393621589
+--- !u!114 &-1329247311962890644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11139,11 +11181,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8467299631789049650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d23b4d592da4d22ad57e1954196428, type: 3}
+  m_Script: {fileID: 11500000, guid: 482237023b0cf6641a86328229cbdce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvl: 0
-  Level: {fileID: 0}
+  range: 10
+  dmg: 10
+  fireRate: 1
 --- !u!114 &7919157147423774123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11214,34 +11257,6 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
---- !u!114 &-413563414575958208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8467299631789049650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b76fa4b02f60e94694d25be63f3a7b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 100
---- !u!114 &-1329247311962890644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8467299631789049650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 482237023b0cf6641a86328229cbdce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 10
-  dmg: 10
-  fireRate: 1
 --- !u!222 &1716850996140609020
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20174,5 +20189,5 @@ Transform:
   m_Children:
   - {fileID: 4212428030163676199}
   m_Father: {fileID: 1117262601212255681}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

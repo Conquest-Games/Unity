@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WorldConqueror;
 
 public class Arow : MonoBehaviour
 {
@@ -54,7 +55,7 @@ public class Arow : MonoBehaviour
 
         try
         {
-            CombatScript e = target.GetComponent<CombatScript>();
+            Unit e = target.GetComponent<Unit>();
             if (e != null)
             {
                 e.TakeDammage(dmg);

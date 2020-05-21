@@ -12,20 +12,20 @@ namespace WorldConqueror
 
         #region Attributs
 
-        private int damage = 0;
-        private int hp = 0;
-        private int Maxhp = 0;
-        private float speed = 0f;
-        private float attackSpeed = 1f;
-        public int lvl;
-        private SoldierType type;
+        public SoldierType type;
         private PunTeams.Team team;
+        public int lvl = 0;
+
+        public int hp = 0;
+        public int Maxhp = 0;
+
+        public int damage = 0;
+        public float attackSpeed = 1f;
+        public float speed = 0f;
+        public float range = 0f;
+        
         private bool isDead;
-        
-        
         public bool fight = false;
-
-
 
         public enum SoldierType
         {
@@ -58,11 +58,11 @@ namespace WorldConqueror
         static int[] SiegeWeaponDommage = { 50, 100, 150, 200 };
         static int[] NinjaDommage = { 5, 10, 15, 20 };
 
-        static int InfantryRange = 10;
-        static int ArcheryRange = 30;
-        static int CavaleryRange = 15;
-        static int SiegeWeaponRange = 45;
-        static int NinjaRange = 10;
+        static float InfantryRange = 10f;
+        static float ArcheryRange = 30f;
+        static float CavaleryRange = 15f;
+        static float SiegeWeaponRange = 45f;
+        static float NinjaRange = 10f;
 
         static float[] InfantryAttackSpeed = { 1.6f, 1.4f, 1.2f, 1f };
         static float[] ArcheryAttackSpeed = { 1.5f, 1.4f, 1.3f, 1.2f };
@@ -84,28 +84,39 @@ namespace WorldConqueror
 
         #endregion
 
-        public Unit(SoldierType type, PunTeams.Team team)
+        public void Initiate()
         {
-            this.type = type;
-            this.team = team;
             isDead = false;
 
+            switch(type)
+            {
+                case SoldierType.Archer:
+                    this.lvl = UnitStats.ArcheryLevel;
+                    break;
+                case SoldierType.Cavalry:
+                    this.lvl = UnitStats.CavaleryLevel;
+                    break;
+                case SoldierType.SiegeWeapon:
+                    this.lvl = UnitStats.SiegeWeaponLevel;
+                    break;
+                case SoldierType.Ninja:
+                    this.lvl = UnitStats.NinjaLevel;
+                    break;
+                default:
+                    this.lvl = UnitStats.InfantryLevel;
+                    break;
+
+            }
 
             switch (type)
             {
-                case (SoldierType.Infantry):
-                    this.damage = InfantryDommage[lvl];
-                    this.hp = InfantryHeal[lvl];
-                    this.Maxhp = InfantryHeal[lvl];
-                    this.attackSpeed = InfantryAttackSpeed[lvl];
-                    this.speed = InfantrySpeed[lvl];
-                    break;
                 case (SoldierType.Archer):
                     this.damage = ArcheryDommage[lvl];
                     this.hp = ArcheryHeal[lvl];
                     this.Maxhp = ArcheryHeal[lvl];
                     this.attackSpeed = ArcheryAttackSpeed[lvl];
                     this.speed = ArcherySpeed[lvl];
+                    this.range = ArcheryRange;
                     break;
                 case (SoldierType.Cavalry):
                     this.damage = CavaleryDommage[lvl];
@@ -113,6 +124,7 @@ namespace WorldConqueror
                     this.Maxhp = CavaleryHeal[lvl];
                     this.attackSpeed = CavaleryAttackSpeed[lvl];
                     this.speed = CavalerySpeed[lvl];
+                    this.range = CavaleryRange;
                     break;
                 case (SoldierType.SiegeWeapon):
                     this.damage = SiegeWeaponDommage[lvl];
@@ -120,6 +132,7 @@ namespace WorldConqueror
                     this.Maxhp = SiegeWeaponHeal[lvl];
                     this.attackSpeed = SiegeWeaponAttackSpeed[lvl];
                     this.speed = SiegeWeaponSpeed[lvl];
+                    this.range = SiegeWeaponRange;
                     break;
                 case (SoldierType.Ninja):
                     this.damage = NinjaDommage[lvl];
@@ -127,9 +140,17 @@ namespace WorldConqueror
                     this.Maxhp = NinjaHeal[lvl];
                     this.attackSpeed = NinjaAttackSpeed[lvl];
                     this.speed = NinjaSpeed[lvl];
+                    this.range = NinjaRange;
                     break;
                 default:
-                    return;
+                    this.damage = InfantryDommage[lvl];
+                    this.hp = InfantryHeal[lvl];
+                    this.Maxhp = InfantryHeal[lvl];
+                    this.attackSpeed = InfantryAttackSpeed[lvl];
+                    this.speed = InfantrySpeed[lvl];
+                    this.range = InfantryRange;
+                    break;
+
 
             }
         }
@@ -139,13 +160,13 @@ namespace WorldConqueror
             transform.Translate(Vector3.right * Time.deltaTime * 10, Space.Self);
         }
 
-        public void Damage(int dam)
+        public void TakeDammage(int dam)
         {
             hp -= dam;
             if (hp <= 0)
             {
                 hp = 0;
-                isDead = true;
+                Destroy(gameObject);
             }
 
         }
@@ -198,19 +219,19 @@ namespace WorldConqueror
 
         private void UpdateText()
         {
-            switch(team)
+            switch(transform.tag)
             {
-                case PunTeams.Team.red:
+                case "Red":
                     {
                         Level.GetComponent<TextMesh>().color = Color.red;
                         break;
                     }
-                case PunTeams.Team.yellow:
+                case "Yellow":
                     {
                         Level.GetComponent<TextMesh>().color = Color.yellow;
                         break;
                     }
-                case PunTeams.Team.green:
+                case "Green":
                     {
                         Level.GetComponent<TextMesh>().color = Color.green;
                         break;
@@ -227,6 +248,8 @@ namespace WorldConqueror
 
         void Start()
         {
+            Initiate();
+
             UpdateText();
         }
 

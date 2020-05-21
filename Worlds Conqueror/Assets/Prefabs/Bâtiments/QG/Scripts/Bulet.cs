@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WorldConqueror;
 
 public class Bulet : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class Bulet : MonoBehaviour
     {
         Destroy(gameObject); 
         
-        CombatScript e = target.GetComponent<CombatScript>();
+        Unit e = target.GetComponent<Unit>();
         if (e != null)
         {
             e.TakeDammage(dmg);

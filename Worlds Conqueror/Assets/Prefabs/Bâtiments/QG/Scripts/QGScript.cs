@@ -23,6 +23,8 @@ namespace Building
         // Start is called before the first frame update
         void Start()
         {
+            CeBatiment = gameObject;
+
             InvokeRepeating("UpdateTarget", 0f, 2f); //appeler la fonction tt les 2s
         }
 

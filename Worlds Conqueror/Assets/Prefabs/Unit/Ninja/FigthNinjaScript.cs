@@ -8,8 +8,8 @@ namespace WorldConqueror
     public class FigthNinjaScript : MonoBehaviour
     {
         private Transform target;
-        public float range = 3f;
-        public int dmg = 10;
+        private float range;
+        private int dmg;
 
         public float fireRate = 1f;
         private float fireCountdown = 0f;
@@ -17,6 +17,9 @@ namespace WorldConqueror
         // Start is called before the first frame update
         void Start()
         {
+            range = gameObject.GetComponent<Unit>().range;
+            dmg = gameObject.GetComponent<Unit>().damage;
+
             InvokeRepeating("UpdateTarget", 0f, 2f);
         }
 

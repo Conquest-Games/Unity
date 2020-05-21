@@ -10,8 +10,8 @@ namespace WorldConqueror
     {
         private Transform target;
         private Transform targetbat;
-        public float range = 15f;
-        public int dammage = 40;
+        private float range;
+        private int dammage;
 
         public float fireRate = 1f;
         private float fireCountdown = 0f;
@@ -22,6 +22,9 @@ namespace WorldConqueror
         // Start is called before the first frame update
         void Start()
         {
+            range = gameObject.GetComponent<Unit>().range;
+            dammage = gameObject.GetComponent<Unit>().damage;
+
             InvokeRepeating("UpdateTarget", 0f, 2f); //appeler la fonction tt les 2s
             InvokeRepeating("BatTarget", 0f, 2f);
         }

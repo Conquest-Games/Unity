@@ -79,10 +79,6 @@
      <Compile Include="Assets\Prefabs\Bâtiments\QG\Scripts\Bulet.cs" />
      <Compile Include="Assets\Prefabs\Bâtiments\QG\Scripts\GameOver.cs" />
      <Compile Include="Assets\Prefabs\Bâtiments\QG\Scripts\QGScript.cs" />
-     <Compile Include="Assets\Prefabs\Bâtiments\QG\Scripts\QGScriptBlue.cs" />
-     <Compile Include="Assets\Prefabs\Bâtiments\QG\Scripts\QGScriptGreen.cs" />
-     <Compile Include="Assets\Prefabs\Bâtiments\QG\Scripts\QGScriptRed.cs" />
-     <Compile Include="Assets\Prefabs\Bâtiments\QG\Scripts\QGScriptYellow.cs" />
      <Compile Include="Assets\Prefabs\Bâtiments\Tour D&apos;archer\Scripts\Arow.cs" />
      <Compile Include="Assets\Prefabs\Bâtiments\Tour D&apos;archer\Scripts\TourDarcherScript.cs" />
      <Compile Include="Assets\Prefabs\Bâtiments\UpgradeScript.cs" />
@@ -90,12 +86,8 @@
      <Compile Include="Assets\Prefabs\Players\Player.cs" />
      <Compile Include="Assets\Prefabs\Players\Player\PlayerNameInputField.cs" />
      <Compile Include="Assets\Prefabs\RotationText.cs" />
-     <Compile Include="Assets\Prefabs\Unit\Archer\Archer.cs" />
      <Compile Include="Assets\Prefabs\Unit\Archer\RangeScript.cs" />
-     <Compile Include="Assets\Prefabs\Unit\Cavalry\Cavalry.cs" />
      <Compile Include="Assets\Prefabs\Unit\Infantry\CaCScript.cs" />
-     <Compile Include="Assets\Prefabs\Unit\Infantry\CombatScript.cs" />
-     <Compile Include="Assets\Prefabs\Unit\Infantry\Infantry.cs" />
      <Compile Include="Assets\Prefabs\Unit\Mouvements\Blue\BlueToGreen.cs" />
      <Compile Include="Assets\Prefabs\Unit\Mouvements\Blue\BlueToRed.cs" />
      <Compile Include="Assets\Prefabs\Unit\Mouvements\Blue\BlueToYellow.cs" />
@@ -109,9 +101,7 @@
      <Compile Include="Assets\Prefabs\Unit\Mouvements\Yellow\YellowToGreen.cs" />
      <Compile Include="Assets\Prefabs\Unit\Mouvements\Yellow\YellowToRed.cs" />
      <Compile Include="Assets\Prefabs\Unit\Ninja\FigthNinjaScript.cs" />
-     <Compile Include="Assets\Prefabs\Unit\Ninja\Ninja.cs" />
      <Compile Include="Assets\Prefabs\Unit\SiegeWeapon\CataStrophe.cs" />
-     <Compile Include="Assets\Prefabs\Unit\SiegeWeapon\SiegeWeapon.cs" />
      <Compile Include="Assets\Prefabs\Unit\Spawner.cs" />
      <Compile Include="Assets\Prefabs\Unit\Unit.cs" />
      <Compile Include="Assets\Prefabs\Unit\UnitControlleur.cs" />

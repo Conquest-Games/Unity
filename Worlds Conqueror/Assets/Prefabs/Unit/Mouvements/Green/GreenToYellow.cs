@@ -13,21 +13,24 @@ namespace WorldConqueror
 
     public class GreenToYellow : MonoBehaviour
     {
+        public GameObject ThisUnit;
         public Unit ThisOne;
+
         private void Start()
         {
             string nam = name;
-            if(nam == "Archer")
-                ThisOne = new Archer(PhotonNetwork.LocalPlayer.GetTeam());
-            else if(nam == "Cavalry")
-                ThisOne = new Cavalry(PhotonNetwork.LocalPlayer.GetTeam());
-            else if(nam == "SiegeWeapon")
-                ThisOne = new SiegeWeapon(PhotonNetwork.LocalPlayer.GetTeam());
-            else if(nam == "Ninja")
-                ThisOne = new Ninja(PhotonNetwork.LocalPlayer.GetTeam());
+            if (nam == "Archer")
+                ThisUnit = GameObject.Find("Archery");
+            else if (nam == "Cavalry")
+                ThisUnit = GameObject.Find("Cavalery");
+            else if (nam == "SiegeWeapon")
+                ThisUnit = GameObject.Find("SiegeWeapon");
+            else if (nam == "Ninja")
+                ThisUnit = GameObject.Find("Ninja");
             else
-                ThisOne = new Infantry(PhotonNetwork.LocalPlayer.GetTeam());
+                ThisUnit = GameObject.Find("Infantry");
 
+            ThisOne = ThisUnit.GetComponent<Unit>();
 
         }
 
