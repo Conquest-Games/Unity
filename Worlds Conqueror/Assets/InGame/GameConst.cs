@@ -14,19 +14,22 @@ namespace GameControl
         // Start is called before the first frame update
         void Start()
         {
-            Photon.Realtime.Player[] playerListOthers = PhotonNetwork.PlayerListOthers;
-            foreach (var player in playerListOthers)
+            if (PhotonNetwork.LocalPlayer.GetTeam() == PunTeams.Team.none)
             {
-                if (player.GetTeam() == PunTeams.Team.blue)
-                    color.Remove(PunTeams.Team.blue);
-                else if (player.GetTeam() == PunTeams.Team.red)
-                    color.Remove(PunTeams.Team.red);
-                else if (player.GetTeam() == PunTeams.Team.yellow)
-                    color.Remove(PunTeams.Team.yellow);
+                Photon.Realtime.Player[] playerListOthers = PhotonNetwork.PlayerListOthers;
+                foreach (var player in playerListOthers)
+                {
+                    if (player.GetTeam() == PunTeams.Team.blue)
+                        color.Remove(PunTeams.Team.blue);
+                    else if (player.GetTeam() == PunTeams.Team.red)
+                        color.Remove(PunTeams.Team.red);
+                    else if (player.GetTeam() == PunTeams.Team.yellow)
+                        color.Remove(PunTeams.Team.yellow);
+                }
+
+                PhotonNetwork.LocalPlayer.SetTeam(color[color.Count - 1]);
             }
 
-            PhotonNetwork.LocalPlayer.SetTeam(color[color.Count - 1]);
-            
             switch (PhotonNetwork.LocalPlayer.GetTeam())
             {
                 case PunTeams.Team.yellow:
@@ -64,20 +67,23 @@ namespace GameControl
 
         }
         
-        public void TeamAsignation()
+        public static void TeamAsignation()
         {
+            Debug.Log("color assignation");
+            List<PunTeams.Team> colo = new List<PunTeams.Team>
+                {PunTeams.Team.green, PunTeams.Team.yellow, PunTeams.Team.red, PunTeams.Team.blue};
             Photon.Realtime.Player[] playerListOthers = PhotonNetwork.PlayerListOthers;
             foreach (var player in playerListOthers)
             {
                 if (player.GetTeam() == PunTeams.Team.blue)
-                    color.Remove(PunTeams.Team.blue);
+                    colo.Remove(PunTeams.Team.blue);
                 else if (player.GetTeam() == PunTeams.Team.red)
-                    color.Remove(PunTeams.Team.red);
-                else if (player.GetTeam() == PunTeams.Team.green)
-                    color.Remove(PunTeams.Team.green);
+                    colo.Remove(PunTeams.Team.red);
+                else if (player.GetTeam() == PunTeams.Team.yellow)
+                    colo.Remove(PunTeams.Team.yellow);
             }
 
-            PhotonNetwork.LocalPlayer.SetTeam(color[color.Count - 1]);
+            PhotonNetwork.LocalPlayer.SetTeam(colo[colo.Count - 1]);
         }
     }
 }

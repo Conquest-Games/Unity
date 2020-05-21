@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using GameControl;
+
 public class LobbyScript : MonoBehaviour
 {
     public Text NbPlayers;
     public Text CoInfos;
-    
-    
+
+    private bool isInTeam = false;
     
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,15 @@ public class LobbyScript : MonoBehaviour
     {
         CoInfos.text = PhotonNetwork.NetworkClientState.ToString();
         if (CoInfos.text == "Joined")
+        {
             CoInfos.text = "Connecté";
+            if (!isInTeam)
+            {
+                isInTeam = true;
+                GameConst.TeamAsignation();
+            }
+        }
+        
         else
             CoInfos.text = "Connection...";
         

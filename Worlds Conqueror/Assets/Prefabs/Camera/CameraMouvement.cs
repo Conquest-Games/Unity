@@ -55,11 +55,23 @@ public class CameraMouvement : MonoBehaviour
 
         if (Input.GetKey("z") || Input.GetKey(KeyCode.UpArrow))
         {
+            float y = transform.position.y;
             transform.Translate(Vector3.forward * Time.deltaTime * PanSpeed, Space.Self);
+            transform.SetPositionAndRotation(new Vector3(
+                    transform.position.x , 
+                    y, 
+                    transform.position.z),
+                transform.rotation);
         }
         else if (Input.GetKey("s") || Input.GetKey(KeyCode.DownArrow))
         {
+            float y = transform.position.y;
             transform.Translate(Vector3.forward * Time.deltaTime * -PanSpeed, Space.Self);
+            transform.SetPositionAndRotation(new Vector3(
+                    transform.position.x , 
+                    y, 
+                    transform.position.z),
+                transform.rotation);
         }
 
         //rotate the camera
