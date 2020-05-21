@@ -48,7 +48,8 @@ namespace Building
         protected float[] rangeTourDarcher = { 15f, 30f, 45f };
         protected float[] rangeQG = { 25f, 50f, 75f };
 
-        protected int[] upgradePrice = { 200, 500 };
+        protected int[] upgradeOrPrice = { 200, 500 };
+        protected int[] upgradeFerPrice = { 25, 100 };
 
         #endregion
 
@@ -336,7 +337,7 @@ namespace Building
         {
             if (actualLevel >= 2)
                 return;
-            (bool achete, string erreur) = Joueur.Player.Cout(upgradePrice[actualLevel]);
+            (bool achete, string erreur) = Joueur.Player.Cout(upgradeOrPrice[actualLevel], upgradeFerPrice[actualLevel]);
             if (achete)
                 actualLevel++;
             UpdateStats();
