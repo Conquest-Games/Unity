@@ -94,8 +94,11 @@ namespace Joueur
 
             foreach (GameObject i in batiments)
             {
-                incomeFer += i.GetComponent<BuildingScript>().FerIncome;
-                incomeOr += i.GetComponent<BuildingScript>().OrIncome;
+                if (i.GetComponent<BuildingScript>() != null)
+                {
+                    incomeFer += i.GetComponent<BuildingScript>().FerIncome;
+                    incomeOr += i.GetComponent<BuildingScript>().OrIncome;
+                }
             }
         }
 

@@ -58124,7 +58124,7 @@ PrefabInstance:
     - target: {fileID: 7220276895087820309, guid: 4e73b4c2915106740bc0fba3712067dd,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 7220276895087820309, guid: 4e73b4c2915106740bc0fba3712067dd,
         type: 3}
