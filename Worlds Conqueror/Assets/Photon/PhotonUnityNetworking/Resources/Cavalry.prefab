@@ -98,7 +98,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160a82c9a501146d69e6f6254168f190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   lvl: 0
+  hp: 0
+  Maxhp: 0
+  damage: 0
+  attackSpeed: 1
+  speed: 0
+  range: 0
   fight: 0
   Level: {fileID: 0}
 --- !u!114 &-3405287450124783388
@@ -113,8 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 482237023b0cf6641a86328229cbdce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
-  dmg: 20
   fireRate: 1
 --- !u!114 &2499594818078201657
 MonoBehaviour:

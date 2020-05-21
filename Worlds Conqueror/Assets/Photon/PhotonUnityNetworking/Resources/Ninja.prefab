@@ -1816,8 +1816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e51bed803e2c6458d4cd33c13f5765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
-  dmg: 100
   fireRate: 1
 --- !u!114 &-8767464793037696102
 MonoBehaviour:
