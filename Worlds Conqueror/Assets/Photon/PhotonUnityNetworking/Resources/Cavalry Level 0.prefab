@@ -55,6 +55,19 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &6196617937715346076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5445854768189518181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482237023b0cf6641a86328229cbdce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 1
 --- !u!114 &6653511084028662087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,41 +83,6 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!114 &8598430477641658027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5445854768189518181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 160a82c9a501146d69e6f6254168f190, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 3
-  lvl: 0
-  hp: 0
-  Maxhp: 0
-  damage: 0
-  attackSpeed: 1
-  speed: 0
-  range: 0
-  fight: 0
-  Level: {fileID: 0}
---- !u!114 &6196617937715346076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5445854768189518181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 482237023b0cf6641a86328229cbdce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 1
 --- !u!1001 &7183306374765972120
 PrefabInstance:
   m_ObjectHideFlags: 0
