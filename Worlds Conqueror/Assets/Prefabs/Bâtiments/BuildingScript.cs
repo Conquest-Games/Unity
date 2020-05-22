@@ -46,8 +46,8 @@ namespace Building
         protected int[] healsListQG = { 1000, 2000, 5000 };
         protected int[] healsListQG_Captured = { 500, 1000, 1500 };
 
-        protected float[] rangeTourDarcher = { 15f, 30f, 45f };
-        protected float[] rangeQG = { 25f, 50f, 75f };
+        protected float[] rangeTourDarcher = { 35f, 40f, 50f };
+        protected float[] rangeQG = { 70f, 80f, 90f };
 
         protected int[] upgradeOrPrice = { 200, 500 };
         protected int[] upgradeFerPrice = { 25, 100 };

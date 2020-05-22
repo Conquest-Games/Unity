@@ -58,11 +58,11 @@ namespace WorldConqueror
         static int[] SiegeWeaponDommage = { 50, 100, 150, 200 };
         static int[] NinjaDommage = { 5, 10, 15, 20 };
 
-        static float InfantryRange = 10f;
+        static float InfantryRange = 20f;
         static float ArcheryRange = 30f;
-        static float CavaleryRange = 15f;
+        static float CavaleryRange = 25f;
         static float SiegeWeaponRange = 45f;
-        static float NinjaRange = 10f;
+        static float NinjaRange = 20f;
 
         static float[] InfantryAttackSpeed = { 1.6f, 1.4f, 1.2f, 1f };
         static float[] ArcheryAttackSpeed = { 1.5f, 1.4f, 1.3f, 1.2f };
