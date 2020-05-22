@@ -69,7 +69,6 @@ namespace GameControl
         
         public static void TeamAsignation()
         {
-            Debug.Log("color assignation");
             List<PunTeams.Team> colo = new List<PunTeams.Team>
                 {PunTeams.Team.green, PunTeams.Team.yellow, PunTeams.Team.red, PunTeams.Team.blue};
             Photon.Realtime.Player[] playerListOthers = PhotonNetwork.PlayerListOthers;
