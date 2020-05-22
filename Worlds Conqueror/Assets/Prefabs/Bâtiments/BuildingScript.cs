@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using GameControl;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
+using UnityEngine.SceneManagement;
 
 namespace Building
 {
 
     public class BuildingScript : MonoBehaviour
     {
-
         #region DataEnums
 
         public enum BuildingType
@@ -365,8 +366,12 @@ namespace Building
         // Update is called once per frame
         void Update()
         {
-            if (heals <= 0 && type ==BuildingType.QG)
+            if (heals <= 0 && type == BuildingType.QG)
+            {
                 type = BuildingType.QG_Captured;
+                GameOver.EndGame = true;
+
+            }
 
 
             if (actualLevel > 2)

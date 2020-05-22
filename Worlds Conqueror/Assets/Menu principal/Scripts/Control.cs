@@ -37,7 +37,6 @@ namespace WorldConqueror
 
         public void Exit()
         {
-            Debug.Log("Le joueur a quitté le Jeux");
             Application.Quit();
         }
 

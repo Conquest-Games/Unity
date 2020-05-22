@@ -1,23 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameOver : MonoBehaviour
+namespace GameControl
 {
-    public bool EndGame = false;
-
-    public GameObject gameOverUI;
-    
-    void Update()
+    public class GameOver : MonoBehaviour
     {
-        if (EndGame)
+        public GameObject GO;
+        public static bool EndGame = false;
+
+        //public GameObject gameOverUI;
+
+        void Update()
         {
-            End();
+            if (EndGame)
+            {
+                End();
+            }
         }
-    }
 
-    void End()
-    {
-        GameObject.Find("GameOver").SetActive(true);
+        void End()
+        {
+            Debug.Log("end() called");
+            float time = Time.time;
+            GO.SetActive(true);
+            PhotonNetwork.Disconnect();
+            SceneManager.LoadScene("Luncher");
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Building;
+using WorldConqueror;
 
 public class CaptureScript : MonoBehaviour
 {
@@ -15,12 +16,10 @@ public class CaptureScript : MonoBehaviour
             if (transform.name == "QG_Vert" || transform.name == "QG_Bleu" || transform.name == "QG_Rouge" || transform.name == "QG_Jaune")
             {
                 if (Batiment.GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG)
+                {
                     Batiment.GetComponent<BuildingScript>().type = Building.BuildingScript.BuildingType.QG_Captured;
 
-                GameOver e = transform.GetComponent<GameOver>();
-                if (e != null)
-                {
-                    e.EndGame = true;
+                    GameObject.Find("GameOver").SetActive(true);
                 }
             }
             else
