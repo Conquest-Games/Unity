@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using Building;
+using WorldConqueror;
 
 namespace Joueur
 {
@@ -103,6 +104,98 @@ namespace Joueur
 
         #endregion
 
+        #region Reset
+
+        void ResetMap()
+        {
+            GameObject[] red = GameObject.FindGameObjectsWithTag("Red");
+
+            foreach (GameObject i in red)
+            {
+                if (i.GetComponent<Unit>() != null)
+                    Destroy(i);
+                if (i.GetComponent<BuildingScript>() != null)
+                {
+                    if (i.name == "QG_Bleu")
+                        i.tag = "Blue";
+                    else if (i.name == "QG_Rouge")
+                        i.tag = "Red";
+                    else if (i.name == "QG_Jaune")
+                        i.tag = "Yellow";
+                    else if (i.name == "QG_Vert")
+                        i.tag = "Green";
+                    else
+                        i.tag = "Neutral";
+                }
+            }
+
+            GameObject[] blue = GameObject.FindGameObjectsWithTag("Blue");
+
+            foreach (GameObject i in blue)
+            {
+                if (i.GetComponent<Unit>() != null)
+                    Destroy(i);
+                if (i.GetComponent<BuildingScript>() != null)
+                {
+                    if (i.name == "QG_Bleu")
+                        i.tag = "Blue";
+                    else if (i.name == "QG_Rouge")
+                        i.tag = "Red";
+                    else if (i.name == "QG_Jaune")
+                        i.tag = "Yellow";
+                    else if (i.name == "QG_Vert")
+                        i.tag = "Green";
+                    else
+                        i.tag = "Neutral";
+                }
+            }
+
+            GameObject[] yellow = GameObject.FindGameObjectsWithTag("Yellow");
+
+            foreach (GameObject i in yellow)
+            {
+                if (i.GetComponent<Unit>() != null)
+                    Destroy(i);
+                if (i.GetComponent<BuildingScript>() != null)
+                {
+                    if (i.name == "QG_Bleu")
+                        i.tag = "Blue";
+                    else if (i.name == "QG_Rouge")
+                        i.tag = "Red";
+                    else if (i.name == "QG_Jaune")
+                        i.tag = "Yellow";
+                    else if (i.name == "QG_Vert")
+                        i.tag = "Green";
+                    else
+                        i.tag = "Neutral";
+                }
+            }
+
+            GameObject[] green = GameObject.FindGameObjectsWithTag("Green");
+
+            foreach (GameObject i in green)
+            {
+                if (i.GetComponent<Unit>() != null)
+                    Destroy(i);
+                if (i.GetComponent<BuildingScript>() != null)
+                {
+                    if (i.name == "QG_Bleu")
+                        i.tag = "Blue";
+                    else if (i.name == "QG_Rouge")
+                        i.tag = "Red";
+                    else if (i.name == "QG_Jaune")
+                        i.tag = "Yellow";
+                    else if (i.name == "QG_Vert")
+                        i.tag = "Green";
+                    else
+                        i.tag = "Neutral";
+                }
+            }
+
+        }
+
+        #endregion
+
         // Start is called before the first frame update
         void Start()
         {
@@ -125,6 +218,7 @@ namespace Joueur
             }
             ActualiseIncomes();
 
+            ResetMap();
 
             #region Text update
 

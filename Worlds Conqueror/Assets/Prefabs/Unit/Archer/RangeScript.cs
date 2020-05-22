@@ -64,6 +64,7 @@ namespace WorldConqueror
                 l += ennemiesG.Length;
             }
 
+
             GameObject[] ennemies = new GameObject[l];
 
             int c = 0;
@@ -157,21 +158,12 @@ namespace WorldConqueror
             {
                 if (targetbat != null)
                 {
-                    ShootBat();
+                    Capture();
                 }
                 else if (target != null)
                 {
-                    try
-                    {
-                        Shoot(); 
-
-                        ShootBat();
-                    }
-                    catch (Exception e)
-                    {
-                        
-                    }
-                    
+                    Shoot(); 
+                    ShootBat();
                 }
 
                 fireCountdown = 1 / fireRate;
@@ -198,7 +190,7 @@ namespace WorldConqueror
 
             if (arow != null)
             {
-                arow.Search(target, 0);
+                arow.Search(target, dammage);
                 CaptureScript ee = target.GetComponent<CaptureScript>();
                 if (ee != null)
                 {
@@ -207,14 +199,17 @@ namespace WorldConqueror
             }
         }
 
-        /*void Capture()
+        void Capture()
         {
+            GameObject arrowGO = PhotonNetwork.Instantiate(arrow.name, firePoint.position, firePoint.rotation);
+            Arow arow = arrowGO.GetComponent<Arow>();
+
             CaptureScript ee = targetbat.GetComponent<CaptureScript>();
             if (ee != null)
             {
                 ee.TakeDammag(dammage, transform.tag);
             }
-        }*/
+        }
 
         private void OnDrawGizmosSelected()
         {

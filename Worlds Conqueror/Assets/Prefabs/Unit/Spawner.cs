@@ -11,131 +11,11 @@ namespace WorldConqueror
     {
         #region Déclaration des variables
 
-        private int InfantryLevel = UnitStats.GetLevel(UnitStats.SolderType.Infantry);
-        private int ArcheryLevel = UnitStats.GetLevel(UnitStats.SolderType.Archery);
-        private int CavaleryLevel = UnitStats.GetLevel(UnitStats.SolderType.Cavalery);
-        private int SiegeWeaponLevel = UnitStats.GetLevel(UnitStats.SolderType.SiegeWeapon);
-        private int NinjaLevel = UnitStats.GetLevel(UnitStats.SolderType.Ninja);
-
-        public GameObject InfantryLevel0;
-        public GameObject InfantryLevel1;
-        public GameObject InfantryLevel2;
-        public GameObject InfantryLevel3;
-
-        public GameObject ArcheryLevel0;
-        public GameObject ArcheryLevel1;
-        public GameObject ArcheryLevel2;
-        public GameObject ArcheryLevel3;
-
-        public GameObject CavaleryLevel0;
-        public GameObject CavaleryLevel1;
-        public GameObject CavaleryLevel2;
-        public GameObject CavaleryLevel3;
-
-        public GameObject SiegeWeaponLevel0;
-        public GameObject SiegeWeaponLevel1;
-        public GameObject SiegeWeaponLevel2;
-        public GameObject SiegeWeaponLevel3;
-
-        public GameObject NinjaLevel0;
-        public GameObject NinjaLevel1;
-        public GameObject NinjaLevel2;
-        public GameObject NinjaLevel3;
-
-        private GameObject Infantry;
-        private GameObject Archery;
-        private GameObject Cavalery;
-        private GameObject SiegeWeapon;
-        private GameObject Ninja;
-
-        public void ActualiseLevel()
-        {
-            switch(InfantryLevel)
-            {
-                case (0):
-                    Infantry = InfantryLevel0;
-                    break;
-                case (1):
-                    Infantry = InfantryLevel1;
-                    break;
-                case (2):
-                    Infantry = InfantryLevel2;
-                    break;
-                case (3):
-                    Infantry = InfantryLevel3;
-                    break;
-                default:
-                    break;
-            }
-            switch (ArcheryLevel)
-            {
-                case (0):
-                    Archery = ArcheryLevel0;
-                    break;
-                case (1):
-                    Archery = ArcheryLevel1;
-                    break;
-                case (2):
-                    Archery = ArcheryLevel2;
-                    break;
-                case (3):
-                    Archery = ArcheryLevel3;
-                    break;
-                default:
-                    break;
-            }
-            switch (CavaleryLevel)
-            {
-                case (0):
-                    Cavalery = CavaleryLevel0;
-                    break;
-                case (1):
-                    Cavalery = CavaleryLevel1;
-                    break;
-                case (2):
-                    Cavalery = CavaleryLevel2;
-                    break;
-                case (3):
-                    Cavalery = CavaleryLevel3;
-                    break;
-                default:
-                    break;
-            }
-            switch (SiegeWeaponLevel)
-            {
-                case (0):
-                    SiegeWeapon = SiegeWeaponLevel0;
-                    break;
-                case (1):
-                    SiegeWeapon = SiegeWeaponLevel1;
-                    break;
-                case (2):
-                    SiegeWeapon = SiegeWeaponLevel2;
-                    break;
-                case (3):
-                    SiegeWeapon = SiegeWeaponLevel3;
-                    break;
-                default:
-                    break;
-            }
-            switch (NinjaLevel)
-            {
-                case (0):
-                    Ninja = NinjaLevel0;
-                    break;
-                case (1):
-                    Ninja = NinjaLevel1;
-                    break;
-                case (2):
-                    Ninja = NinjaLevel2;
-                    break;
-                case (3):
-                    Ninja = NinjaLevel3;
-                    break;
-                default:
-                    break;
-            }
-        }
+        public GameObject Infantry;
+        public GameObject Archery;
+        public GameObject Cavalery;
+        public GameObject SiegeWeapon;
+        public GameObject Ninja;
 
         #endregion
 
@@ -189,29 +69,29 @@ namespace WorldConqueror
             switch (PhotonNetwork.LocalPlayer.GetTeam())
             {
                 case PunTeams.Team.red:
-                {
-                    Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
-                    GameObject TheOner = PhotonNetwork.Instantiate(Infantry.name, spawnPosr, Quaternion.identity);
-                    TheOner.AddComponent<RedToBlue>();
-                    TheOner.tag = "Red";
-                    break;
-                }
+                    {
+                        Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
+                        GameObject TheOner = PhotonNetwork.Instantiate(Infantry.name, spawnPosr, Quaternion.identity);
+                        TheOner.AddComponent<RedToBlue>();
+                        TheOner.tag = "Red";
+                        break;
+                    }
                 case PunTeams.Team.yellow:
-                {
-                    Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
-                    GameObject TheOney = PhotonNetwork.Instantiate(Infantry.name, spawnPosy, Quaternion.identity);
-                    TheOney.AddComponent<YellowToRed>();
-                    TheOney.tag = "Yellow";
-                    break;
-                }
+                    {
+                        Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
+                        GameObject TheOney = PhotonNetwork.Instantiate(Infantry.name, spawnPosy, Quaternion.identity);
+                        TheOney.AddComponent<YellowToRed>();
+                        TheOney.tag = "Yellow";
+                        break;
+                    }
                 case PunTeams.Team.green:
-                {
-                    Vector3 spawnPosg = new Vector3(138.4f, 0, -150);
-                    GameObject TheOneg = PhotonNetwork.Instantiate(Infantry.name, spawnPosg, Quaternion.identity);
-                    TheOneg.AddComponent<GreenToYellow>();
-                    TheOneg.tag = "Green";
-                    break;
-                }
+                    {
+                        Vector3 spawnPosg = new Vector3(138.4f, 0, -150);
+                        GameObject TheOneg = PhotonNetwork.Instantiate(Infantry.name, spawnPosg, Quaternion.identity);
+                        TheOneg.AddComponent<GreenToYellow>();
+                        TheOneg.tag = "Green";
+                        break;
+                    }
                 default:
                     Vector3 spawnPos = new Vector3(-138.4f, 0, -150);
                     GameObject TheOne = PhotonNetwork.Instantiate(Infantry.name, spawnPos, Quaternion.identity);
@@ -220,7 +100,7 @@ namespace WorldConqueror
                     break;
             }
         }
-        
+
         public void SpawnInfantryForward()
         {
             (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Infantry));
@@ -229,29 +109,29 @@ namespace WorldConqueror
             switch (PhotonNetwork.LocalPlayer.GetTeam())
             {
                 case PunTeams.Team.red:
-                {
-                    Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
-                    GameObject TheOner = PhotonNetwork.Instantiate(Infantry.name, spawnPosr, Quaternion.identity);
-                    TheOner.AddComponent<RedToGreen>();
-                    TheOner.tag = "Red";
-                    break;
-                }
+                    {
+                        Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
+                        GameObject TheOner = PhotonNetwork.Instantiate(Infantry.name, spawnPosr, Quaternion.identity);
+                        TheOner.AddComponent<RedToGreen>();
+                        TheOner.tag = "Red";
+                        break;
+                    }
                 case PunTeams.Team.yellow:
-                {
-                    Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
-                    GameObject TheOney = PhotonNetwork.Instantiate(Infantry.name, spawnPosy, Quaternion.identity);
-                    TheOney.AddComponent<YellowToBlue>();
-                    TheOney.tag = "Yellow";
-                    break;
-                }
+                    {
+                        Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
+                        GameObject TheOney = PhotonNetwork.Instantiate(Infantry.name, spawnPosy, Quaternion.identity);
+                        TheOney.AddComponent<YellowToBlue>();
+                        TheOney.tag = "Yellow";
+                        break;
+                    }
                 case PunTeams.Team.green:
-                {
-                    Vector3 spawnPosg = new Vector3(138.4f, 0, -150);
-                    GameObject TheOneg = PhotonNetwork.Instantiate(Infantry.name, spawnPosg, Quaternion.identity);
-                    TheOneg.AddComponent<GreenToRed>();
-                    TheOneg.tag = "Green";
-                    break;
-                }
+                    {
+                        Vector3 spawnPosg = new Vector3(138.4f, 0, -150);
+                        GameObject TheOneg = PhotonNetwork.Instantiate(Infantry.name, spawnPosg, Quaternion.identity);
+                        TheOneg.AddComponent<GreenToRed>();
+                        TheOneg.tag = "Green";
+                        break;
+                    }
                 default:
                     Vector3 spawnPos = new Vector3(-138.4f, 0, -150);
                     GameObject TheOne = PhotonNetwork.Instantiate(Infantry.name, spawnPos, Quaternion.identity);
@@ -758,27 +638,5 @@ namespace WorldConqueror
         }
 
         #endregion
-
-        void Start()
-        {
-            InfantryLevel = UnitStats.GetLevel(UnitStats.SolderType.Infantry);
-            ArcheryLevel = UnitStats.GetLevel(UnitStats.SolderType.Archery);
-            CavaleryLevel = UnitStats.GetLevel(UnitStats.SolderType.Cavalery);
-            SiegeWeaponLevel = UnitStats.GetLevel(UnitStats.SolderType.SiegeWeapon);
-            NinjaLevel = UnitStats.GetLevel(UnitStats.SolderType.Ninja);
-
-            ActualiseLevel();
-        }
-
-        void Update()
-        {
-            InfantryLevel = UnitStats.GetLevel(UnitStats.SolderType.Infantry);
-            ArcheryLevel = UnitStats.GetLevel(UnitStats.SolderType.Archery);
-            CavaleryLevel = UnitStats.GetLevel(UnitStats.SolderType.Cavalery);
-            SiegeWeaponLevel = UnitStats.GetLevel(UnitStats.SolderType.SiegeWeapon);
-            NinjaLevel = UnitStats.GetLevel(UnitStats.SolderType.Ninja);
-
-            ActualiseLevel();
-        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WorldConqueror;
 
 namespace Building
 {
@@ -31,93 +32,77 @@ namespace Building
         // Update is called once per frame
         void UpdateTarget()
         {
-            GameObject[] ennemiesB = GameObject.FindGameObjectsWithTag("Blue");
-            GameObject[] ennemiesR = GameObject.FindGameObjectsWithTag("Red");
-            GameObject[] ennemiesY = GameObject.FindGameObjectsWithTag("Yellow");
-            GameObject[] ennemiesG = GameObject.FindGameObjectsWithTag("Green");
-            GameObject[] ennemies = null;
+            int l = 0;
+            GameObject[] ennemiesG = new GameObject[0];
+            GameObject[] ennemiesR = new GameObject[0];
+            GameObject[] ennemiesB = new GameObject[0];
+            GameObject[] ennemiesY = new GameObject[0];
+            if (transform.tag != "Green")
+            {
+                GameObject[] ennemiesG2 = GameObject.FindGameObjectsWithTag("Green");
+                ennemiesG = ennemiesG2;
+                l += ennemiesG.Length;
+            }
+            if (transform.tag != "Red")
+            {
+                GameObject[] ennemiesR2 = GameObject.FindGameObjectsWithTag("Red");
+                ennemiesR = ennemiesR2;
+                l += ennemiesR.Length;
+            }
+            if (transform.tag != "Yellow")
+            {
+                GameObject[] ennemiesY2 = GameObject.FindGameObjectsWithTag("Yellow");
+                ennemiesY = ennemiesY2;
+                l += ennemiesY.Length;
+            }
+            if (transform.tag != "Blue")
+            {
+                GameObject[] ennemiesB2 = GameObject.FindGameObjectsWithTag("Blue");
+                ennemiesB = ennemiesB2;
+                l += ennemiesB.Length;
+            }
+
+            GameObject[] ennemieUnit = new GameObject[l];
 
             int c = 0;
-
-            switch (CeBatiment.tag)
+            for (int i = 0; i < ennemiesG.Length; i++)
             {
-                case "Red":
-                    ennemies = new GameObject[ennemiesB.Length + ennemiesG.Length + ennemiesY.Length];
-                    for (int i = 0; i < ennemiesB.Length; i++)
-                    {
-                        ennemies[c] = ennemiesB[i];
-                        c += 1;
-                    }
-                    for (int j = 0; j < ennemiesG.Length; j++)
-                    {
-                        ennemies[c] = ennemiesG[j];
-                        c += 1;
-                    }
-                    for (int k = 0; k < ennemiesY.Length; k++)
-                    {
-                        ennemies[c] = ennemiesY[k];
-                        c += 1;
-                    }
-                    break;
+                ennemieUnit[c] = ennemiesG[i];
+                c += 1;
+            }
+            for (int j = 0; j < ennemiesR.Length; j++)
+            {
+                ennemieUnit[c] = ennemiesR[j];
+                c += 1;
+            }
+            for (int k = 0; k < ennemiesY.Length; k++)
+            {
+                ennemieUnit[c] = ennemiesY[k];
+                c += 1;
+            }
+            for (int m = 0; m < ennemiesB.Length; m++)
+            {
+                ennemieUnit[c] = ennemiesB[m];
+                c += 1;
+            }
+            int lengthUnit = 0;
 
+            foreach (var i in ennemieUnit)
+            {
+                if (i.GetComponent<Unit>() != null)
+                    lengthUnit++;
+            }
 
-                case "Yellow":
-                    ennemies = new GameObject[ennemiesB.Length + ennemiesR.Length + ennemiesG.Length];
-                    for (int i = 0; i < ennemiesB.Length; i++)
-                    {
-                        ennemies[c] = ennemiesB[i];
-                        c += 1;
-                    }
-                    for (int j = 0; j < ennemiesR.Length; j++)
-                    {
-                        ennemies[c] = ennemiesR[j];
-                        c += 1;
-                    }
-                    for (int k = 0; k < ennemiesG.Length; k++)
-                    {
-                        ennemies[c] = ennemiesG[k];
-                        c += 1;
-                    }
-                    break;
+            GameObject[] ennemies = new GameObject[lengthUnit];
+            int compteur = 0;
 
-                case "Green":
-                    ennemies = new GameObject[ennemiesB.Length + ennemiesR.Length + ennemiesY.Length];
-                    for (int i = 0; i < ennemiesB.Length; i++)
-                    {
-                        ennemies[c] = ennemiesB[i];
-                        c += 1;
-                    }
-                    for (int j = 0; j < ennemiesR.Length; j++)
-                    {
-                        ennemies[c] = ennemiesR[j];
-                        c += 1;
-                    }
-                    for (int k = 0; k < ennemiesY.Length; k++)
-                    {
-                        ennemies[c] = ennemiesY[k];
-                        c += 1;
-                    }
-                    break;
-
-                default:
-                    ennemies = new GameObject[ennemiesG.Length + ennemiesR.Length + ennemiesY.Length];
-                    for (int i = 0; i < ennemiesG.Length; i++)
-                    {
-                        ennemies[c] = ennemiesG[i];
-                        c += 1;
-                    }
-                    for (int j = 0; j < ennemiesR.Length; j++)
-                    {
-                        ennemies[c] = ennemiesR[j];
-                        c += 1;
-                    }
-                    for (int k = 0; k < ennemiesY.Length; k++)
-                    {
-                        ennemies[c] = ennemiesY[k];
-                        c += 1;
-                    }
-                    break;
-
+            foreach (var i in ennemieUnit)
+            {
+                if (i.GetComponent<Unit>() != null)
+                {
+                    ennemies[compteur] = i;
+                    compteur++;
+                }
             }
 
             float shortestDistance = Mathf.Infinity;

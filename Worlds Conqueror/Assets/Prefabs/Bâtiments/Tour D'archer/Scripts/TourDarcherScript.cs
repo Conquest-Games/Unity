@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using WorldConqueror;
 
 namespace Building
 {
@@ -61,29 +62,49 @@ namespace Building
                 l += ennemiesB.Length;
             }
 
-            GameObject[] ennemies = new GameObject[l];
+            GameObject[] ennemieUnit = new GameObject[l];
 
             int c = 0;
             for (int i = 0; i < ennemiesG.Length; i++)
             {
-                ennemies[c] = ennemiesG[i];
+                ennemieUnit[c] = ennemiesG[i];
                 c += 1;
             }
             for (int j = 0; j < ennemiesR.Length; j++)
             {
-                ennemies[c] = ennemiesR[j];
+                ennemieUnit[c] = ennemiesR[j];
                 c += 1;
             }
             for (int k = 0; k < ennemiesY.Length; k++)
             {
-                ennemies[c] = ennemiesY[k];
+                ennemieUnit[c] = ennemiesY[k];
                 c += 1;
             }
 			for (int m = 0; m < ennemiesB.Length; m++)
 			{
-				ennemies[c] = ennemiesB[m];
+				ennemieUnit[c] = ennemiesB[m];
 				c += 1;
 			}
+            int lengthUnit = 0;
+
+            foreach (var i in ennemieUnit)
+            {
+                if (i.GetComponent<Unit>() != null)
+                    lengthUnit ++;
+            }
+
+            GameObject[] ennemies = new GameObject[lengthUnit];
+            int compteur = 0;
+
+            foreach (var i in ennemieUnit)
+            {
+                if (i.GetComponent<Unit>() != null)
+                {
+                    ennemies[compteur] = i;
+                    compteur++;
+                }
+            }
+
 
             float shortestDistance = Mathf.Infinity;
             GameObject nearestEnemy = null;

@@ -32,10 +32,10 @@ namespace Building
         public GameObject TextLevel;
         public GameObject HpLevel;
 
-        protected int[] orIncomeList = { 5, 10, 20 };
-        protected int[] orQGIncomeList = { 10, 20, 30 };
+        protected int[] orIncomeList = { 2, 4, 8 };
+        protected int[] orQGIncomeList = { 5, 10, 15 };
         protected int[] ferIncomeList = { 1, 2, 3 };
-        protected int[] ferQGIncomeList = { 2, 4, 8 };
+        protected int[] ferQGIncomeList = { 2, 4, 6 };
         protected int[] dommageList = { 10, 15, 25 };
         protected int[] dommageQGList = { 20, 30, 50 };
 
@@ -50,7 +50,7 @@ namespace Building
         protected float[] rangeQG = { 70f, 80f, 90f };
 
         protected int[] upgradeOrPrice = { 200, 500 };
-        protected int[] upgradeFerPrice = { 25, 100 };
+        protected int[] upgradeFerPrice = { 50, 150 };
 
         #endregion
 
@@ -146,6 +146,9 @@ namespace Building
                 case BuildingType.QG_Captured:
 
                     this.spawnUnit = true;
+                    this.maxHeals = healsListQG[actualLevel];
+                    if (type == BuildingType.QG_Captured)
+                        this.maxHeals = healsListQG_Captured[actualLevel];
                     this.orIncome = orQGIncomeList[ActualLevel];
                     this.ferIncome = ferQGIncomeList[actualLevel];
                     this.range = rangeQG[actualLevel];
@@ -206,6 +209,9 @@ namespace Building
                 case BuildingType.QG_Captured:
 
                     this.spawnUnit = true;
+                    this.maxHeals = healsListQG[actualLevel];
+                    if (type == BuildingType.QG_Captured)
+                        this.maxHeals = healsListQG_Captured[actualLevel];
                     this.orIncome = orQGIncomeList[ActualLevel];
                     this.ferIncome = ferQGIncomeList[actualLevel];
                     this.range = rangeQG[actualLevel];
@@ -341,6 +347,9 @@ namespace Building
             (bool achete, string erreur) = Joueur.Player.Cout(upgradeOrPrice[actualLevel], upgradeFerPrice[actualLevel]);
             if (achete)
                 actualLevel++;
+            else
+                return;
+
             UpdateStats();
             heals = maxHeals;
         }
@@ -354,13 +363,17 @@ namespace Building
             else if (actualLevel < 0)
                 actualLevel = 0;
             ActualiseLevel();
-            UpdateText();
             InvokeRepeating("HealBuilding", 1f, 1f);
+            UpdateStats();
             if (CeBatiment.tag == "Neutral")
             {
                 heals = maxNeutralHeals;
             }
-            UpdateStats();
+            else
+            {
+                heals = maxHeals;
+            }
+            UpdateText();
         }
 
         // Update is called once per frame
@@ -369,10 +382,10 @@ namespace Building
             if (heals <= 0 && type == BuildingType.QG)
             {
                 type = BuildingType.QG_Captured;
+                actualLevel = initialLevel;
+                this.maxHeals = healsListQG_Captured[actualLevel];
                 GameOver.EndGame = true;
-
             }
-
 
             if (actualLevel > 2)
                 actualLevel = 2;
