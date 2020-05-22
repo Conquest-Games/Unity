@@ -9829,7 +9829,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: QG
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8874354594803057873, guid: 4e73b4c2915106740bc0fba3712067dd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4e73b4c2915106740bc0fba3712067dd, type: 3}
 --- !u!1001 &257008921
 PrefabInstance:

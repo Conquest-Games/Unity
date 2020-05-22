@@ -50,7 +50,7 @@ namespace WorldConqueror
 
             if (transform.position.x < 121 && transform.position.x > 119) 
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -90, 0));
-            if (transform.position.x < -109 && transform.position.x > -111) 
+            if (transform.position.x < -122 && transform.position.x > -123) 
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -150, 0));
 
         }

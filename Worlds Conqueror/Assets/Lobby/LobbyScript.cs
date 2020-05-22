@@ -10,7 +10,6 @@ public class LobbyScript : MonoBehaviour
 {
     public Text NbPlayers;
     public Text CoInfos;
-
     private bool isInTeam = false;
     
     // Start is called before the first frame update

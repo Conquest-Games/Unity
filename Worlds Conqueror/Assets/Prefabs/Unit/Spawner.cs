@@ -583,7 +583,7 @@ namespace WorldConqueror
                 case PunTeams.Team.green:
                     {
                         Vector3 spawnPosg = new Vector3(138.4f, 0, -150);
-                        GameObject TheOneg = PhotonNetwork.Instantiate(Infantry.name, spawnPosg, Quaternion.identity);
+                        GameObject TheOneg = PhotonNetwork.Instantiate(Ninja.name, spawnPosg, Quaternion.identity);
                         TheOneg.AddComponent<GreenToYellow>();
                         TheOneg.tag = "Green";
                         break;

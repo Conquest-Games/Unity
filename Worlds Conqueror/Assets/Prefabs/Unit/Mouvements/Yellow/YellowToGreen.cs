@@ -46,26 +46,26 @@ namespace WorldConqueror
             }
 
             if (transform.position.z < 151 && transform.position.z > 149)
-                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -150, 0));
 
             if (transform.position.z > -121 && transform.position.z < -119)
-                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 150, 0));
 
             if (transform.position.z > -61 && transform.position.z < -59)
-                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 50, 0));
-
-            if (transform.position.z > -31 && transform.position.z < -29)
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
 
+            if (transform.position.z > -31 && transform.position.z < -29)
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -150, 0));
+
             if (transform.position.z > 29 && transform.position.z < 31)
-                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 210, 0));
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
 
 
             if (transform.position.z > 59 && transform.position.z < 61)
-                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 150, 0));
 
             if (transform.position.z > 119 && transform.position.z < 121)
-                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 150, 0));
+                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
         }
     }
 }

@@ -48,10 +48,10 @@ namespace WorldConqueror
             if (transform.position.z < 155 && transform.position.z > 145)
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -150, 0));
 
-            if (transform.position.z > 29 && transform.position.x < -34)
+            if (transform.position.z > 25 && transform.position.x < -34)
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -150, 0));
             
-            if (transform.position.x > 69 && transform.position.x < 71)
+            if (transform.position.x > 67 && transform.position.x < 68)
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -90, 0));
         }
     }

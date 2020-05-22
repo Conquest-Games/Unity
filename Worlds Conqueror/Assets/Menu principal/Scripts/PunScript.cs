@@ -86,7 +86,6 @@ namespace GameControl
                 PhotonNetwork.GameVersion = gameVersion;
             }
 
-            GameConst.TeamAsignation();
 
         }
 
