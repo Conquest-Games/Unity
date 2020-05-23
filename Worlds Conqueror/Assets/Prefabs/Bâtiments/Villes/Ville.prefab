@@ -571,6 +571,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Villelvl1
       objectReference: {fileID: 0}
+    - target: {fileID: 5547178906589109430, guid: 27052ee32538d5b4fa21e1212a09f8ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9179254218610800766, guid: 27052ee32538d5b4fa21e1212a09f8ee,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -652,6 +657,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Villelvl2
       objectReference: {fileID: 0}
+    - target: {fileID: 75548384795234017, guid: 1c5c84d034dcbb7498da94653ff1c6d5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5224628834174511551, guid: 1c5c84d034dcbb7498da94653ff1c6d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -665,7 +675,7 @@ PrefabInstance:
     - target: {fileID: 5224628834174511551, guid: 1c5c84d034dcbb7498da94653ff1c6d5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 5224628834174511551, guid: 1c5c84d034dcbb7498da94653ff1c6d5,
         type: 3}
@@ -707,6 +717,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5224628834174511551, guid: 1c5c84d034dcbb7498da94653ff1c6d5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5224628834174511551, guid: 1c5c84d034dcbb7498da94653ff1c6d5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5224628834174511551, guid: 1c5c84d034dcbb7498da94653ff1c6d5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c5c84d034dcbb7498da94653ff1c6d5, type: 3}
 --- !u!4 &3060366977883430971 stripped
@@ -741,7 +766,7 @@ PrefabInstance:
     - target: {fileID: 1423141552972425985, guid: ae2ff232443a6e94d87a1f600f56c117,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 1423141552972425985, guid: ae2ff232443a6e94d87a1f600f56c117,
         type: 3}
@@ -787,6 +812,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Villelvl3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097989069318253600, guid: ae2ff232443a6e94d87a1f600f56c117,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae2ff232443a6e94d87a1f600f56c117, type: 3}

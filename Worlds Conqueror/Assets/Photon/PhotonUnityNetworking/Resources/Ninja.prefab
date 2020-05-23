@@ -4635,12 +4635,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4999241856699767972}
   - component: {fileID: 3324553555015017863}
-  - component: {fileID: 3156769896983551062}
   - component: {fileID: 640697959183937627}
   - component: {fileID: 6961985983122164625}
   - component: {fileID: 4436975616017433278}
   - component: {fileID: 2092334720541350058}
   - component: {fileID: 37810729637699352}
+  - component: {fileID: -6625972882099407860}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -4684,19 +4684,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3156769896983551062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6140513953487556658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 482237023b0cf6641a86328229cbdce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 1
 --- !u!114 &640697959183937627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4790,6 +4777,19 @@ MonoBehaviour:
   fight: 0
   Level: {fileID: 1060459582947588930}
   MiniMapRender: {fileID: 4247848116696431087}
+--- !u!114 &-6625972882099407860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140513953487556658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e51bed803e2c6458d4cd33c13f5765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 1
 --- !u!1 &6148680479017299414
 GameObject:
   m_ObjectHideFlags: 0

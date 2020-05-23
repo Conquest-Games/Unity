@@ -9,7 +9,6 @@ namespace WorldConqueror
     public class RangeScript : MonoBehaviour
     {
         private Transform target;
-        private Transform targetbat;
         private float range;
         private int dammage;
 
@@ -26,7 +25,6 @@ namespace WorldConqueror
             dammage = gameObject.GetComponent<Unit>().damage;
 
             InvokeRepeating("UpdateTarget", 0f, 2f); //appeler la fonction tt les 2s
-            InvokeRepeating("BatTarget", 0f, 2f);
         }
 
         void UpdateTarget()
@@ -64,6 +62,9 @@ namespace WorldConqueror
                 l += ennemiesG.Length;
             }
 
+            GameObject[] ennemiesN = GameObject.FindGameObjectsWithTag("Neutral");
+            l += ennemiesN.Length;
+
 
             GameObject[] ennemies = new GameObject[l];
 
@@ -92,6 +93,12 @@ namespace WorldConqueror
                 c += 1;
             }
 
+            for (int n = 0; n < ennemiesN.Length; n++)
+            {
+                ennemies[c] = ennemiesN[n];
+                c += 1;
+            }
+
             float shortestDistance = Mathf.Infinity;
             GameObject nearestEnemy = null;
 
@@ -115,39 +122,11 @@ namespace WorldConqueror
                 target = null;
             }
         }
-
-        void BatTarget()
-        {
-            GameObject[] batiments = GameObject.FindGameObjectsWithTag("Neutral");
-
-            float shortestDistance = Mathf.Infinity;
-            GameObject nearestBat = null;
-
-            foreach (GameObject bat in batiments)
-            {
-                float distanceToBat = Vector3.Distance(transform.position, bat.transform.position);
-                if (distanceToBat < shortestDistance)
-                {
-                    shortestDistance = distanceToBat;
-                    nearestBat = bat;
-                }
-            }
-
-            if (nearestBat != null && shortestDistance <= range)
-            {
-                gameObject.GetComponent<Unit>().fight = true; //Variable permettant l'arret des unités lors des combats
-                targetbat = nearestBat.transform;
-            }
-            else
-            {
-                targetbat = null;
-            }
-        }
-
+        
         // Update is called once per frame
         void Update()
         {
-            if (target == null && targetbat == null)
+            if (target == null)
             {
                 //Variable permettant l'arret (ici la reprise du mouv) des unités lors des combats
                 gameObject.GetComponent<Unit>().fight = false;
@@ -156,11 +135,7 @@ namespace WorldConqueror
 
             if (fireCountdown <= 0f)
             {
-                if (targetbat != null)
-                {
-                    Capture();
-                }
-                else if (target != null)
+                if (target != null)
                 {
                     Shoot(); 
                     ShootBat();
@@ -199,7 +174,7 @@ namespace WorldConqueror
             }
         }
 
-        void Capture()
+        /*void Capture()
         {
             GameObject arrowGO = PhotonNetwork.Instantiate(arrow.name, firePoint.position, firePoint.rotation);
             Arow arow = arrowGO.GetComponent<Arow>();
@@ -209,7 +184,7 @@ namespace WorldConqueror
             {
                 ee.TakeDammag(dammage, transform.tag);
             }
-        }
+        }*/
 
         private void OnDrawGizmosSelected()
         {
