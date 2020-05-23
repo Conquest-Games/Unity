@@ -377,6 +377,7 @@
                 <e p="QGScript.cs" t="Include" />
               </e>
             </e>
+            <e p="RotationMiniMap.cs" t="Include" />
             <e p="Tour D'archer" t="Include">
               <e p="Scripts" t="Include">
                 <e p="Arow.cs" t="Include" />
@@ -395,6 +396,11 @@
             <e p="Player.cs" t="Include" />
           </e>
           <e p="RotationText.cs" t="Include" />
+          <e p="Sols" t="Include">
+            <e p="Marais" t="Include">
+              <e p="MaraisScipt.cs" t="Include" />
+            </e>
+          </e>
           <e p="test.cs" t="Include" />
           <e p="Unit" t="Include">
             <e p="Archer" t="Include">

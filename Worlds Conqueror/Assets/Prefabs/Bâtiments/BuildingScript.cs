@@ -11,6 +11,7 @@ namespace Building
 
     public class BuildingScript : MonoBehaviour
     {
+        private PhotonView _view;
         #region DataEnums
 
         public enum BuildingType
@@ -109,6 +110,7 @@ namespace Building
 
         #endregion
 
+        [PunRPC]
         private void UpdateStats()
         {
             switch (type)
@@ -234,7 +236,7 @@ namespace Building
 
             return;
         }
-
+        [PunRPC]
         private void ActualiseLevel()
         {
             if (CeBatiment.tag == "Neutral")
@@ -258,7 +260,7 @@ namespace Building
                     break;
             }
         }
-
+        [PunRPC]
         private void UpdateText()
         {
             switch (CeBatiment.tag)
@@ -348,23 +350,29 @@ namespace Building
                 this.heals++;
         }
 
+        [PunRPC]
+        void LevelUp()
+        {
+            actualLevel++;
+        }
         public void upgradeBuilding()
         {
             if (actualLevel >= 2)
                 return;
             (bool achete, string erreur) = Joueur.Player.Cout(upgradeOrPrice[actualLevel], upgradeFerPrice[actualLevel]);
             if (achete)
-                actualLevel++;
+                _view.RPC("LevelUp", RpcTarget.All);
             else
                 return;
 
-            UpdateStats();
+            _view.RPC("UpdateStats", RpcTarget.All);
             heals = maxHeals;
         }
 
         // Start is called before the first frame update
         void Start()
         {
+            _view = PhotonView.Get(gameObject);
             Initiate();
             if (actualLevel > 2)
                 actualLevel = 2;
@@ -405,7 +413,9 @@ namespace Building
                 actualLevel = 0;
 
             ActualiseLevel();
+            //_view.RPC("ActualiseLevel", RpcTarget.All);
             UpdateText();
+            //_view.RPC("UpdateText", RpcTarget.All);
         }
     }
 }

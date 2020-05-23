@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ namespace WorldConqueror
 {
     public class UnitControlleur : MonoBehaviour
     {
+        private PhotonView _view;
         
         #region Textes
 
@@ -116,6 +118,11 @@ namespace WorldConqueror
 
         #region Upgrade
 
+        [PunRPC]
+        void LevelUp(UnitStats.SolderType type)
+        {
+            UnitStats.Upgrade(type);
+        }
         private void Upgrade(UnitStats.SolderType type)
         {
             int level = UnitStats.GetLevel(type);
@@ -123,8 +130,8 @@ namespace WorldConqueror
                 return;
             (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPriceUpgrade(type, level));
             if (achete)
-                UnitStats.Upgrade(type);
-
+                _view.RPC("LevelUp", RpcTarget.All, type);
+            
         }
 
         public void UpgradeInfantry()
@@ -157,6 +164,7 @@ namespace WorldConqueror
         // Start is called before the first frame update
         void Start()
         {
+            _view = PhotonView.Get(gameObject);
             UpdateTexte();
             UpdatePiece();
         }

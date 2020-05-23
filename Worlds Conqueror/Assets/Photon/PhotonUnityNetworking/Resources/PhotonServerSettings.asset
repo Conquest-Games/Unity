@@ -34,5 +34,13 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - UpdateText
+  - MajText
+  - TakeDammage
+  - ActualiseLevel
+  - upgradeBuilding
+  - LevelUp
+  - UpdateStats
+  - Initiate
   DisableAutoOpenWizard: 1
   ShowSettings: 0

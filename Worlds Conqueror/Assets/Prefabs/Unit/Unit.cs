@@ -10,6 +10,7 @@ namespace WorldConqueror
     public class Unit : MonoBehaviour
     {
 
+        private PhotonView _view;
         #region Attributs
 
         public SoldierType type;
@@ -86,6 +87,7 @@ namespace WorldConqueror
 
         #endregion
 
+        [PunRPC]
         public void Initiate()
         {
             isDead = false;
@@ -161,64 +163,18 @@ namespace WorldConqueror
         {
             transform.Translate(Vector3.right * Time.deltaTime * 10, Space.Self);
         }
-
+        
         public void TakeDammage(int dam)
         {
             hp -= dam;
             if (hp <= 0)
             {
                 hp = 0;
-                Destroy(gameObject);
+                PhotonView.Destroy(gameObject);
             }
 
         }
-
-        /*public void Attack(Unit unit, Building.Building building)
-        {
-            if (type == SoldierType.Ninja)
-            {
-                if (building == null)
-                {
-                    if (unit != null)
-                        unit.Damage(damage / 3);
-                }
-                /*else
-                {
-                    if (building.Team == Building.Building.BuildingTeam.Neutral
-                        || building.Team == Building.Building.BuildingTeam.Neutral_Capturable)
-                        fonction qui inflige des dégats aux batiments
-                }
-                   
-            }
-            else
-            {
-                if (type == SoldierType.SiegeWeapon)
-                {
-                    if (unit == null)
-                    {
-                        //if (building != null)
-                        //foncntion de degats sur batiments
-                    }
-                    else
-                    {
-                        unit.Damage(damage / 3);
-                    }
-                }
-                else
-                {
-                    if (building == null)
-                    {
-                        if (unit != null)
-                            unit.Damage(damage);
-                    }
-                    else
-                    {
-                        //foncntion de degats sur batiments
-                    }
-                }
-            }
-        }*/
-
+        
         private void UpdateText()
         {
             switch(transform.tag)
@@ -260,7 +216,8 @@ namespace WorldConqueror
 
         void Start()
         {
-            Initiate();
+            _view = PhotonView.Get(gameObject);
+            _view.RPC("Initiate", RpcTarget.All);
             initialSpeed = speed;
 
             InvokeRepeating("ResetSpeed", 0f, 0.1f);
