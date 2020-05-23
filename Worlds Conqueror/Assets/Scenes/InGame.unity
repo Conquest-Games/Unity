@@ -5534,7 +5534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 136849807}
   m_Layer: 0
-  m_Name: GameOver
+  m_Name: Game Over
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26423,7 +26423,7 @@ PrefabInstance:
     - target: {fileID: 6357452453069275035, guid: ef20bc1db58d0fc489e950f0b296b351,
         type: 3}
       propertyPath: m_TagString
-      value: MainCamera
+      value: Green
       objectReference: {fileID: 0}
     - target: {fileID: 6996544180290767571, guid: ef20bc1db58d0fc489e950f0b296b351,
         type: 3}

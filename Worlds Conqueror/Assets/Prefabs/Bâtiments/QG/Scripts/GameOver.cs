@@ -11,7 +11,13 @@ namespace GameControl
         public GameObject GO;
         public static bool EndGame = false;
 
-        //public GameObject gameOverUI;
+        private bool cooldownn = false;
+
+        private int cooldown = 300;
+        
+        private void Start()
+        {
+        }
 
         void Update()
         {
@@ -19,15 +25,28 @@ namespace GameControl
             {
                 End();
             }
+
+            if (cooldownn)
+            {
+                if (cooldown > 0)
+                    cooldown--;
+                else
+                {
+                    cooldownn = false;
+                    EndGame = false;
+                    GameObject.Find("Game Over").SetActive(false);
+                    GameObject.Find("Upgrade").SetActive(false);
+                    GameObject.Find("Unité Menu").SetActive(false);
+                    GameObject.Find("Menu Basic").SetActive(false);
+                    GameObject.Find("Interface Ressource").SetActive(false);
+                }
+            }
         }
 
         void End()
         {
-            Debug.Log("end() called");
-            float time = Time.time;
             GO.SetActive(true);
-            PhotonNetwork.Disconnect();
-            SceneManager.LoadScene("Luncher");
+            cooldownn = true;
         }
     }
 }

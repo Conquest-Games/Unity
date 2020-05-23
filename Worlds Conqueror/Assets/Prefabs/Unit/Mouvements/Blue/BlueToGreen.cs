@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Building;
 using UnityEngine;
 using Photon.Pun;
@@ -40,8 +41,8 @@ namespace WorldConqueror
                 transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
             if (transform.position.x > 138 && transform.position.z < -130)
             {
-                Destroy(gameObject);
-                //GameObject.Find("QG_Vert").GetComponent<BuildingScript>().heals -= ThisOne.UnitDamage;
+                gameObject.AddComponent<GreenToYellow>();
+                Destroy(gameObject.GetComponent<BlueToGreen>());
             }
             if (transform.position.x > -140 && transform.position.x < -135)
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 30, 0));

@@ -41,8 +41,8 @@ namespace WorldConqueror
                 transform.Translate(Vector3.forward * Time.deltaTime * ThisOne.Speed, Space.Self);
             if (transform.position.z < -150 && transform.position.x < -120)
             {
-                Destroy(gameObject);
-                //GameObject.Find("QG_Bleu").GetComponent<BuildingScript>().heals -= ThisOne.UnitDamage;
+                gameObject.AddComponent<BlueToGreen>();
+                Destroy(gameObject.GetComponent<RedToBlue>());
             }
             if (transform.position.z < 151 && transform.position.z > 149)
             {

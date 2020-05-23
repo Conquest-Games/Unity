@@ -146,23 +146,15 @@ namespace Building
 
             fireCountdown -= Time.deltaTime;
 
-            if (CeBatiment.GetComponent<BuildingScript>().Heals <= 0 && !dead)
+            /*if (CeBatiment.GetComponent<BuildingScript>().Heals <= 0 )
             {
                 dead = true;
                 GameObject.Find("Unités").SetActive(false);
                 GameObject.Find("Interface Ressource").SetActive(false);
                 GameObject.Find("UnitMenu").SetActive(false);
                 GameObject.Find("InfantryEnnemiChoice").SetActive(false);
-                GameObject.Find("Loose").SetActive(true);
-
-
-            }
+            }*/
         }
-
-        /*void TakeDamage(int amount)
-        {
-            life -= amount;
-        }*/
 
         void Shoot()
         {

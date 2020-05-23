@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Building;
+using GameControl;
 using WorldConqueror;
 
 public class CaptureScript : MonoBehaviour
@@ -28,8 +29,8 @@ public class CaptureScript : MonoBehaviour
                 if (Batiment.GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG)
                 {
                     Batiment.GetComponent<BuildingScript>().type = Building.BuildingScript.BuildingType.QG_Captured;
-                    
-                    GameObject.Find("GameOver").SetActive(true);
+
+                    GameOver.EndGame = true;
                 }
             }
             
