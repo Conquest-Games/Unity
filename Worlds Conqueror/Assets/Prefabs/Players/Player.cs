@@ -79,12 +79,6 @@ namespace Joueur
             return (true, "");
         }
 
-        private void Reset()
-        {
-            or = 100;
-            fer = 0;
-        }
-
         private void ActualiseIncomes()
         {
             incomeOr = 0;
@@ -105,6 +99,17 @@ namespace Joueur
         #endregion
 
         #region Reset
+
+        private void Reset()
+        {
+            or = 100;
+            fer = 0;
+            UnitStats.InfantryLevel = 0;
+            UnitStats.ArcheryLevel = 0;
+            UnitStats.CavaleryLevel = 0;
+            UnitStats.SiegeWeaponLevel = 0;
+            UnitStats.NinjaLevel = 0;
+        }
 
         void ResetMap()
         {
@@ -234,6 +239,32 @@ namespace Joueur
         void Update()
         {
             ActualiseIncomes();
+
+            #region clean perdant
+
+            if (GameObject.Find("QG_Rouge").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured)
+            {
+                foreach (GameObject i in GameObject.FindGameObjectsWithTag("Red"))
+                    i.tag = "Neutral";
+            }
+            if (GameObject.Find("QG_Bleu").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured)
+            {
+                foreach (GameObject i in GameObject.FindGameObjectsWithTag("Blue"))
+                    i.tag = "Neutral";
+            }
+            if (GameObject.Find("QG_Jaune").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured)
+            {
+                foreach (GameObject i in GameObject.FindGameObjectsWithTag("Yellow"))
+                    i.tag = "Neutral";
+            }
+            if (GameObject.Find("QG_Vert").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured)
+            {
+                foreach (GameObject i in GameObject.FindGameObjectsWithTag("Green"))
+                    i.tag = "Neutral";
+            }
+
+            #endregion
+
             #region Text update
 
             pOr.text = ((int) or).ToString();

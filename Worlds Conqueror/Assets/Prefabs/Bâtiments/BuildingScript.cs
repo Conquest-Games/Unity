@@ -33,10 +33,10 @@ namespace Building
         public GameObject HpLevel;
         public GameObject MiniMapRender;
 
-        protected int[] orIncomeList = { 2, 4, 8 };
-        protected int[] orQGIncomeList = { 5, 10, 15 };
+        protected int[] orIncomeList = { 1, 2, 4 };
+        protected int[] orQGIncomeList = { 4, 8, 12 };
         protected int[] ferIncomeList = { 1, 2, 3 };
-        protected int[] ferQGIncomeList = { 2, 4, 6 };
+        protected int[] ferQGIncomeList = { 1, 2, 3 };
         protected int[] dommageList = { 10, 15, 25 };
         protected int[] dommageQGList = { 20, 30, 50 };
 
@@ -299,8 +299,10 @@ namespace Building
                         break;
                     }
             }
-
-            switch (PhotonNetwork.LocalPlayer.GetTeam())
+            if (actualLevel == 2)
+                UpgradeBouton.SetActive(false);
+            else
+                switch (PhotonNetwork.LocalPlayer.GetTeam())
             {
                 case PunTeams.Team.red:
                     if (CeBatiment.tag == "Red")

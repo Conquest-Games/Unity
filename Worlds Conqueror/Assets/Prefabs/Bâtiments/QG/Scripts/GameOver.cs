@@ -15,7 +15,7 @@ namespace GameControl
 
         private int cooldown = 300;
         
-        private void Start()
+        void Start()
         {
         }
 

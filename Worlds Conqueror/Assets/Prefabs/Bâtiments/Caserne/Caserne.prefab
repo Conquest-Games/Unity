@@ -393,7 +393,7 @@ MonoBehaviour:
   CeBatiment: {fileID: 4663625160220570020}
   Level1: {fileID: 8910353991430640105}
   Level2: {fileID: 2532262920648960402}
-  Level3: {fileID: 6958787507145715918, guid: d919a5f3f22dd5f40a5de4b20baf4213, type: 3}
+  Level3: {fileID: 3302364666897501084}
   UpgradeBouton: {fileID: 4221418656993868804}
   TextLevel: {fileID: 1592431867836372448}
   HpLevel: {fileID: 7436814772332597234}
@@ -777,6 +777,12 @@ PrefabInstance:
 --- !u!4 &7936239176666204310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2550691119513531332, guid: d919a5f3f22dd5f40a5de4b20baf4213,
+    type: 3}
+  m_PrefabInstance: {fileID: 5568366089364224850}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3302364666897501084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6958787507145715918, guid: d919a5f3f22dd5f40a5de4b20baf4213,
     type: 3}
   m_PrefabInstance: {fileID: 5568366089364224850}
   m_PrefabAsset: {fileID: 0}
