@@ -27180,6 +27180,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 330693794}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &684211577
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 112.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 195.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -412.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.45869094
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.10190989
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.05305094
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.88113713
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 52.895004
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -22.232
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652392, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -18.055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652398, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_Name
+      value: Directional Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452123483496652399, guid: 97df6ee5bc1702541969064deab451c3,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 97df6ee5bc1702541969064deab451c3, type: 3}
 --- !u!1001 &684977397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44797,98 +44871,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c52527d6f462b8143806fe7f70ecd50e, type: 3}
---- !u!1 &1156489466
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1156489468}
-  - component: {fileID: 1156489467}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &1156489467
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156489466}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &1156489468
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156489466}
-  m_LocalRotation: {x: 0.45869094, y: -0.10190989, z: -0.05305094, w: 0.88113713}
-  m_LocalPosition: {x: 112.1, y: 195.7, z: -412.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 52.895004, y: -22.232, z: -18.055}
 --- !u!1001 &1158026473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51784,7 +51766,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1336414589
 PrefabInstance:
@@ -65778,14 +65760,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c7242909f96490f898c4a633b42755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Infantry: {fileID: 4287995071970314482, guid: 38518c6460e293142a0ef65db6a8aa3b,
+  InfantryRed: {fileID: 1428039748588077807, guid: c5478ee4f9b7c054ab4a53e17922df69,
     type: 3}
-  Archery: {fileID: 2473246223586523795, guid: d656ad67e4334fc46829ef0a9be60cdf, type: 3}
-  Cavalery: {fileID: 3941920747698394927, guid: 53155d7971ac340468846c255eced60d,
+  ArcheryRed: {fileID: 2084705284097911804, guid: 93f4e854debfd39408636477b5c540d2,
     type: 3}
-  SiegeWeapon: {fileID: 1865736313255090937, guid: 06c53489f80a76947b01a87fb9bc36fb,
+  CavaleryRed: {fileID: 4479884848499616338, guid: 8872bfc877142da4185082b5aa5bdf64,
     type: 3}
-  Ninja: {fileID: 6140513953487556658, guid: 436a634c10df31744a90f7844c789636, type: 3}
+  SiegeWeaponRed: {fileID: 7770364889236556596, guid: 8cdcf710df9c0ec4c9b89e9b872d5617,
+    type: 3}
+  NinjaRed: {fileID: 5843790208767235668, guid: b993ad1c7c1a2ba4da1bdc8b9c6425f1,
+    type: 3}
+  InfantryBlue: {fileID: 3582457882402902238, guid: 5134ea6eb8c97bd44b6329130a2d4719,
+    type: 3}
+  ArcheryBlue: {fileID: 7772392587942922832, guid: 18bee412ddc9d0d4189b3447146bfb6e,
+    type: 3}
+  CavaleryBlue: {fileID: 5753423392983668803, guid: ee5ab990375e3eb4986aa762b69a3996,
+    type: 3}
+  SiegeWeaponBlue: {fileID: 5804084606234067716, guid: 495a43ff6ea6f1848bec105b7254a7e8,
+    type: 3}
+  NinjaBlue: {fileID: 4800089288445052563, guid: aaf3860dbdb757c48a7b51d6e8978972,
+    type: 3}
+  InfantryYellow: {fileID: 1056064186875450989, guid: 26eca2ce18b9d8a4b99d893333e1c0b6,
+    type: 3}
+  ArcheryYellow: {fileID: 7774533190746166019, guid: b858d3b4aac03984a9edc387784c6aed,
+    type: 3}
+  CavaleryYellow: {fileID: 877625235248056012, guid: 48c130d687d931f4baca9940a59efd78,
+    type: 3}
+  SiegeWeaponYellow: {fileID: 5401689772787442025, guid: 51c242a6646d7f349bb6bbfb34e7b6db,
+    type: 3}
+  NinjaYellow: {fileID: 4425630942725341060, guid: b0ef1c4503777ef43aae29cbf66b5638,
+    type: 3}
+  InfantryGreen: {fileID: 2016488720853037842, guid: 871e3cbc980bc3649b0f6375f5503b56,
+    type: 3}
+  ArcheryGreen: {fileID: 5196211743635852418, guid: 085dbe792cb002e4587c1e70b783deca,
+    type: 3}
+  CavaleryGreen: {fileID: 7095677413607459116, guid: 6a353b41aeea2c249ad8e120782d355e,
+    type: 3}
+  SiegeWeaponGreen: {fileID: 6023756355484444582, guid: 31e13b931e27299478ad462493fbb3e5,
+    type: 3}
+  NinjaGreen: {fileID: 3205099119653153586, guid: 021c9a374cd94694e92bc3bcc07c0adc,
+    type: 3}
 --- !u!82 &1729415403
 AudioSource:
   m_ObjectHideFlags: 0
