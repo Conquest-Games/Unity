@@ -22,6 +22,7 @@ namespace WorldConqueror
         public int damage = 0;
         public float attackSpeed = 1f;
         public float speed = 0f;
+        private float initialSpeed = 0f;
         public float range = 0f;
         
         private bool isDead;
@@ -38,6 +39,7 @@ namespace WorldConqueror
         }
 
         public GameObject Level;
+        public GameObject MiniMapRender;
 
         public PunTeams.Team Team
         {
@@ -224,21 +226,26 @@ namespace WorldConqueror
                 case "Red":
                     {
                         Level.GetComponent<TextMesh>().color = Color.red;
+                        MiniMapRender.GetComponent<SpriteRenderer>().color = Color.red;
                         break;
                     }
                 case "Yellow":
                     {
                         Level.GetComponent<TextMesh>().color = Color.yellow;
+                        MiniMapRender.GetComponent<SpriteRenderer>().color = Color.yellow;
                         break;
+
                     }
                 case "Green":
                     {
                         Level.GetComponent<TextMesh>().color = Color.green;
+                        MiniMapRender.GetComponent<SpriteRenderer>().color = Color.green;
                         break;
                     }
                 default:
                     {
                         Level.GetComponent<TextMesh>().color = Color.cyan;
+                        MiniMapRender.GetComponent<SpriteRenderer>().color = Color.cyan;
                         break;
                     }
             }
@@ -246,9 +253,17 @@ namespace WorldConqueror
             Level.GetComponent<TextMesh>().text = lvl.ToString() + ": " + hp.ToString() + " / " + Maxhp.ToString();
         }
 
+        void ResetSpeed()
+        {
+            this.speed = initialSpeed;
+        }
+
         void Start()
         {
             Initiate();
+            initialSpeed = speed;
+
+            InvokeRepeating("ResetSpeed", 0f, 0.1f);
 
             UpdateText();
         }

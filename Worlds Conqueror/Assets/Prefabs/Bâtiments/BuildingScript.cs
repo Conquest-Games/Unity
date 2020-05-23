@@ -31,6 +31,7 @@ namespace Building
         public GameObject UpgradeBouton;
         public GameObject TextLevel;
         public GameObject HpLevel;
+        public GameObject MiniMapRender;
 
         protected int[] orIncomeList = { 2, 4, 8 };
         protected int[] orQGIncomeList = { 5, 10, 15 };
@@ -229,7 +230,7 @@ namespace Building
             if (gameObject.tag == "Neutral")
                 this.heals = maxNeutralHeals;
             else
-                 this.heals = maxHeals;
+                this.heals = maxHeals;
 
             return;
         }
@@ -266,30 +267,35 @@ namespace Building
                     {
                         TextLevel.GetComponent<TextMesh>().color = Color.red;
                         HpLevel.GetComponent<TextMesh>().color = Color.red;
+                        MiniMapRender.GetComponent<SpriteRenderer>().color = Color.red;
                         break;
                     }
                 case "Yellow":
                     {
                         TextLevel.GetComponent<TextMesh>().color = Color.yellow;
                         HpLevel.GetComponent<TextMesh>().color = Color.yellow;
+                        MiniMapRender.GetComponent<SpriteRenderer>().color = Color.yellow;
                         break;
                     }
                 case "Green":
                     {
                         TextLevel.GetComponent<TextMesh>().color = Color.green;
                         HpLevel.GetComponent<TextMesh>().color = Color.green;
+                        MiniMapRender.GetComponent<SpriteRenderer>().color = Color.green;
                         break;
                     }
                 case "Blue":
                     {
                         TextLevel.GetComponent<TextMesh>().color = Color.cyan;
                         HpLevel.GetComponent<TextMesh>().color = Color.cyan;
+                        MiniMapRender.GetComponent<SpriteRenderer>().color = Color.cyan;
                         break;
                     }
                 default:
                     {
                         TextLevel.GetComponent<TextMesh>().color = Color.white;
                         HpLevel.GetComponent<TextMesh>().color = Color.white;
+                        MiniMapRender.GetComponent<SpriteRenderer>().color = Color.white;
                         break;
                     }
             }
@@ -386,6 +392,10 @@ namespace Building
                 this.maxHeals = healsListQG_Captured[actualLevel];
                 GameOver.EndGame = true;
             }
+
+            if (gameObject.tag == "Neutral" && heals > maxNeutralHeals)
+                this.heals = maxNeutralHeals;
+
 
             if (actualLevel > 2)
                 actualLevel = 2;
