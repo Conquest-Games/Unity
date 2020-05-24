@@ -130,6 +130,7 @@ namespace WorldConqueror
                 return;
             (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPriceUpgrade(type, level));
             if (achete)
+                //LevelUp(type);
                 _view.RPC("LevelUp", RpcTarget.All, type);
             
         }

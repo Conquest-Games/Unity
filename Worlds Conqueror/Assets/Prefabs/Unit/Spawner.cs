@@ -65,6 +65,11 @@ namespace WorldConqueror
                                 spawnPosy = new Vector3(138.4f, 0, -150);
                         }
                         GameObject TheOney = PhotonNetwork.Instantiate(InfantryYellow.name, spawnPosy, Quaternion.identity);
+                        if (spawnPosy.z == 0)
+                        {
+                            TheOney.transform.SetPositionAndRotation(
+                                TheOney.transform.position, Quaternion.Euler(0, 180, 0));
+                        }
                         TheOney.AddComponent<YellowToGreen>();
                         break;
                     }
@@ -108,7 +113,13 @@ namespace WorldConqueror
                             if (GameObject.Find("QG_Bleu").tag == "Red")
                                 spawnPosr = new Vector3(-138.4f, 0, -150);
                         }
-                        GameObject TheOner = PhotonNetwork.Instantiate(InfantryRed.name, spawnPosr, Quaternion.identity);
+                        GameObject TheOner = PhotonNetwork.Instantiate(
+                            InfantryRed.name, spawnPosr, Quaternion.identity);
+                        if (spawnPosr.z == 0)
+                        {
+                            TheOner.transform.SetPositionAndRotation(
+                                TheOner.transform.position, Quaternion.Euler(0, 180, 0));
+                        }
                         TheOner.AddComponent<RedToBlue>();
                         break;
                     }
@@ -154,7 +165,7 @@ namespace WorldConqueror
                 case PunTeams.Team.red:
                     {
                         Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
-                        if (GameObject.Find("QG_Green").tag == "Red")
+                        if (GameObject.Find("QG_Vert").tag == "Red")
                             spawnPosr = new Vector3(138.4f, 0, -150);
                         GameObject TheOner = PhotonNetwork.Instantiate(InfantryRed.name, spawnPosr, Quaternion.identity);
                         TheOner.AddComponent<RedToGreen>();
@@ -218,6 +229,11 @@ namespace WorldConqueror
                                 spawnPosy = new Vector3(138.4f, 0, -150);
                         }
                         GameObject TheOney = PhotonNetwork.Instantiate(ArcheryYellow.name, spawnPosy, Quaternion.identity);
+                        if (spawnPosy.z == 0)
+                        {
+                            TheOney.transform.SetPositionAndRotation(
+                                TheOney.transform.position, Quaternion.Euler(0, 180, 0));
+                        }
                         TheOney.AddComponent<YellowToGreen>();
                         break;
                     }
@@ -261,6 +277,11 @@ namespace WorldConqueror
                                 spawnPosr = new Vector3(-138.4f, 0, -150);
                         }
                         GameObject TheOner = PhotonNetwork.Instantiate(ArcheryRed.name, spawnPosr, Quaternion.identity);
+                        if (spawnPosr.z == 0)
+                        {
+                            TheOner.transform.SetPositionAndRotation(
+                                TheOner.transform.position, Quaternion.Euler(0, 180, 0));
+                        }
                         TheOner.AddComponent<RedToBlue>();
                         break;
                     }
@@ -306,7 +327,7 @@ namespace WorldConqueror
                 case PunTeams.Team.red:
                     {
                         Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
-                        if (GameObject.Find("QG_Green").tag == "Red")
+                        if (GameObject.Find("QG_Vert").tag == "Red")
                             spawnPosr = new Vector3(138.4f, 0, -150);
                         GameObject TheOner = PhotonNetwork.Instantiate(ArcheryRed.name, spawnPosr, Quaternion.identity);
                         TheOner.AddComponent<RedToGreen>();
@@ -370,6 +391,11 @@ namespace WorldConqueror
                                 spawnPosy = new Vector3(138.4f, 0, -150);
                         }
                         GameObject TheOney = PhotonNetwork.Instantiate(CavaleryYellow.name, spawnPosy, Quaternion.identity);
+                        if (spawnPosy.z == 0)
+                        {
+                            TheOney.transform.SetPositionAndRotation(
+                                TheOney.transform.position, Quaternion.Euler(0, 180, 0));
+                        }
                         TheOney.AddComponent<YellowToGreen>();
                         break;
                     }
@@ -413,6 +439,11 @@ namespace WorldConqueror
                                 spawnPosr = new Vector3(-138.4f, 0, -150);
                         }
                         GameObject TheOner = PhotonNetwork.Instantiate(CavaleryRed.name, spawnPosr, Quaternion.identity);
+                        if (spawnPosr.z == 0)
+                        {
+                            TheOner.transform.SetPositionAndRotation(
+                                TheOner.transform.position, Quaternion.Euler(0, 180, 0));
+                        }
                         TheOner.AddComponent<RedToBlue>();
                         break;
                     }
@@ -458,7 +489,7 @@ namespace WorldConqueror
                 case PunTeams.Team.red:
                     {
                         Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
-                        if (GameObject.Find("QG_Green").tag == "Red")
+                        if (GameObject.Find("QG_Vert").tag == "Red")
                             spawnPosr = new Vector3(138.4f, 0, -150);
                         GameObject TheOner = PhotonNetwork.Instantiate(CavaleryRed.name, spawnPosr, Quaternion.identity);
                         TheOner.AddComponent<RedToGreen>();
@@ -522,6 +553,11 @@ namespace WorldConqueror
                                 spawnPosy = new Vector3(138.4f, 0, -150);
                         }
                         GameObject TheOney = PhotonNetwork.Instantiate(SiegeWeaponYellow.name, spawnPosy, Quaternion.identity);
+                        if (spawnPosy.z == 0)
+                        {
+                            TheOney.transform.SetPositionAndRotation(
+                                TheOney.transform.position, Quaternion.Euler(0, 180, 0));
+                        }
                         TheOney.AddComponent<YellowToGreen>();
                         break;
                     }
@@ -565,6 +601,11 @@ namespace WorldConqueror
                                 spawnPosr = new Vector3(-138.4f, 0, -150);
                         }
                         GameObject TheOner = PhotonNetwork.Instantiate(SiegeWeaponRed.name, spawnPosr, Quaternion.identity);
+                        if (spawnPosr.z == 0)
+                        {
+                            TheOner.transform.SetPositionAndRotation(
+                                TheOner.transform.position, Quaternion.Euler(0, 180, 0));
+                        }
                         TheOner.AddComponent<RedToBlue>();
                         break;
                     }
@@ -610,7 +651,7 @@ namespace WorldConqueror
                 case PunTeams.Team.red:
                     {
                         Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
-                        if (GameObject.Find("QG_Green").tag == "Red")
+                        if (GameObject.Find("QG_Vert").tag == "Red")
                             spawnPosr = new Vector3(138.4f, 0, -150);
                         GameObject TheOner = PhotonNetwork.Instantiate(SiegeWeaponRed.name, spawnPosr, Quaternion.identity);
                         TheOner.AddComponent<RedToGreen>();
@@ -674,6 +715,12 @@ namespace WorldConqueror
                                 spawnPosy = new Vector3(138.4f, 0, -150);
                         }
                         GameObject TheOney = PhotonNetwork.Instantiate(NinjaYellow.name, spawnPosy, Quaternion.identity);
+                        
+                        if (spawnPosy.z == 0)
+                        {
+                            TheOney.transform.SetPositionAndRotation(
+                                TheOney.transform.position, Quaternion.Euler(0, 180, 0));
+                        }
                         TheOney.AddComponent<YellowToGreen>();
                         break;
                     }
@@ -717,6 +764,11 @@ namespace WorldConqueror
                                 spawnPosr = new Vector3(-138.4f, 0, -150);
                         }
                         GameObject TheOner = PhotonNetwork.Instantiate(NinjaRed.name, spawnPosr, Quaternion.identity);
+                        if (spawnPosr.z == 0)
+                        {
+                            TheOner.transform.SetPositionAndRotation(
+                                TheOner.transform.position, Quaternion.Euler(0, 180, 0));
+                        }
                         TheOner.AddComponent<RedToBlue>();
                         break;
                     }
@@ -762,7 +814,7 @@ namespace WorldConqueror
                 case PunTeams.Team.red:
                     {
                         Vector3 spawnPosr = new Vector3(-138.4f, 0, 150);
-                        if (GameObject.Find("QG_Green").tag == "Red")
+                        if (GameObject.Find("QG_Vert").tag == "Red")
                             spawnPosr = new Vector3(138.4f, 0, -150);
                         GameObject TheOner = PhotonNetwork.Instantiate(NinjaRed.name, spawnPosr, Quaternion.identity);
                         TheOner.AddComponent<RedToGreen>();

@@ -86,11 +86,8 @@ namespace WorldConqueror
 
         #endregion
 
-        [PunRPC]
-        public void Initiate()
+        void MajLevel()
         {
-            isDead = false;
-
             switch(type)
             {
                 case SoldierType.Archer:
@@ -110,7 +107,14 @@ namespace WorldConqueror
                     break;
 
             }
+        }
+        [PunRPC]
+        public void Initiate()
+        {
+            isDead = false;
 
+            MajLevel();
+            
             switch (type)
             {
                 case (SoldierType.Archer):
@@ -216,7 +220,10 @@ namespace WorldConqueror
         void Start()
         {
             _view = PhotonView.Get(gameObject);
-            _view.RPC("Initiate", RpcTarget.All);
+            //MajLevel();
+            Initiate();
+            _view.RPC("Initiate", RpcTarget.Others);
+            
             initialSpeed = speed;
 
             InvokeRepeating("ResetSpeed", 0f, 0.1f);

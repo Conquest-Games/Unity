@@ -28,6 +28,7 @@ namespace WorldConqueror
 
         public void Lunch()
         {
+            alone = false;
             SceneManager.LoadScene("Lobby");
         }
 
