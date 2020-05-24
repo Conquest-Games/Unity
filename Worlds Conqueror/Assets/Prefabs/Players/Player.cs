@@ -295,6 +295,7 @@ namespace Joueur
             else if(loose)
             {
                 Interface.SetActive(false);
+                GameOver.SetActive(true);
 
                 if (cooldown > 0)
                     cooldown--;

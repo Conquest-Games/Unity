@@ -15,6 +15,7 @@ ScriptsOnlyBuild:
     - GameControl.PunScript
     - Joueur.Player
     - LobbyScript
+    - MaraisScipt
     - OpenLink
     - Pivot
     - RotationMiniMap
@@ -46,8 +47,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -134,13 +133,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11492}
     - Class: 114
+      Script: {instanceID: 11550}
+    - Class: 114
       Script: {instanceID: 11662}
     - Class: 114
       Script: {instanceID: 11756}
     - Class: 114
       Script: {instanceID: 11872}
-    - Class: 114
-      Script: {instanceID: 11940}
     - Class: 114
       Script: {instanceID: 12004}
     - Class: 114
@@ -346,6 +345,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11492}
     - Class: 114
+      Script: {instanceID: 11662}
+    - Class: 114
       Script: {instanceID: 11754}
     - Class: 114
       Script: {instanceID: 11756}
@@ -374,7 +375,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12574}
     - Class: 114
+      Script: {instanceID: 12642}
+    - Class: 114
       Script: {instanceID: 12644}
+    - Class: 114
+      Script: {instanceID: 12706}
     - Class: 114
       Script: {instanceID: 12732}
     - Class: 114
@@ -418,9 +423,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13636}
     - Class: 114
+      Script: {instanceID: 13678}
+    - Class: 114
       Script: {instanceID: 13684}
     - Class: 114
       Script: {instanceID: 13742}
+    - Class: 114
+      Script: {instanceID: 13750}
     - Class: 114
       Script: {instanceID: 13778}
     - Class: 114
@@ -428,7 +437,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13824}
     - Class: 114
-      Script: {instanceID: 36820}
+      Script: {instanceID: 15418}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -500,7 +509,7 @@ ScriptsOnlyBuild:
     className: SmoothSyncMovement
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: e09933ad9c1806955560ccef1048263a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bulet
@@ -902,7 +911,7 @@ ScriptsOnlyBuild:
     className: Pivot
   - hash:
       serializedVersion: 2
-      Hash: 07df5b3b3caa5195ad85a14345db55f2
+      Hash: 4d5dfbf9822a7bd2350ffcfb66e3ae9c
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: RangeScript
@@ -1562,7 +1571,7 @@ ScriptsOnlyBuild:
     className: CinemachineImpulseListener
   - hash:
       serializedVersion: 2
-      Hash: d3b5bac7b2bdc9c2ac051512775e8516
+      Hash: de7e1dfa66494c3fce377612266c891f
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: Unit
@@ -1628,7 +1637,7 @@ ScriptsOnlyBuild:
     className: InputField
   - hash:
       serializedVersion: 2
-      Hash: f3cb4c5c851842b69888c7938b9721ca
+      Hash: 36f60f70324aaeaa290ba4f7d21da6e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: Joueur
     className: Player
@@ -1868,7 +1877,7 @@ ScriptsOnlyBuild:
     className: YellowToRed
   - hash:
       serializedVersion: 2
-      Hash: 9fc190c55f80991aa18abe14bc1305ed
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: GameControl
     className: GameOver
@@ -2453,4 +2462,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Luncher.unity
   - Assets/Scenes/Lobby.unity
   - Assets/Scenes/InGame.unity
-  playerPath: C:/Users/monta/Desktop/World Conqueror/Projet S2.exe
+  playerPath: C:/Users/visse/Documents/BuildGame/Projet S2.exe
