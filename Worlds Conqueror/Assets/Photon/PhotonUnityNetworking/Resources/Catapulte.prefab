@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134300652325830677}
   m_LocalRotation: {x: -0.00000008146035, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.4, y: 209.7, z: 25.4}
+  m_LocalPosition: {x: 4.4, y: 628, z: -7}
   m_LocalScale: {x: 2.5000002, y: 2.5000002, z: 2.5000002}
   m_Children: []
   m_Father: {fileID: 2078412339965371373}
@@ -191,12 +191,12 @@ GameObject:
   - component: {fileID: 2078412339965371373}
   - component: {fileID: 5797573914972364578}
   - component: {fileID: 236887207723688923}
-  - component: {fileID: 9186637679149553950}
   - component: {fileID: 8466706818110510801}
   - component: {fileID: 8852232153052249914}
   - component: {fileID: 2212599249981455900}
   - component: {fileID: 6242578115113736143}
   - component: {fileID: 3470419609266762888}
+  - component: {fileID: -6966942760481185493}
   m_Layer: 0
   m_Name: Catapulte
   m_TagString: Untagged
@@ -274,21 +274,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9186637679149553950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865736313255090937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a5f97481b04044f9a111d8b437306c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 1
-  firePoint: {fileID: 848144750927230466}
-  bullet: {fileID: 8329637170989231371, guid: 05d0ff4acb1ff59409d6af09608a2d02, type: 3}
 --- !u!114 &8466706818110510801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,10 +363,27 @@ MonoBehaviour:
   damage: 0
   attackSpeed: 1
   speed: 0
+  initialSpeed: 0
   range: 0
   fight: 0
   Level: {fileID: 180172921587787593}
   MiniMapRender: {fileID: 3027171294244273319}
+--- !u!114 &-6966942760481185493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865736313255090937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de03f7314949dc489cf98f8a92e2fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0.25
+  firePoint: {fileID: 848144750927230466}
+  projectile: {fileID: 8329637170989231371, guid: 05d0ff4acb1ff59409d6af09608a2d02,
+    type: 3}
 --- !u!1 &3027171294244273319
 GameObject:
   m_ObjectHideFlags: 0

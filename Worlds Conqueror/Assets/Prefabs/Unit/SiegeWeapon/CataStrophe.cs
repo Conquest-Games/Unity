@@ -9,7 +9,6 @@ namespace WorldConqueror
     public class CataStrophe : MonoBehaviour
     {
         private Transform target;
-        private Transform targetbat;
         private float range;
         private int dammage;
 
@@ -18,15 +17,13 @@ namespace WorldConqueror
 
         public Transform firePoint;
         public GameObject bullet;
-
-        // Start is called before the first frame update
+        
         void Start()
         {
             range = gameObject.GetComponent<Unit>().range;
             dammage = gameObject.GetComponent<Unit>().damage;
 
-            InvokeRepeating("UpdateTarget", 0f, 2f); //appeler la fonction tt les 2s
-            InvokeRepeating("BatTarget", 0f, 2f);
+            InvokeRepeating("UpdateTarget", 0f, 2f);
         }
 
         void UpdateTarget()
@@ -64,6 +61,10 @@ namespace WorldConqueror
                 l += ennemiesG.Length;
             }
 
+            GameObject[] ennemiesN = GameObject.FindGameObjectsWithTag("Neutral");
+            l += ennemiesN.Length;
+
+
             GameObject[] ennemies = new GameObject[l];
 
             int c = 0;
@@ -91,6 +92,12 @@ namespace WorldConqueror
                 c += 1;
             }
 
+            for (int n = 0; n < ennemiesN.Length; n++)
+            {
+                ennemies[c] = ennemiesN[n];
+                c += 1;
+            }
+
             float shortestDistance = Mathf.Infinity;
             GameObject nearestEnemy = null;
 
@@ -106,7 +113,7 @@ namespace WorldConqueror
 
             if (nearestEnemy != null && shortestDistance <= range)
             {
-                gameObject.GetComponent<Unit>().fight = true; //Variable permettant l'arret des unités lors des combats
+                gameObject.GetComponent<Unit>().fight = true;
                 target = nearestEnemy.transform;
             }
             else
@@ -114,63 +121,21 @@ namespace WorldConqueror
                 target = null;
             }
         }
-
-        void BatTarget()
-        {
-            GameObject[] batiments = GameObject.FindGameObjectsWithTag("Neutral");
-
-            float shortestDistance = Mathf.Infinity;
-            GameObject nearestBat = null;
-
-            foreach (GameObject bat in batiments)
-            {
-                float distanceToBat = Vector3.Distance(transform.position, bat.transform.position);
-                if (distanceToBat < shortestDistance)
-                {
-                    shortestDistance = distanceToBat;
-                    nearestBat = bat;
-                }
-            }
-
-            if (nearestBat != null && shortestDistance <= range)
-            {
-                gameObject.GetComponent<Unit>().fight = true; //Variable permettant l'arret des unités lors des combats
-                targetbat = nearestBat.transform;
-            }
-            else
-            {
-                targetbat = null;
-            }
-        }
-
-        // Update is called once per frame
+        
         void Update()
         {
-            if (target == null && targetbat == null)
+            if (target == null)
             {
-                //Variable permettant l'arret (ici la reprise du mouv) des unités lors des combats
                 gameObject.GetComponent<Unit>().fight = false;
                 return;
             }
 
             if (fireCountdown <= 0f)
             {
-                if (targetbat != null)
+                if (target != null)
                 {
+                    Shoot(); 
                     ShootBat();
-                }
-                else if (target != null)
-                {
-                    try
-                    {
-                        Shoot();
-                        ShootBat();
-                    }
-                    catch (Exception e)
-                    {
-
-                    }
-
                 }
 
                 fireCountdown = 1 / fireRate;
@@ -192,17 +157,10 @@ namespace WorldConqueror
 
         void ShootBat()
         {
-            GameObject bulletGO = PhotonNetwork.Instantiate(bullet.name, firePoint.position, firePoint.rotation);
-            Bulet bulet = bulletGO.GetComponent<Bulet>();
-
-            if (bulet != null)
+            CaptureScript ee = target.GetComponent<CaptureScript>();
+            if (ee != null)
             {
-                bulet.Search(target, 0);
-                CaptureScript ee = target.GetComponent<CaptureScript>();
-                if (ee != null)
-                {
-                    ee.TakeDammag(dammage, transform.tag);
-                }
+                ee.TakeDammag(dammage, transform.tag);
             }
         }
 

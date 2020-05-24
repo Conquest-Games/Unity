@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using WorldConqueror;
@@ -6,8 +7,9 @@ using WorldConqueror;
 public class Bulet : MonoBehaviour
 {
     private Transform target;
-    public float speed = 70f;
+    public float speed = 100f;
     private int dmg;
+	public string tagg;
 
     public void Search(Transform _target, int dammage)
     {
@@ -34,16 +36,24 @@ public class Bulet : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+ 		transform.LookAt(target);
     }
 
     void HitTarget()
     {
-        Destroy(gameObject); 
+        Destroy(gameObject);
         
-        Unit e = target.GetComponent<Unit>();
-        if (e != null)
+        try
         {
-            e.TakeDammage(dmg);
+            Unit e = target.GetComponent<Unit>();
+            if (e != null)
+            {
+                e.TakeDammage(dmg);
+            }
+        }
+        catch (Exception e)
+        {
+            
         }
     }
 }

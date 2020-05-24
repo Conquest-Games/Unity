@@ -16,15 +16,14 @@ namespace WorldConqueror
         private float fireCountdown = 0f;
 
         public Transform firePoint;
-        public GameObject arrow;
-
-        // Start is called before the first frame update
+        public GameObject projectile;
+        
         void Start()
         {
             range = gameObject.GetComponent<Unit>().range;
             dammage = gameObject.GetComponent<Unit>().damage;
 
-            InvokeRepeating("UpdateTarget", 0f, 2f); //appeler la fonction tt les 2s
+            InvokeRepeating("UpdateTarget", 0f, 2f);
         }
 
         void UpdateTarget()
@@ -114,7 +113,7 @@ namespace WorldConqueror
 
             if (nearestEnemy != null && shortestDistance <= range)
             {
-                gameObject.GetComponent<Unit>().fight = true; //Variable permettant l'arret des unités lors des combats
+                gameObject.GetComponent<Unit>().fight = true;
                 target = nearestEnemy.transform;
             }
             else
@@ -123,12 +122,10 @@ namespace WorldConqueror
             }
         }
         
-        // Update is called once per frame
         void Update()
         {
             if (target == null)
             {
-                //Variable permettant l'arret (ici la reprise du mouv) des unités lors des combats
                 gameObject.GetComponent<Unit>().fight = false;
                 return;
             }
@@ -149,8 +146,8 @@ namespace WorldConqueror
 
         void Shoot()
         {
-            GameObject arrowGO = PhotonNetwork.Instantiate(arrow.name, firePoint.position, firePoint.rotation);
-            Arow arow = arrowGO.GetComponent<Arow>();
+            GameObject projectileGO = PhotonNetwork.Instantiate(projectile.name, firePoint.position, firePoint.rotation);
+            Arow arow = projectileGO.GetComponent<Arow>();
 
             if (arow != null)
             {
@@ -160,31 +157,12 @@ namespace WorldConqueror
 
         void ShootBat()
         {
-            GameObject arrowGO = PhotonNetwork.Instantiate(arrow.name, firePoint.position, firePoint.rotation);
-            Arow arow = arrowGO.GetComponent<Arow>();
-
-            if (arow != null)
-            {
-                arow.Search(target, dammage);
-                CaptureScript ee = target.GetComponent<CaptureScript>();
-                if (ee != null)
-                {
-                    ee.TakeDammag(dammage, transform.tag);
-                }
-            }
-        }
-
-        /*void Capture()
-        {
-            GameObject arrowGO = PhotonNetwork.Instantiate(arrow.name, firePoint.position, firePoint.rotation);
-            Arow arow = arrowGO.GetComponent<Arow>();
-
-            CaptureScript ee = targetbat.GetComponent<CaptureScript>();
+            CaptureScript ee = target.GetComponent<CaptureScript>();
             if (ee != null)
             {
                 ee.TakeDammag(dammage, transform.tag);
             }
-        }*/
+        }
 
         private void OnDrawGizmosSelected()
         {

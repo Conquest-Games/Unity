@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 6140513953487556658, guid: 436a634c10df31744a90f7844c789636,
         type: 3}
       propertyPath: m_Name
-      value: NinjaBlue Variant
+      value: NinjaBlue
       objectReference: {fileID: 0}
     - target: {fileID: 6140513953487556658, guid: 436a634c10df31744a90f7844c789636,
         type: 3}

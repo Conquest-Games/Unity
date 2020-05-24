@@ -157,6 +157,18 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4311683384430655405, guid: 42d03f8a34ae14974b5628bd47a58815,
+        type: 3}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 6991464157184956881, guid: 8db24ae45c5d1ce41ad36eb65e40fc31,
+        type: 3}
+    - target: {fileID: 4311683384430655405, guid: 42d03f8a34ae14974b5628bd47a58815,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 6991464157184956881, guid: 8db24ae45c5d1ce41ad36eb65e40fc31,
+        type: 3}
     - target: {fileID: 4311683384430655406, guid: 42d03f8a34ae14974b5628bd47a58815,
         type: 3}
       propertyPath: MiniMapRender

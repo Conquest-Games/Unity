@@ -6,12 +6,11 @@ using WorldConqueror;
 
 public class Arow : MonoBehaviour
 {
-    //private Transform targetbat;
     private Transform target;
-    //private string tag;
     private int dmg;
     public float speed = 70f;
     public string tagg;
+    
     public void Search(Transform _target, int dammage)
     {
         target = _target;

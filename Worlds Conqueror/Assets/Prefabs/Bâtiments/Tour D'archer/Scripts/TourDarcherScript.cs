@@ -26,8 +26,6 @@ namespace Building
         {
             range = TourDArcher.GetComponent<BuildingScript>().range;
             dammage = TourDArcher.GetComponent<BuildingScript>().dommage;
-
-            InvokeRepeating("UpdateTarget", 0f, 2f); //appeler la fonction tt les 2s
         }
         
         void UpdateTarget()
@@ -132,6 +130,7 @@ namespace Building
         // Update is called once per frame
         void Update()
         {
+			UpdateTarget();
             range = TourDArcher.GetComponent<BuildingScript>().range;
             dammage = TourDArcher.GetComponent<BuildingScript>().dommage;
 

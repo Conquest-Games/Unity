@@ -25,8 +25,6 @@ namespace Building
         void Start()
         {
             CeBatiment = gameObject;
-
-            InvokeRepeating("UpdateTarget", 0f, 2f); //appeler la fonction tt les 2s
         }
 
         // Update is called once per frame
@@ -130,6 +128,7 @@ namespace Building
 
         void Update()
         {
+            UpdateTarget();
             dammage = CeBatiment.GetComponent<BuildingScript>().dommage;
             range = CeBatiment.GetComponent<BuildingScript>().range;
 
