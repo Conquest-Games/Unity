@@ -35150,7 +35150,7 @@ PrefabInstance:
     - target: {fileID: 4663625160220570020, guid: c68ac0a08c76aae479c276e5a819eabf,
         type: 3}
       propertyPath: m_Name
-      value: Caserne Jaune/Vert (lvl 1)
+      value: Caserne Jaune/Vert
       objectReference: {fileID: 0}
     - target: {fileID: 7149477834263273505, guid: c68ac0a08c76aae479c276e5a819eabf,
         type: 3}
@@ -45082,7 +45082,7 @@ PrefabInstance:
     - target: {fileID: 4663625160220570020, guid: c68ac0a08c76aae479c276e5a819eabf,
         type: 3}
       propertyPath: m_Name
-      value: Caserne Bleu/Rouge (lvl 1)
+      value: Caserne Bleu/Rouge
       objectReference: {fileID: 0}
     - target: {fileID: 7149477834263273505, guid: c68ac0a08c76aae479c276e5a819eabf,
         type: 3}

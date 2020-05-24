@@ -33,36 +33,30 @@ namespace WorldConqueror
         {
             choice = Random.Range(0, 100);
             Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
-
+            
+            
             if (choice < 20)
             {
-                GameObject TheOney = PhotonNetwork.Instantiate("Infantry Level 2", spawnPosy, Quaternion.identity);
+                GameObject TheOney = PhotonNetwork.Instantiate("InfantryYellow", spawnPosy, Quaternion.identity);
                 TheOney.AddComponent<YellowToBlue>();
-                TheOney.tag = "Yellow";
             }
             else if (choice < 35)
             {
-                GameObject TheOney = PhotonNetwork.Instantiate("Archer Level 2", spawnPosy, Quaternion.identity);
+                GameObject TheOney = PhotonNetwork.Instantiate("ArcherYellow", spawnPosy, Quaternion.identity);
                 TheOney.AddComponent<YellowToBlue>();
                 TheOney.tag = "Yellow";
             }
             else if (choice < 45)
             {
-                Debug.Log("cavalery spawned");
-
-                //spawn cavalery
-                /*GameObject TheOney = PhotonNetwork.Instantiate("Cavalery Variant", spawnPosy, Quaternion.identity);
+                GameObject TheOney = PhotonNetwork.Instantiate("CavaleryYellow", spawnPosy, Quaternion.identity);
                 TheOney.AddComponent<YellowToBlue>();
-                TheOney.tag = "Yellow";*/
+                TheOney.tag = "Yellow";
             }
             else if (choice < 50)
             {
-                Debug.Log("siegeWeapon spawned");
-
-                //spawn SiegeWeapon
-                /*GameObject TheOney = PhotonNetwork.Instantiate("SiegeWeapon Variant", spawnPosy, Quaternion.identity);
+                GameObject TheOney = PhotonNetwork.Instantiate("CatapulteYellow", spawnPosy, Quaternion.identity);
                 TheOney.AddComponent<YellowToBlue>();
-                TheOney.tag = "Yellow";*/
+                TheOney.tag = "Yellow";
             }
             else
             {

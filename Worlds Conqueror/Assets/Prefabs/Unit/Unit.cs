@@ -9,7 +9,6 @@ namespace WorldConqueror
 {
     public class Unit : MonoBehaviour
     {
-
         private PhotonView _view;
         #region Attributs
 

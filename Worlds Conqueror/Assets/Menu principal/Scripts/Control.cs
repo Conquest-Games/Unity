@@ -18,6 +18,7 @@ namespace WorldConqueror
         public void SetAlone()
         {
             alone = true;
+            PhotonNetwork.OfflineMode = true;
         }
         public void BackToMenu()
         {

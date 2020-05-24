@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 2473246223586523795, guid: d656ad67e4334fc46829ef0a9be60cdf,
         type: 3}
       propertyPath: m_Name
-      value: ArcherYellow Variant
+      value: ArcherYellow
       objectReference: {fileID: 0}
     - target: {fileID: 2473246223586523795, guid: d656ad67e4334fc46829ef0a9be60cdf,
         type: 3}

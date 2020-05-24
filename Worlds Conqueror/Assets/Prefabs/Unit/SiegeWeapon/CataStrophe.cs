@@ -206,15 +206,6 @@ namespace WorldConqueror
             }
         }
 
-        /*void Capture()
-        {
-            CaptureScript ee = targetbat.GetComponent<CaptureScript>();
-            if (ee != null)
-            {
-                ee.TakeDammag(dammage, transform.tag);
-            }
-        }*/
-
         private void OnDrawGizmosSelected()
         {
             Gizmos.DrawWireSphere(transform.position, range);

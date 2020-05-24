@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 4287995071970314482, guid: 38518c6460e293142a0ef65db6a8aa3b,
         type: 3}
       propertyPath: m_Name
-      value: InfantryYellow Variant
+      value: InfantryYellow
       objectReference: {fileID: 0}
     - target: {fileID: 4287995071970314482, guid: 38518c6460e293142a0ef65db6a8aa3b,
         type: 3}
