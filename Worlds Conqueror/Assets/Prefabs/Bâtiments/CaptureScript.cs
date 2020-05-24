@@ -29,8 +29,6 @@ public class CaptureScript : MonoBehaviour
                 if (Batiment.GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG)
                 {
                     Batiment.GetComponent<BuildingScript>().type = Building.BuildingScript.BuildingType.QG_Captured;
-
-                    GameOver.EndGame = true;
                 }
             }
             

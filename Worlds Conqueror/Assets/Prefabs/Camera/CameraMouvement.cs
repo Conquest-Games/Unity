@@ -38,22 +38,37 @@ public class CameraMouvement : MonoBehaviour
 
     void Update()
     {
+        Vector3 coords = transform.position;
+
+        bool droite = true;
+        bool gauche = true;
+        bool devant = true;
+        bool derriere = true;
+
+        /*if (coords.z <= -240)
+        {
+            if (transform.rotation.y > -90 && transform.rotation.y < 90)
+                derriere = false;
+            if (transform.rotation.y > 0 && transform.rotation.y < 180)
+                droite = false;
+            if ((transform.rotation.y > 90 && transform.rotation.y < 270) )
+                devant = false;
+            if (transform.rotation.y < 0 && transform.rotation.y < -180)
+                gauche = false;
+        }*/
+
 
         //move the camera
-        if (Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow))
+        if ((Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow)) && droite)
         {
             transform.Translate(Vector3.right * Time.deltaTime * PanSpeed, Space.Self);
         }
-        else if (Input.GetKey("q") || Input.GetKey(KeyCode.LeftArrow))
+        else if ((Input.GetKey("q") || Input.GetKey(KeyCode.LeftArrow)) && gauche)
         {
             transform.Translate(Vector3.right * Time.deltaTime * -PanSpeed, Space.Self);
         }
-        else if (Input.GetKey(KeyCode.Mouse1))
-        {
-            //if 
-        }
 
-        if (Input.GetKey("z") || Input.GetKey(KeyCode.UpArrow))
+        if ((Input.GetKey("z") || Input.GetKey(KeyCode.UpArrow)) && devant)
         {
             float y = transform.position.y;
             transform.Translate(Vector3.forward * Time.deltaTime * PanSpeed, Space.Self);
@@ -63,7 +78,7 @@ public class CameraMouvement : MonoBehaviour
                     transform.position.z),
                 transform.rotation);
         }
-        else if (Input.GetKey("s") || Input.GetKey(KeyCode.DownArrow))
+        else if ((Input.GetKey("s") || Input.GetKey(KeyCode.DownArrow)) && derriere)
         {
             float y = transform.position.y;
             transform.Translate(Vector3.forward * Time.deltaTime * -PanSpeed, Space.Self);

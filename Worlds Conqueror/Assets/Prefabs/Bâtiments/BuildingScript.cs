@@ -400,7 +400,6 @@ namespace Building
                 type = BuildingType.QG_Captured;
                 actualLevel = initialLevel;
                 this.maxHeals = healsListQG_Captured[actualLevel];
-                GameOver.EndGame = true;
             }
 
             if (gameObject.tag == "Neutral" && heals > maxNeutralHeals)

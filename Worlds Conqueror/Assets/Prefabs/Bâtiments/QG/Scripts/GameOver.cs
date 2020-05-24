@@ -8,7 +8,7 @@ namespace GameControl
 {
     public class GameOver : MonoBehaviour
     {
-        public GameObject GO;
+        /*public GameObject GO;
         public static bool EndGame = false;
 
         private bool cooldownn = false;
@@ -47,6 +47,6 @@ namespace GameControl
         {
             GO.SetActive(true);
             cooldownn = true;
-        }
+        }*/
     }
 }

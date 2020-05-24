@@ -18,7 +18,12 @@ namespace Joueur
         private static float fer = 0;
         private static int incomeFer = 10;
         private static int incomeOr = 50;
-        private string tag;
+        public string tag;
+
+        public GameObject GameOver;
+        public GameObject Interface;
+        private bool loose;
+        private int cooldown = 300;
 
         #endregion
 
@@ -201,11 +206,39 @@ namespace Joueur
 
         #endregion
 
+        #region endGame
+
+        void IsLoosed()
+        {
+            switch (tag)
+            {
+                case "Red":
+                    if (GameObject.Find("QG_Rouge").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured)
+                        loose = true;
+                    break;
+                case "Green":
+                    if (GameObject.Find("QG_Green").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured)
+                        loose = true;
+                    break;
+                case "Yellow":
+                    if (GameObject.Find("QG_Jaune").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured)
+                        loose = true;
+                    break;
+                default:
+                    if (GameObject.Find("QG_Bleu").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured)
+                        loose = true;
+                    break;
+            }
+        }
+
+        #endregion
+
         // Start is called before the first frame update
         void Start()
         {
             Reset();
             InvokeRepeating("AddIncome", 1f, 0.05f);
+            this.loose = false;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
             {
                 case PunTeams.Team.red:
@@ -238,7 +271,40 @@ namespace Joueur
         // Update is called once per frame
         void Update()
         {
-            ActualiseIncomes();
+            IsLoosed();
+
+            if (!loose)
+            {
+                gameObject.tag = this.tag;
+                ActualiseIncomes();
+                cooldown = 300;
+                GameOver.SetActive(false);
+                Interface.SetActive(true);
+
+
+
+                #region Text update
+
+                pOr.text = ((int)or).ToString();
+                pFer.text = ((int)fer).ToString();
+                pOrIncome.text = "+" + incomeOr.ToString() + "/s";
+                pFerIncome.text = "+" + incomeFer.ToString() + "/s";
+
+                #endregion
+            }
+            else if(loose)
+            {
+                Interface.SetActive(false);
+
+                if (cooldown > 0)
+                    cooldown--;
+                else
+                {
+                    GameOver.SetActive(false);
+                }
+                
+            }
+
 
             #region clean perdant
 
@@ -262,15 +328,6 @@ namespace Joueur
                 foreach (GameObject i in GameObject.FindGameObjectsWithTag("Green"))
                     i.tag = "Neutral";
             }
-
-            #endregion
-
-            #region Text update
-
-            pOr.text = ((int) or).ToString();
-            pFer.text = ((int) fer).ToString();
-            pOrIncome.text = "+" + incomeOr.ToString() + "/s";
-            pFerIncome.text = "+" + incomeFer.ToString() + "/s";
 
             #endregion
         }

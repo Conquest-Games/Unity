@@ -22,7 +22,7 @@ namespace WorldConqueror
         public int damage = 0;
         public float attackSpeed = 1f;
         public float speed = 0f;
-        private float initialSpeed = 0f;
+        public float initialSpeed = 0f;
         public float range = 0f;
         
         private bool isDead;

@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1865736313255090937, guid: 06c53489f80a76947b01a87fb9bc36fb,
         type: 3}
       propertyPath: m_Name
-      value: CatapulteYellow Variant
+      value: CatapulteYellow
       objectReference: {fileID: 0}
     - target: {fileID: 1865736313255090937, guid: 06c53489f80a76947b01a87fb9bc36fb,
         type: 3}
