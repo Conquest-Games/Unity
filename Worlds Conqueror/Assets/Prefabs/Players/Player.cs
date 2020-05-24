@@ -6,6 +6,7 @@ using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using Building;
 using WorldConqueror;
+using UnityEngine.SceneManagement;
 
 namespace Joueur
 {
@@ -16,14 +17,16 @@ namespace Joueur
 
         private static float or = 0;
         private static float fer = 0;
-        private static int incomeFer = 10;
-        private static int incomeOr = 50;
+        private static int incomeFer = 0;
+        private static int incomeOr = 0;
         public string tag;
 
         public GameObject GameOver;
         public GameObject Interface;
+        public GameObject Victoire;
         private bool loose;
         private int cooldown = 300;
+        private int compteur = 1000;
 
         #endregion
 
@@ -231,11 +234,73 @@ namespace Joueur
             }
         }
 
+        void IsWin()
+        {
+            bool RedLoose = (GameObject.Find("QG_Rouge").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured);
+            bool BlueLoose = (GameObject.Find("QG_Bleu").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured);
+            bool GreenLoose = (GameObject.Find("QG_Vert").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured);
+            bool YellowLoose = (GameObject.Find("QG_Jaune").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured);
+
+
+            switch (tag)
+            {
+                case "Red":
+                    if (BlueLoose && GreenLoose & YellowLoose && !RedLoose)
+                        Win();
+                    break;
+                case "Green":
+                    if (BlueLoose && RedLoose && YellowLoose && !GreenLoose)
+                        Win();
+                    break;
+                case "Yellow":
+                    if (BlueLoose && RedLoose && GreenLoose && !YellowLoose)
+                        Win();
+                    break;
+                default:
+                    if (RedLoose && GreenLoose && YellowLoose && !BlueLoose)
+                        Win();
+                    break;
+            }
+
+            if (BlueLoose && GreenLoose & YellowLoose && !RedLoose)
+                Leave();
+            if (BlueLoose && RedLoose && YellowLoose && !GreenLoose)
+                Leave();
+            if (BlueLoose && RedLoose && GreenLoose && !YellowLoose)
+                Leave();
+            if (RedLoose && GreenLoose && YellowLoose && !BlueLoose)
+                Leave();
+        }
+
+        void Win()
+        {
+            Interface.SetActive(false);
+            Victoire.SetActive(true);
+
+            if (cooldown > 0)
+                cooldown--;
+            else
+            {
+                Victoire.SetActive(false);
+            }
+
+           
+        }
+
+        void Leave()
+        {
+            if (compteur > 0)
+                compteur--;
+            else
+                SceneManager.LoadScene("Luncher");
+        }
         #endregion
 
         // Start is called before the first frame update
         void Start()
         {
+            cooldown = 300;
+            compteur = 1000;
             Reset();
             InvokeRepeating("AddIncome", 1f, 0.05f);
             this.loose = false;
