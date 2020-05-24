@@ -18,20 +18,8 @@ namespace WorldConqueror
 
         private void Start()
         {
-            string nam = name;
-            if (nam == "Archer")
-                ThisUnit = GameObject.Find("Archery");
-            else if (nam == "Cavalry")
-                ThisUnit = GameObject.Find("Cavalery");
-            else if (nam == "SiegeWeapon")
-                ThisUnit = GameObject.Find("SiegeWeapon");
-            else if (nam == "Ninja")
-                ThisUnit = GameObject.Find("Ninja");
-            else
-                ThisUnit = GameObject.Find("Infantry");
-
+            ThisUnit = gameObject;
             ThisOne = ThisUnit.GetComponent<Unit>();
-
         }
 
         // Update is called once per frame

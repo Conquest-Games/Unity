@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1865736313255090937, guid: 06c53489f80a76947b01a87fb9bc36fb,
         type: 3}
       propertyPath: m_Name
-      value: CatapulteBlue Variant
+      value: CatapulteBlue
       objectReference: {fileID: 0}
     - target: {fileID: 1865736313255090937, guid: 06c53489f80a76947b01a87fb9bc36fb,
         type: 3}
@@ -25,12 +25,12 @@ PrefabInstance:
     - target: {fileID: 2078412339965371373, guid: 06c53489f80a76947b01a87fb9bc36fb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 2078412339965371373, guid: 06c53489f80a76947b01a87fb9bc36fb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2078412339965371373, guid: 06c53489f80a76947b01a87fb9bc36fb,
         type: 3}

@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 3941920747698394927, guid: 53155d7971ac340468846c255eced60d,
         type: 3}
       propertyPath: m_Name
-      value: CavaleryBlue Variant
+      value: CavaleryBlue
       objectReference: {fileID: 0}
     - target: {fileID: 3941920747698394927, guid: 53155d7971ac340468846c255eced60d,
         type: 3}
