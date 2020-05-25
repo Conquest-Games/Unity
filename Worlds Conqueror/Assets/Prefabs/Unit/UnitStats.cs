@@ -194,9 +194,9 @@ namespace WorldConqueror
             }
         }
 
-        public static void Upgrade(SolderType type)
+        public static void Upgrade(SolderType type, string tag)
         {
-            switch (GameObject.Find("Player").GetComponent<Player>().tag)
+            switch (tag) //GameObject.Find("Player").GetComponent<Player>().tag)
             {
                 case "Red":
                     switch (type)

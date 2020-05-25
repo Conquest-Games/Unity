@@ -4,6 +4,7 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 using Joueur;
+using Photon.Pun.UtilityScripts;
 
 namespace WorldConqueror
 {
@@ -120,9 +121,9 @@ namespace WorldConqueror
         #region Upgrade
 
         [PunRPC]
-        void LevelUp(UnitStats.SolderType type)
+        void LevelUp(UnitStats.SolderType type, string tag)
         {
-            UnitStats.Upgrade(type);
+            UnitStats.Upgrade(type, tag);
         }
         private void Upgrade(UnitStats.SolderType type)
         {
@@ -131,9 +132,26 @@ namespace WorldConqueror
                 return;
             (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPriceUpgrade(type, level));
             if (achete)
+            {
+                switch (PhotonNetwork.LocalPlayer.GetTeam())
+                {
+                    case PunTeams.Team.blue:
+                        _view.RPC("LevelUp", RpcTarget.All, type, "Blue");
+                        break;
+                    case PunTeams.Team.red:
+                        _view.RPC("LevelUp", RpcTarget.All, type, "Red");
+                        break;
+                    case PunTeams.Team.green:
+                        _view.RPC("LevelUp", RpcTarget.All, type, "Green");
+                        break;
+                    case PunTeams.Team.yellow:
+                        _view.RPC("LevelUp", RpcTarget.All, type, "Yellow");
+                        break;
+                }
                 //LevelUp(type);
-                _view.RPC("LevelUp", RpcTarget.All, type);
-            
+                //_view.RPC("LevelUp", RpcTarget.All, type);
+            }
+
         }
 
         public void UpgradeInfantry()

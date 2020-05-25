@@ -86,8 +86,10 @@ namespace WorldConqueror
 
         #endregion
 
+        [PunRPC]
         void MajLevel()
         {
+            
             switch(type)
             {
                 case SoldierType.Archer:
@@ -112,8 +114,7 @@ namespace WorldConqueror
         public void Initiate()
         {
             isDead = false;
-
-            MajLevel();
+            
             
             switch (type)
             {
@@ -220,9 +221,10 @@ namespace WorldConqueror
         void Start()
         {
             _view = PhotonView.Get(gameObject);
-            //MajLevel();
+            MajLevel();
             Initiate();
-            _view.RPC("Initiate", RpcTarget.Others);
+            //_view.RPC("MajLevel", RpcTarget.Others);
+            //_view.RPC("Initiate", RpcTarget.Others);
             
             initialSpeed = speed;
 
