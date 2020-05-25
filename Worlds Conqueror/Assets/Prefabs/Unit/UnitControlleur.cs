@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
+using Joueur;
 
 namespace WorldConqueror
 {
@@ -34,19 +35,19 @@ namespace WorldConqueror
         {
             int infantry = UnitStats.GetPriceUpgrade(
                 UnitStats.SolderType.Infantry, UnitStats.GetLevel(
-                    UnitStats.SolderType.Infantry));
+                    UnitStats.SolderType.Infantry, GameObject.Find("Player").GetComponent<Player>().tag));
             int archery = UnitStats.GetPriceUpgrade(
                 UnitStats.SolderType.Archery, UnitStats.GetLevel(
-                    UnitStats.SolderType.Archery));
+                    UnitStats.SolderType.Archery, GameObject.Find("Player").GetComponent<Player>().tag));
             int cavalery = UnitStats.GetPriceUpgrade(
                 UnitStats.SolderType.Cavalery, UnitStats.GetLevel(
-                    UnitStats.SolderType.Cavalery));
+                    UnitStats.SolderType.Cavalery, GameObject.Find("Player").GetComponent<Player>().tag));
             int siegeWeapon = UnitStats.GetPriceUpgrade(
                 UnitStats.SolderType.SiegeWeapon, UnitStats.GetLevel(
-                    UnitStats.SolderType.SiegeWeapon));
+                    UnitStats.SolderType.SiegeWeapon, GameObject.Find("Player").GetComponent<Player>().tag));
             int ninja = UnitStats.GetPriceUpgrade(
                 UnitStats.SolderType.Ninja, UnitStats.GetLevel(
-                    UnitStats.SolderType.Ninja));
+                    UnitStats.SolderType.Ninja, GameObject.Find("Player").GetComponent<Player>().tag));
 
             if (infantry == -1)
                 priceUpgradeInfantry.text = "MAX";
@@ -74,11 +75,11 @@ namespace WorldConqueror
                 priceUpgradeNinja.text = ninja.ToString();
 
 
-            priceSpawnInfantry.text = UnitStats.GetPrice(UnitStats.SolderType.Infantry).ToString();
-            priceSpawnArchery.text = UnitStats.GetPrice(UnitStats.SolderType.Archery).ToString();
-            priceSpawnCavalery.text = UnitStats.GetPrice(UnitStats.SolderType.Cavalery).ToString();
-            priceSpawnSiegeWeapon.text = UnitStats.GetPrice(UnitStats.SolderType.SiegeWeapon).ToString();
-            priceSpawnNinja.text = UnitStats.GetPrice(UnitStats.SolderType.Ninja).ToString();
+            priceSpawnInfantry.text = UnitStats.GetPrice(UnitStats.SolderType.Infantry, GameObject.Find("Player").GetComponent<Player>().tag).ToString();
+            priceSpawnArchery.text = UnitStats.GetPrice(UnitStats.SolderType.Archery, GameObject.Find("Player").GetComponent<Player>().tag).ToString();
+            priceSpawnCavalery.text = UnitStats.GetPrice(UnitStats.SolderType.Cavalery, GameObject.Find("Player").GetComponent<Player>().tag).ToString();
+            priceSpawnSiegeWeapon.text = UnitStats.GetPrice(UnitStats.SolderType.SiegeWeapon, GameObject.Find("Player").GetComponent<Player>().tag).ToString();
+            priceSpawnNinja.text = UnitStats.GetPrice(UnitStats.SolderType.Ninja, GameObject.Find("Player").GetComponent<Player>().tag).ToString();
         }
 
         #endregion
@@ -125,7 +126,7 @@ namespace WorldConqueror
         }
         private void Upgrade(UnitStats.SolderType type)
         {
-            int level = UnitStats.GetLevel(type);
+            int level = UnitStats.GetLevel(type, GameObject.Find("Player").GetComponent<Player>().tag);
             if (level == 3)
                 return;
             (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPriceUpgrade(type, level));

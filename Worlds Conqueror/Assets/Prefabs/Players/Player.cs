@@ -112,11 +112,6 @@ namespace Joueur
         {
             or = 100;
             fer = 0;
-            UnitStats.InfantryLevel = 0;
-            UnitStats.ArcheryLevel = 0;
-            UnitStats.CavaleryLevel = 0;
-            UnitStats.SiegeWeaponLevel = 0;
-            UnitStats.NinjaLevel = 0;
         }
 
         void ResetMap()

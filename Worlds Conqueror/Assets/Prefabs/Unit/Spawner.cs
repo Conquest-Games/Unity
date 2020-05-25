@@ -4,6 +4,7 @@ using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using UnityEngine;
 using UnityEngine.UI;
+using Joueur;
 
 namespace WorldConqueror
 {
@@ -41,7 +42,7 @@ namespace WorldConqueror
 
         public void SpawnInfantryLeft()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Infantry));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Infantry, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -99,7 +100,7 @@ namespace WorldConqueror
 
         public void SpawnInfantryRight()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Infantry));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Infantry, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -157,7 +158,7 @@ namespace WorldConqueror
 
         public void SpawnInfantryForward()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Infantry));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Infantry, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -205,7 +206,7 @@ namespace WorldConqueror
 
         public void SpawnArcheryLeft()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Archery));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Archery, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -262,7 +263,7 @@ namespace WorldConqueror
 
         public void SpawnArcheryRight()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Archery));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Archery, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -319,7 +320,7 @@ namespace WorldConqueror
 
         public void SpawnArcheryForward()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Archery));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Archery, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -367,7 +368,7 @@ namespace WorldConqueror
 
         public void SpawnCavaleryLeft()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Cavalery));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Cavalery, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -424,7 +425,7 @@ namespace WorldConqueror
 
         public void SpawnCavaleryRight()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Cavalery));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Cavalery, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -481,7 +482,7 @@ namespace WorldConqueror
 
         public void SpawnCavaleryForward()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Cavalery));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Cavalery, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -529,7 +530,7 @@ namespace WorldConqueror
 
         public void SpawnSiegeWeaponLeft()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.SiegeWeapon));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.SiegeWeapon, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -586,7 +587,7 @@ namespace WorldConqueror
 
         public void SpawnSiegeWeaponRight()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.SiegeWeapon));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.SiegeWeapon, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -643,7 +644,7 @@ namespace WorldConqueror
 
         public void SpawnSiegeWeaponForward()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.SiegeWeapon));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.SiegeWeapon, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -691,7 +692,7 @@ namespace WorldConqueror
 
         public void SpawnNinjaLeft()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Ninja));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Ninja, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -749,7 +750,7 @@ namespace WorldConqueror
 
         public void SpawnNinjaRight()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Ninja));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Ninja, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())
@@ -806,7 +807,7 @@ namespace WorldConqueror
 
         public void SpawnNinjaForward()
         {
-            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Ninja));
+            (bool achete, string erreur) = Joueur.Player.Cout(UnitStats.GetPrice(UnitStats.SolderType.Ninja, GameObject.Find("Player").GetComponent<Player>().tag));
             if (!achete)
                 return;
             switch (PhotonNetwork.LocalPlayer.GetTeam())

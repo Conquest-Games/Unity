@@ -91,19 +91,19 @@ namespace WorldConqueror
             switch(type)
             {
                 case SoldierType.Archer:
-                    this.lvl = UnitStats.ArcheryLevel;
+                    this.lvl = UnitStats.GetLevel(UnitStats.SolderType.Archery, transform.tag);
                     break;
                 case SoldierType.Cavalry:
-                    this.lvl = UnitStats.CavaleryLevel;
+                    this.lvl = UnitStats.GetLevel(UnitStats.SolderType.Cavalery, transform.tag);
                     break;
                 case SoldierType.SiegeWeapon:
-                    this.lvl = UnitStats.SiegeWeaponLevel;
+                    this.lvl = UnitStats.GetLevel(UnitStats.SolderType.SiegeWeapon, transform.tag);
                     break;
                 case SoldierType.Ninja:
-                    this.lvl = UnitStats.NinjaLevel;
+                    this.lvl = UnitStats.GetLevel(UnitStats.SolderType.Ninja, transform.tag);
                     break;
                 default:
-                    this.lvl = UnitStats.InfantryLevel;
+                    this.lvl = UnitStats.GetLevel(UnitStats.SolderType.Infantry, transform.tag);
                     break;
 
             }

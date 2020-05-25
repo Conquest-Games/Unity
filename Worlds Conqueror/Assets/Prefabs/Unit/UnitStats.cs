@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Joueur;
 
 namespace WorldConqueror
 {
@@ -29,17 +30,35 @@ namespace WorldConqueror
 
         #region Levels
 
-        public static int InfantryLevel = 0;
-        public static int ArcheryLevel = 0;
-        public static int CavaleryLevel = 0;
-        public static int SiegeWeaponLevel = 0;
-        public static int NinjaLevel = 0;
+        public static int InfantryLevelRed = 0;
+        public static int ArcheryLevelRed = 0;
+        public static int CavaleryLevelRed = 0;
+        public static int SiegeWeaponLevelRed = 0;
+        public static int NinjaLevelRed = 0;
+
+        public static int InfantryLevelBlue = 0;
+        public static int ArcheryLevelBlue = 0;
+        public static int CavaleryLevelBlue = 0;
+        public static int SiegeWeaponLevelBlue = 0;
+        public static int NinjaLevelBlue = 0;
+
+        public static int InfantryLevelYellow = 0;
+        public static int ArcheryLevelYellow = 0;
+        public static int CavaleryLevelYellow = 0;
+        public static int SiegeWeaponLevelYellow = 0;
+        public static int NinjaLevelYellow = 0;
+
+        public static int InfantryLevelGreen = 0;
+        public static int ArcheryLevelGreen = 0;
+        public static int CavaleryLevelGreen = 0;
+        public static int SiegeWeaponLevelGreen = 0;
+        public static int NinjaLevelGreen = 0;
 
         #endregion
 
-        public static int GetPrice(SolderType type)
+        public static int GetPrice(SolderType type, string tag)
         {
-            int level = GetLevel(type);
+            int level = GetLevel(type, tag);
 
             switch (type)
             {
@@ -79,22 +98,78 @@ namespace WorldConqueror
             }
         }
 
-        public static int GetLevel(SolderType type)
+        public static int GetLevel(SolderType type, string tag)
         {
-            switch (type)
+            switch (tag)
             {
-                case SolderType.Infantry:
-                    return InfantryLevel;
-                case SolderType.Archery:
-                    return ArcheryLevel;
-                case SolderType.Cavalery:
-                    return CavaleryLevel;
-                case SolderType.SiegeWeapon:
-                    return SiegeWeaponLevel;
-                case SolderType.Ninja:
-                    return NinjaLevel;
+                case "Red":
+                    switch (type)
+                    {
+                        case SolderType.Infantry:
+                            return InfantryLevelRed;
+                        case SolderType.Archery:
+                            return ArcheryLevelRed;
+                        case SolderType.Cavalery:
+                            return CavaleryLevelRed;
+                        case SolderType.SiegeWeapon:
+                            return SiegeWeaponLevelRed;
+                        case SolderType.Ninja:
+                            return NinjaLevelRed;
+                        default:
+                            return 0;
+                    }
+                    break;
+                case "Green":
+                    switch (type)
+                    {
+                        case SolderType.Infantry:
+                            return InfantryLevelGreen;
+                        case SolderType.Archery:
+                            return ArcheryLevelGreen;
+                        case SolderType.Cavalery:
+                            return CavaleryLevelGreen;
+                        case SolderType.SiegeWeapon:
+                            return SiegeWeaponLevelGreen;
+                        case SolderType.Ninja:
+                            return NinjaLevelGreen;
+                        default:
+                            return 0;
+                    }
+                    break;
+                case "Yellow":
+                    switch (type)
+                    {
+                        case SolderType.Infantry:
+                            return InfantryLevelYellow;
+                        case SolderType.Archery:
+                            return ArcheryLevelYellow;
+                        case SolderType.Cavalery:
+                            return CavaleryLevelYellow;
+                        case SolderType.SiegeWeapon:
+                            return SiegeWeaponLevelYellow;
+                        case SolderType.Ninja:
+                            return NinjaLevelYellow;
+                        default:
+                            return 0;
+                    }
+                    break;
                 default:
-                    return 0;
+                    switch (type)
+                    {
+                        case SolderType.Infantry:
+                            return InfantryLevelBlue;
+                        case SolderType.Archery:
+                            return ArcheryLevelBlue;
+                        case SolderType.Cavalery:
+                            return CavaleryLevelBlue;
+                        case SolderType.SiegeWeapon:
+                            return SiegeWeaponLevelBlue;
+                        case SolderType.Ninja:
+                            return NinjaLevelBlue;
+                        default:
+                            return 0;
+                    }
+                    break;
             }
         }
 
@@ -121,35 +196,124 @@ namespace WorldConqueror
 
         public static void Upgrade(SolderType type)
         {
-            switch (type)
+            switch (GameObject.Find("Player").GetComponent<Player>().tag)
             {
-                case SolderType.Infantry:
-                    InfantryLevel++;
-                    return;
-                case SolderType.Archery:
-                    ArcheryLevel++;
-                    return;
-                case SolderType.Cavalery:
-                    CavaleryLevel++;
-                    return;
-                case SolderType.SiegeWeapon:
-                    SiegeWeaponLevel++;
-                    return;
-                case SolderType.Ninja:
-                    NinjaLevel++;
-                    return;
+                case "Red":
+                    switch (type)
+                    {
+                        case SolderType.Infantry:
+                            InfantryLevelRed++;
+                            return;
+                        case SolderType.Archery:
+                            ArcheryLevelRed++;
+                            return;
+                        case SolderType.Cavalery:
+                            CavaleryLevelRed++;
+                            return;
+                        case SolderType.SiegeWeapon:
+                            SiegeWeaponLevelRed++;
+                            return;
+                        case SolderType.Ninja:
+                            NinjaLevelRed++;
+                            return;
+                        default:
+                            return;
+                    }
+                    break;
+                case "Green":
+                    switch (type)
+                    {
+                        case SolderType.Infantry:
+                            InfantryLevelGreen++;
+                            return;
+                        case SolderType.Archery:
+                            ArcheryLevelGreen++;
+                            return;
+                        case SolderType.Cavalery:
+                            CavaleryLevelGreen++;
+                            return;
+                        case SolderType.SiegeWeapon:
+                            SiegeWeaponLevelGreen++;
+                            return;
+                        case SolderType.Ninja:
+                            NinjaLevelGreen++;
+                            return;
+                        default:
+                            return;
+                    }
+                    break;
+                case "Yellow":
+                    switch (type)
+                    {
+                        case SolderType.Infantry:
+                            InfantryLevelYellow++;
+                            return;
+                        case SolderType.Archery:
+                            ArcheryLevelYellow++;
+                            return;
+                        case SolderType.Cavalery:
+                            CavaleryLevelYellow++;
+                            return;
+                        case SolderType.SiegeWeapon:
+                            SiegeWeaponLevelYellow++;
+                            return;
+                        case SolderType.Ninja:
+                            NinjaLevelYellow++;
+                            return;
+                        default:
+                            return;
+                    }
+                    break;
                 default:
-                    return;
+                    switch (type)
+                    {
+                        case SolderType.Infantry:
+                            InfantryLevelBlue++;
+                            return;
+                        case SolderType.Archery:
+                            ArcheryLevelBlue++;
+                            return;
+                        case SolderType.Cavalery:
+                            CavaleryLevelBlue++;
+                            return;
+                        case SolderType.SiegeWeapon:
+                            SiegeWeaponLevelBlue++;
+                            return;
+                        case SolderType.Ninja:
+                            NinjaLevelBlue++;
+                            return;
+                        default:
+                            return;
+                    }
+                    break;
             }
         }
 
         void start()
         {
-            InfantryLevel = 0;
-            ArcheryLevel = 0;
-            NinjaLevel = 0;
-            CavaleryLevel = 0;
-            SiegeWeaponLevel = 0;
+            InfantryLevelRed = 0;
+            ArcheryLevelRed = 0;
+            CavaleryLevelRed = 0;
+            SiegeWeaponLevelRed = 0;
+            NinjaLevelRed = 0;
+
+            InfantryLevelBlue = 0;
+            ArcheryLevelBlue = 0;
+            CavaleryLevelBlue = 0;
+            SiegeWeaponLevelBlue = 0;
+            NinjaLevelBlue = 0;
+
+            InfantryLevelYellow = 0;
+            ArcheryLevelYellow = 0;
+            CavaleryLevelYellow = 0;
+            SiegeWeaponLevelYellow = 0;
+            NinjaLevelYellow = 0;
+
+            InfantryLevelGreen = 0;
+            ArcheryLevelGreen = 0;
+            CavaleryLevelGreen = 0;
+            SiegeWeaponLevelGreen = 0;
+            NinjaLevelGreen = 0;
         }
     }
 }
