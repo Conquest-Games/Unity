@@ -33,7 +33,7 @@ namespace WorldConqueror
                 Destroy(gameObject.GetComponent<RedToYellow>());
             }
             
-            if (transform.position.x > -140 && transform.position.x < -135)
+            if (transform.position.x > -145 && transform.position.x < -135)
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 150, 0));
 
             if (transform.position.x > -121 && transform.position.x < -119) 
