@@ -9,7 +9,6 @@ public class Bulet : MonoBehaviour
     private Transform target;
     public float speed = 100f;
     private int dmg;
-	public string tagg;
 
     public void Search(Transform _target, int dammage)
     {
@@ -36,7 +35,9 @@ public class Bulet : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
- 		transform.LookAt(target);
+        
+        //Rotation
+ 		//transform.LookAt(target);
     }
 
     void HitTarget()

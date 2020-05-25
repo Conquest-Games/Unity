@@ -9,20 +9,12 @@ public class Arow : MonoBehaviour
     private Transform target;
     private int dmg;
     public float speed = 70f;
-    public string tagg;
     
     public void Search(Transform _target, int dammage)
     {
         target = _target;
         dmg = dammage;
     }
-
-    /*public void SearchBat(Transform _target, int dammage, string s)
-    {
-        target = _target;
-        dmg = dammage;
-        tagg = s;
-    }*/
 
 // Update is called once per frame
     void Update()
@@ -59,12 +51,10 @@ public class Arow : MonoBehaviour
             {
                 e.TakeDammage(dmg);
             }
-            
         }
         catch (Exception e)
         {
             
         }
-
     }
 }
