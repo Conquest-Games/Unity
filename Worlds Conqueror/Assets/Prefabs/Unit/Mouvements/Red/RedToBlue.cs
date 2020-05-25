@@ -32,7 +32,7 @@ namespace WorldConqueror
                 gameObject.AddComponent<BlueToGreen>();
                 Destroy(gameObject.GetComponent<RedToBlue>());
             }
-            if (transform.position.z < 151 && transform.position.z > 149)
+            if (transform.position.z < 155 && transform.position.z > 145)
             {
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 150, 0));
             }
