@@ -21100,6 +21100,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1580703554458722593, guid: 640a7c2f77bbe1c429a495b857197421,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1580703554458722598, guid: 640a7c2f77bbe1c429a495b857197421,
         type: 3}
       propertyPath: m_BackGroundColor.r
@@ -21123,7 +21128,7 @@ PrefabInstance:
     - target: {fileID: 4479265359700333760, guid: 640a7c2f77bbe1c429a495b857197421,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 4479265359700333760, guid: 640a7c2f77bbe1c429a495b857197421,
         type: 3}
