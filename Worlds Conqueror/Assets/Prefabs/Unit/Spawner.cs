@@ -59,7 +59,7 @@ namespace WorldConqueror
                 case PunTeams.Team.yellow:
                     {
                         Vector3 spawnPosy = new Vector3(138.4f, 0, 150);
-                        if (GameObject.Find("Caserne Jaune/vert").tag == "Yellow")
+                        if (GameObject.Find("Caserne Jaune/Vert").tag == "Yellow")
                         {
                             spawnPosy = new Vector3(138.4f, 0, 0);
                             if (GameObject.Find("QG_Vert").tag == "Yellow")

@@ -80,7 +80,7 @@ namespace GameControl
                 else if (player.GetTeam() == PunTeams.Team.yellow)
                     colo.Remove(PunTeams.Team.yellow);
             }
-            //PhotonNetwork.LocalPlayer.SetTeam(PunTeams.Team.red);
+            //PhotonNetwork.LocalPlayer.SetTeam(PunTeams.Team.yellow);
 
             PhotonNetwork.LocalPlayer.SetTeam(colo[colo.Count - 1]);
         }
