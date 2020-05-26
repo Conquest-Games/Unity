@@ -2,30 +2,35 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Arow
+    - Building.BuildingScript
     - Building.QGScript
-    - Building.QGScriptBlue
-    - Building.QGScriptGreen
-    - Building.QGScriptRed
-    - Building.QGScriptYellow
     - Building.TourDarcherScript
+    - Building.UpgradeScript
     - Bulet
-    - CaCScript
     - CameraMouvement
-    - CombatScript
+    - CaptureScript
     - ConsoleDebugLogs
     - GameControl.GameConst
+    - GameControl.GameOver
     - GameControl.PunScript
     - Joueur.Player
     - LobbyScript
+    - MaraisScipt
     - OpenLink
     - Pivot
+    - RotationMiniMap
+    - RotationText
     - WorldConqueror.AI
+    - WorldConqueror.CaCScript
+    - WorldConqueror.CataStrophe
     - WorldConqueror.Control
-    - WorldConqueror.Infantry
+    - WorldConqueror.FigthNinjaScript
     - WorldConqueror.PlayerNameInputField
+    - WorldConqueror.RangeScript
     - WorldConqueror.Spawner
     - WorldConqueror.Unit
     - WorldConqueror.UnitControlleur
+    - WorldConqueror.UnitStats
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
@@ -52,6 +57,12 @@ ScriptsOnlyBuild:
     - Photon.Pun.ServerSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_ColorGradient
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -91,78 +102,98 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 102
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11194}
+      Script: {instanceID: 11214}
     - Class: 114
-      Script: {instanceID: 11402}
-    - Class: 114
-      Script: {instanceID: 11454}
+      Script: {instanceID: 11420}
     - Class: 114
       Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11788}
+      Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 11846}
+      Script: {instanceID: 11550}
     - Class: 114
-      Script: {instanceID: 11852}
+      Script: {instanceID: 11662}
     - Class: 114
-      Script: {instanceID: 11980}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 12116}
+      Script: {instanceID: 11872}
     - Class: 114
-      Script: {instanceID: 12248}
+      Script: {instanceID: 12004}
     - Class: 114
-      Script: {instanceID: 12298}
+      Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 12376}
+      Script: {instanceID: 12276}
     - Class: 114
-      Script: {instanceID: 12464}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12540}
+      Script: {instanceID: 12392}
     - Class: 114
-      Script: {instanceID: 12564}
+      Script: {instanceID: 12410}
     - Class: 114
-      Script: {instanceID: 12648}
+      Script: {instanceID: 12434}
     - Class: 114
-      Script: {instanceID: 12664}
+      Script: {instanceID: 12496}
     - Class: 114
-      Script: {instanceID: 12768}
+      Script: {instanceID: 12574}
     - Class: 114
-      Script: {instanceID: 12822}
+      Script: {instanceID: 12598}
     - Class: 114
-      Script: {instanceID: 12946}
+      Script: {instanceID: 12642}
     - Class: 114
-      Script: {instanceID: 13032}
+      Script: {instanceID: 12682}
     - Class: 114
-      Script: {instanceID: 13044}
+      Script: {instanceID: 12706}
     - Class: 114
-      Script: {instanceID: 13110}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 13152}
+      Script: {instanceID: 12858}
     - Class: 114
-      Script: {instanceID: 13230}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 13364}
+      Script: {instanceID: 13078}
     - Class: 114
-      Script: {instanceID: 13602}
+      Script: {instanceID: 13160}
     - Class: 114
-      Script: {instanceID: 13668}
+      Script: {instanceID: 13166}
     - Class: 114
-      Script: {instanceID: 13698}
+      Script: {instanceID: 13286}
     - Class: 114
-      Script: {instanceID: 21476}
+      Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 21482}
+      Script: {instanceID: 13536}
+    - Class: 114
+      Script: {instanceID: 13678}
+    - Class: 114
+      Script: {instanceID: 13684}
+    - Class: 114
+      Script: {instanceID: 13750}
+    - Class: 114
+      Script: {instanceID: 13778}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -172,6 +203,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -202,38 +235,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11194}
+      Script: {instanceID: 11280}
     - Class: 114
-      Script: {instanceID: 11260}
+      Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11402}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11454}
+      Script: {instanceID: 11754}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 12004}
     - Class: 114
-      Script: {instanceID: 11980}
+      Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 12116}
+      Script: {instanceID: 12574}
     - Class: 114
-      Script: {instanceID: 12540}
+      Script: {instanceID: 13286}
     - Class: 114
-      Script: {instanceID: 12674}
+      Script: {instanceID: 13376}
     - Class: 114
-      Script: {instanceID: 13230}
+      Script: {instanceID: 13742}
     - Class: 114
-      Script: {instanceID: 13310}
-    - Class: 114
-      Script: {instanceID: 13660}
-    - Class: 114
-      Script: {instanceID: 13698}
+      Script: {instanceID: 13778}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -269,6 +302,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 65
@@ -277,96 +312,136 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
+    - Class: 102
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11214}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11354}
     - Class: 114
-      Script: {instanceID: 11402}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11454}
-    - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11420}
     - Class: 114
       Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11882}
+      Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 11980}
+      Script: {instanceID: 11550}
     - Class: 114
-      Script: {instanceID: 12068}
+      Script: {instanceID: 11662}
     - Class: 114
-      Script: {instanceID: 12116}
+      Script: {instanceID: 11754}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 12298}
+      Script: {instanceID: 11902}
     - Class: 114
-      Script: {instanceID: 12376}
+      Script: {instanceID: 11940}
     - Class: 114
-      Script: {instanceID: 12402}
+      Script: {instanceID: 12004}
     - Class: 114
-      Script: {instanceID: 12540}
+      Script: {instanceID: 12046}
     - Class: 114
-      Script: {instanceID: 12610}
+      Script: {instanceID: 12098}
     - Class: 114
-      Script: {instanceID: 12698}
+      Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12306}
     - Class: 114
-      Script: {instanceID: 12768}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12790}
+      Script: {instanceID: 12392}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12410}
     - Class: 114
-      Script: {instanceID: 12804}
+      Script: {instanceID: 12436}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12574}
     - Class: 114
-      Script: {instanceID: 12938}
+      Script: {instanceID: 12642}
     - Class: 114
-      Script: {instanceID: 13044}
+      Script: {instanceID: 12644}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 12706}
     - Class: 114
-      Script: {instanceID: 13068}
+      Script: {instanceID: 12732}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 12734}
     - Class: 114
-      Script: {instanceID: 13230}
+      Script: {instanceID: 12802}
+    - Class: 114
+      Script: {instanceID: 12824}
+    - Class: 114
+      Script: {instanceID: 12832}
+    - Class: 114
+      Script: {instanceID: 12838}
+    - Class: 114
+      Script: {instanceID: 12852}
+    - Class: 114
+      Script: {instanceID: 12892}
+    - Class: 114
+      Script: {instanceID: 12910}
+    - Class: 114
+      Script: {instanceID: 12982}
+    - Class: 114
+      Script: {instanceID: 12990}
+    - Class: 114
+      Script: {instanceID: 13094}
+    - Class: 114
+      Script: {instanceID: 13114}
+    - Class: 114
+      Script: {instanceID: 13132}
+    - Class: 114
+      Script: {instanceID: 13286}
     - Class: 114
       Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 13364}
+      Script: {instanceID: 13376}
     - Class: 114
-      Script: {instanceID: 13448}
+      Script: {instanceID: 13494}
     - Class: 114
-      Script: {instanceID: 13602}
+      Script: {instanceID: 13520}
     - Class: 114
-      Script: {instanceID: 13660}
+      Script: {instanceID: 13536}
     - Class: 114
-      Script: {instanceID: 13698}
+      Script: {instanceID: 13636}
     - Class: 114
-      Script: {instanceID: 13736}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 13744}
+      Script: {instanceID: 13684}
     - Class: 114
-      Script: {instanceID: 31176}
+      Script: {instanceID: 13742}
+    - Class: 114
+      Script: {instanceID: 13750}
+    - Class: 114
+      Script: {instanceID: 13778}
+    - Class: 114
+      Script: {instanceID: 13816}
+    - Class: 114
+      Script: {instanceID: 13824}
+    - Class: 114
+      Script: {instanceID: 62530}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -387,6 +462,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 199
       Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -400,7 +477,7 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: RedToBlue
@@ -520,12 +597,6 @@ ScriptsOnlyBuild:
     className: CinemachineFollowZoom
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Building
-    className: VilleScript
-  - hash:
-      serializedVersion: 2
       Hash: 74c875e0f15c48e0a55f06093aa93e15
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -574,7 +645,7 @@ ScriptsOnlyBuild:
     className: TextToggleIsOnTransition
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: YellowToGreen
@@ -617,6 +688,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro
+    className: TMP_PhoneNumberValidator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
@@ -655,18 +732,12 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
-    className: Archer
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: WorldConqueror
     className: PlayerNameInputField
   - hash:
       serializedVersion: 2
-      Hash: 58eef1beec1df920a17b664ac8de8d54
+      Hash: 3f58da7e9d251ce5bb2370429101fe05
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: WorldConqueror
     className: CaCScript
   - hash:
       serializedVersion: 2
@@ -692,6 +763,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MaraisScipt
   - hash:
       serializedVersion: 2
       Hash: 267e1e00a8f1d106bd614339db235595
@@ -778,6 +855,12 @@ ScriptsOnlyBuild:
     className: BezierCurve
   - hash:
       serializedVersion: 2
+      Hash: 01a771ea92dc6be5cecef8754b36d74f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Building
+    className: UpgradeScript
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Hub
@@ -832,6 +915,12 @@ ScriptsOnlyBuild:
     className: Pivot
   - hash:
       serializedVersion: 2
+      Hash: 4d5dfbf9822a7bd2350ffcfb66e3ae9c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: RangeScript
+  - hash:
+      serializedVersion: 2
       Hash: 4e9333594897a1fb8b136ad2eae996c7
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -844,19 +933,13 @@ ScriptsOnlyBuild:
     className: AsteroidsGameManager
   - hash:
       serializedVersion: 2
-      Hash: 36edea54c02505166662370d8830708b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Building
-    className: QGScriptBlue
-  - hash:
-      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: RedToGreen
@@ -866,12 +949,6 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineFreeLook
-  - hash:
-      serializedVersion: 2
-      Hash: 36edea54c02505166662370d8830708b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Building
-    className: QGScriptRed
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -892,7 +969,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: GreenToYellow
@@ -902,12 +979,6 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine.PostFX
     className: CinemachinePostProcessing
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: WorldConqueror
-    className: SiegeWeapon
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -934,6 +1005,18 @@ ScriptsOnlyBuild:
     className: NamePickGui
   - hash:
       serializedVersion: 2
+      Hash: 4d16cfbaa8e821a2b370e80844a0e9bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark03
+  - hash:
+      serializedVersion: 2
+      Hash: e778113d4feda243242ccfa7bdd7e480
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: CataStrophe
+  - hash:
+      serializedVersion: 2
       Hash: 24f79094aff162c9aa69c31d64d777d3
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -958,10 +1041,16 @@ ScriptsOnlyBuild:
     className: PunCockpitEmbed
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: BlueToGreen
+  - hash:
+      serializedVersion: 2
+      Hash: e6f0efd0e20669d577e9d21526b3d3f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: WarpTextExample
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -974,6 +1063,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: dd7520b7d4e690e8c593273e7b9fbe80
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextEventCheck
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1000,6 +1095,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 08ee418b801850b56a351565b9c8bb78
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro
+    className: TMP_TextEventHandler
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1018,7 +1119,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: BlueToRed
@@ -1028,6 +1129,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 47930f3b40e24ef5b3b5e3d9ada7097a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark01
   - hash:
       serializedVersion: 2
       Hash: f8f5c34557f4103b6547d8f956cec6ea
@@ -1072,12 +1179,6 @@ ScriptsOnlyBuild:
     className: CurrentRoomIsOpenToggle
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: WorldConqueror
-    className: Cavalry
-  - hash:
-      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1108,7 +1209,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: GreenToRed
@@ -1162,6 +1263,12 @@ ScriptsOnlyBuild:
     className: StatesGui
   - hash:
       serializedVersion: 2
+      Hash: 3375c3d749f8f4cad889721b431bdc27
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: CameraController
+  - hash:
+      serializedVersion: 2
       Hash: 0927e41b46e1bd11671f9b5adda4b832
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
@@ -1180,6 +1287,12 @@ ScriptsOnlyBuild:
     className: ChatAppIdCheckerUI
   - hash:
       serializedVersion: 2
+      Hash: e63944317d2f5958e31963668bb29158
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexJitter
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1192,7 +1305,7 @@ ScriptsOnlyBuild:
     className: ConnectionHandler
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: YellowToBlue
@@ -1204,7 +1317,7 @@ ScriptsOnlyBuild:
     className: PlayerDetailsController
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: BlueToYellow
@@ -1226,6 +1339,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RotationMiniMap
   - hash:
       serializedVersion: 2
       Hash: 204ea02909ea3f738dafe3ff633d2a93
@@ -1268,12 +1387,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: BackgroundTimeOutField
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Building
-    className: MineDeFerScript
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
@@ -1330,6 +1443,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 3cae62e09a50c5d5aae8d0536b3d8fde
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChatController
+  - hash:
+      serializedVersion: 2
       Hash: 5f1752ed2092162f016c19510c28a8b9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1360,10 +1479,10 @@ ScriptsOnlyBuild:
     className: IsConnectedProperty
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e071f80c79ec8e6a6abdd36df8b1d5d7
     assemblyName: Assembly-CSharp.dll
     namespaceName: Building
-    className: Building
+    className: BuildingScript
   - hash:
       serializedVersion: 2
       Hash: 5af5a38642aaa0bd29718de32dc06f1f
@@ -1390,7 +1509,7 @@ ScriptsOnlyBuild:
     className: SetRoomCustomPropertyUIForm
   - hash:
       serializedVersion: 2
-      Hash: 525194a831ee627b6db41ca290fc67e3
+      Hash: 6dd955c3a66b435a78331af7b0c26e04
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: Spawner
@@ -1414,16 +1533,16 @@ ScriptsOnlyBuild:
     className: ToggleExpand
   - hash:
       serializedVersion: 2
-      Hash: 36edea54c02505166662370d8830708b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Building
-    className: QGScriptGreen
-  - hash:
-      serializedVersion: 2
-      Hash: 36edea54c02505166662370d8830708b
+      Hash: 43a7aa18e8acf7388b69cf98c1b62321
     assemblyName: Assembly-CSharp.dll
     namespaceName: Building
     className: QGScript
+  - hash:
+      serializedVersion: 2
+      Hash: e244702e0dc05782229aa524e4d757f5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_ExampleScript_01
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -1456,7 +1575,7 @@ ScriptsOnlyBuild:
     className: CinemachineImpulseListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: de7e1dfa66494c3fce377612266c891f
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: Unit
@@ -1510,13 +1629,19 @@ ScriptsOnlyBuild:
     className: SplineWalker
   - hash:
       serializedVersion: 2
+      Hash: 11319334e5365797f8056694f9b5dae4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: ObjectSpin
+  - hash:
+      serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: InputField
   - hash:
       serializedVersion: 2
-      Hash: f3cb4c5c851842b69888c7938b9721ca
+      Hash: fb3c1d1c074db958f487d9dd859bd5e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: Joueur
     className: Player
@@ -1538,6 +1663,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Asteroids
     className: LobbyMainPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro
+    className: TMP_DigitValidator
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -1582,10 +1713,28 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TextConsoleSimulator
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 62fef86270a167c41a606cfca1ecc156
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: ShaderPropAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
       Hash: 1e3d6222ff533d213aab144eb854a53b
@@ -1642,6 +1791,12 @@ ScriptsOnlyBuild:
     className: ServerProperty
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: SimpleScript
+  - hash:
+      serializedVersion: 2
       Hash: d2a2698b314a20912af1eb2b1758dc90
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1666,22 +1821,22 @@ ScriptsOnlyBuild:
     className: RoomListView
   - hash:
       serializedVersion: 2
-      Hash: 3d1d35c3192b422d6e20945d5b7f6a50
+      Hash: f28dd754352323a49cb63cec4adf03f6
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: UnitControlleur
-  - hash:
-      serializedVersion: 2
-      Hash: 7b27c87d5bbeeb1801942cbcc63ac1c1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CombatScript
   - hash:
       serializedVersion: 2
       Hash: 0b24359b178f2110b72f9b386ac3b17c
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
     className: CameraWork
+  - hash:
+      serializedVersion: 2
+      Hash: 274152c972478468d8321a977bbca8e3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextInfoDebugTool
   - hash:
       serializedVersion: 2
       Hash: e10400e84c8c573b2b5e4088aca77453
@@ -1696,6 +1851,12 @@ ScriptsOnlyBuild:
     className: CinemachineCollider
   - hash:
       serializedVersion: 2
+      Hash: bd3f0ca738703903e759f77536ed74fd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_FrameRateCounter
+  - hash:
+      serializedVersion: 2
       Hash: bd50beb95120324d8c4e8386692b6e82
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1708,10 +1869,22 @@ ScriptsOnlyBuild:
     className: Asteroid
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: a1ca1237bad0f30ea5ba8f4060929114
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextSelector_B
+  - hash:
+      serializedVersion: 2
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: YellowToRed
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameControl
+    className: GameOver
   - hash:
       serializedVersion: 2
       Hash: c0201dbecd85f700bcdff493a272631d
@@ -1744,12 +1917,6 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 36edea54c02505166662370d8830708b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Building
-    className: QGScriptYellow
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine.PostFX
@@ -1766,6 +1933,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.SlotRacer
     className: SlotLanes
+  - hash:
+      serializedVersion: 2
+      Hash: 27e5341178f188b89bdc6495710b590c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark01_UGUI
   - hash:
       serializedVersion: 2
       Hash: a8a4fba96bef6fccf7bb4be2f06c16b6
@@ -1798,6 +1971,24 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 8a874a8207a7664bdf44e61f28717254
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: SkewTextExample
+  - hash:
+      serializedVersion: 2
+      Hash: fe2d355deb0ca31d59a0a7cf4d141fc3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark04
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RotationText
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -1828,10 +2019,28 @@ ScriptsOnlyBuild:
     className: ProceduralController
   - hash:
       serializedVersion: 2
+      Hash: 4d16cfbaa8e821a2b370e80844a0e9bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TextMeshSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: e63944317d2f5958e31963668bb29158
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexShakeB
+  - hash:
+      serializedVersion: 2
       Hash: f2b97cb15613853dac3fea117e8f9ead
     assemblyName: Assembly-CSharp.dll
     namespaceName: GameControl
     className: PunScript
+  - hash:
+      serializedVersion: 2
+      Hash: 5bb0c23ac2810973880e592724a69354
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark02
   - hash:
       serializedVersion: 2
       Hash: c5fd97cc10b89deaf7c60af66a6b0d5a
@@ -1846,10 +2055,22 @@ ScriptsOnlyBuild:
     className: PhotonTransformViewClassic
   - hash:
       serializedVersion: 2
+      Hash: bd3f0ca738703903e759f77536ed74fd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_UiFrameRateCounter
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CrcCheckToggle
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexColorCycler
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1860,14 +2081,14 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
-    namespaceName: WorldConqueror
-    className: Infantry
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
     namespaceName: Photon.Chat.UtilityScripts
     className: OnStartDelete
+  - hash:
+      serializedVersion: 2
+      Hash: e63944317d2f5958e31963668bb29158
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexZoom
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
@@ -1900,6 +2121,18 @@ ScriptsOnlyBuild:
     className: MoveByKeys
   - hash:
       serializedVersion: 2
+      Hash: 3f58da7e9d251ce5bb2370429101fe05
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: WorldConqueror
+    className: FigthNinjaScript
+  - hash:
+      serializedVersion: 2
+      Hash: e80c1450883443c68d6c2dade213536f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMPro_InstructionOverlay
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -1916,12 +2149,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomMasterClientIdProperty
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Building
-    className: CaserneScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1954,6 +2181,18 @@ ScriptsOnlyBuild:
     className: SplinePosition
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TeleType
+  - hash:
+      serializedVersion: 2
+      Hash: c12f6929b034322884ced721fca65b10
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TextMeshProFloatingText
+  - hash:
+      serializedVersion: 2
       Hash: df434544c9f7b33d1cc7e635b180d279
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1972,16 +2211,22 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NewBehaviourScript
-  - hash:
-      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomAutoCleanupProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 0784d4fd5b93bd75440d01eb2fac4233
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexShakeA
+  - hash:
+      serializedVersion: 2
+      Hash: 8b1fe5dfdcf943fb3b72506b9f19335f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnvMapAnimator
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -2006,6 +2251,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomPlayerCountProperty
+  - hash:
+      serializedVersion: 2
+      Hash: f471d39a1c8a61caeefca538cdb42fc3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CaptureScript
   - hash:
       serializedVersion: 2
       Hash: d9864ada3db659b8d6f66a20aff414b3
@@ -2068,7 +2319,7 @@ ScriptsOnlyBuild:
     className: CinemachineBrain
   - hash:
       serializedVersion: 2
-      Hash: df3df775ebab07ea00f34d7cf66dbd52
+      Hash: eb0d303955f00b0ffccf31c99d999cd6
     assemblyName: Assembly-CSharp.dll
     namespaceName: Building
     className: TourDarcherScript
@@ -2092,12 +2343,6 @@ ScriptsOnlyBuild:
     className: CurrentRoomExpectedUsersProperty
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: WorldConqueror
-    className: PathFinder
-  - hash:
-      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -2116,7 +2361,7 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: RedToYellow
@@ -2206,7 +2451,7 @@ ScriptsOnlyBuild:
     className: LobbyTopPanel
   - hash:
       serializedVersion: 2
-      Hash: ec1f80cdf6ad1b01a9c1c96a05aae7a5
+      Hash: 78a4baa342a3144483672fb9a0450047
     assemblyName: Assembly-CSharp.dll
     namespaceName: WorldConqueror
     className: GreenToBlue
@@ -2221,4 +2466,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Luncher.unity
   - Assets/Scenes/Lobby.unity
   - Assets/Scenes/InGame.unity
-  playerPath: C:/Users/visse/Documents/BuildGame/Projet S2.exe
+  playerPath: C:/Users/monta/Desktop/World Conqueror/Projet S2.exe
