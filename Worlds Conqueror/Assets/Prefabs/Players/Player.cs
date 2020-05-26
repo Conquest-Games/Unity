@@ -215,7 +215,7 @@ namespace Joueur
                         loose = true;
                     break;
                 case "Green":
-                    if (GameObject.Find("QG_Green").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured)
+                    if (GameObject.Find("QG_Vert").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured)
                         loose = true;
                     break;
                 case "Yellow":
@@ -231,10 +231,10 @@ namespace Joueur
 
         void IsWin()
         {
-            bool RedLoose = (GameObject.Find("QG_Rouge").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured);
-            bool BlueLoose = (GameObject.Find("QG_Bleu").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured);
-            bool GreenLoose = (GameObject.Find("QG_Vert").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured);
-            bool YellowLoose = (GameObject.Find("QG_Jaune").GetComponent<BuildingScript>().type == Building.BuildingScript.BuildingType.QG_Captured);
+            bool RedLoose = (GameObject.Find("QG_Rouge")).tag != "Red";
+            bool BlueLoose = (GameObject.Find("QG_Bleu")).tag != "Blue";
+            bool GreenLoose = (GameObject.Find("QG_Vert")).tag != "Green";
+            bool YellowLoose = (GameObject.Find("QG_Jaune")).tag != "Yellow";
 
 
             switch (tag)
@@ -340,9 +340,8 @@ namespace Joueur
                 fer = 9999;
             }
 
-
+            IsWin();
             IsLoosed();
-
             if (!loose)
             {
                 gameObject.tag = this.tag;
@@ -362,7 +361,7 @@ namespace Joueur
 
                 #endregion
             }
-            else if(loose)
+            else if (loose)
             {
                 Interface.SetActive(false);
                 GameOver.SetActive(true);
@@ -373,7 +372,7 @@ namespace Joueur
                 {
                     GameOver.SetActive(false);
                 }
-                
+
             }
 
 

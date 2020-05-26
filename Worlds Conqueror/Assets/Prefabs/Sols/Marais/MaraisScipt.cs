@@ -52,7 +52,8 @@ public class MaraisScipt : MonoBehaviour
             float distanceToEnemy = Vector3.Distance(transform.position, ennemy.transform.position);
             if (distanceToEnemy <= range)
             {
-                ennemy.GetComponent<Unit>().speed = ennemy.GetComponent<Unit>().initialSpeed / 2;
+                if (ennemy.GetComponent<Unit>() != null)
+                    ennemy.GetComponent<Unit>().speed = ennemy.GetComponent<Unit>().initialSpeed / 2;
             }
         }
     }

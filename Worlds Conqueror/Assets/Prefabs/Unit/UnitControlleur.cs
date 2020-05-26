@@ -125,6 +125,7 @@ namespace WorldConqueror
         {
             UnitStats.Upgrade(type, tag);
         }
+
         private void Upgrade(UnitStats.SolderType type)
         {
             int level = UnitStats.GetLevel(type, GameObject.Find("Player").GetComponent<Player>().tag);
@@ -184,6 +185,7 @@ namespace WorldConqueror
         // Start is called before the first frame update
         void Start()
         {
+            UnitStats.ResetLevels();
             _view = PhotonView.Get(gameObject);
             UpdateTexte();
             UpdatePiece();

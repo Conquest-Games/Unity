@@ -194,6 +194,33 @@ namespace WorldConqueror
             }
         }
 
+        public static void ResetLevels()
+        {
+            InfantryLevelRed = 0;
+            ArcheryLevelRed = 0;
+            CavaleryLevelRed = 0;
+            SiegeWeaponLevelRed = 0;
+            NinjaLevelRed = 0;
+
+            InfantryLevelBlue = 0;
+            ArcheryLevelBlue = 0;
+            CavaleryLevelBlue = 0;
+            SiegeWeaponLevelBlue = 0;
+            NinjaLevelBlue = 0;
+
+            InfantryLevelYellow = 0;
+            ArcheryLevelYellow = 0;
+            CavaleryLevelYellow = 0;
+            SiegeWeaponLevelYellow = 0;
+            NinjaLevelYellow = 0;
+
+            InfantryLevelGreen = 0;
+            ArcheryLevelGreen = 0;
+            CavaleryLevelGreen = 0;
+            SiegeWeaponLevelGreen = 0;
+            NinjaLevelGreen = 0;
+        }
+
         public static void Upgrade(SolderType type, string tag)
         {
             switch (tag) //GameObject.Find("Player").GetComponent<Player>().tag)
