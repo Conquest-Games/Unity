@@ -354,6 +354,8 @@ namespace Building
         void LevelUp()
         {
             actualLevel++;
+            ActualiseLevel();
+            heals = maxHeals;
         }
         public void upgradeBuilding()
         {
