@@ -59930,8 +59930,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Membres du Projet:\n\nMontagna Lo\xEFc ( R\xE9f\xE9rent )\nVisser Lucas\nBaillahut
-    Th\xE9o\nBertrand Geoffrey\n"
+  m_Text: "Membres du Projet de Conquest Games:\n\nMontagna Lo\xEFc ( R\xE9f\xE9rent
+    )\nVisser Lucas\nBallihaut Th\xE9o\nBertrand Geoffrey\n"
 --- !u!222 &1619129041
 CanvasRenderer:
   m_ObjectHideFlags: 0
