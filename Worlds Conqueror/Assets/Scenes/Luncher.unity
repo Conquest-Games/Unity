@@ -2832,7 +2832,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.66, y: -14.35}
+  m_AnchoredPosition: {x: 18.2, y: -19}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &64783141
@@ -15137,7 +15137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.3, y: 1.5}
+  m_AnchoredPosition: {x: -24, y: 1.5}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414857215
@@ -16514,9 +16514,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Bienvenue Dans World Conqueror!\nWorld Conqueror est un jeu RTS (Real
     Time Strategy ) ou Jeu de Strategie en Temps R\xE9el.\n\nLe But du jeu est de
-    controler l'entieret\xE9 de la carte, en se d\xE9bbarassant des ennemies ayant
-    le m\xEAme objectif que vous. Pour cela, vous devrez produire des ressources
-    et cr\xE9er des unite\xE9s."
+    contr\xF4ler l'enti\xE8ret\xE9 de la carte, en se d\xE9barrassant des ennemies
+    ayant le m\xEAme objectif que vous. Pour cela, vous devrez produire des ressources
+    et cr\xE9er des unit\xE9s."
 --- !u!222 &451711025
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28769,21 +28769,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Voyons ensuite ces fameux b\xE2timent:\nExc\xE9pt\xE9 les QG, tous les
-    b\xE2timents commencent neutre. Quand un b\xE2timent est neutre il a la moiti\xE9
-    de ces Point de Vi e Maximum, et ses dernier ne se r\xE9g\xE9nrent pas contrairement
-    aux b\xE2timents captur\xE9\nVoud commencer la partie avec un QG qui sera votre
-    b\xE2timent principal, non seulement il produit des ressources, mais en plus
-    permet de faire apparaitre des unit\xE9s. Le but du jeu est de d\xE9truire les
-    Qg adverse, vous Gagnez quand tous les ennemies ojnt perdu leur QG initial (
-    Si vous avez donc captur\xE9 un autre Qg que le votre, et que vous perdez votre
-    Qg initial, vous perdez m\xEAme si vous possedez encore un Qg ). Quand un ennemie
-    perd son Qg principal, toutes ses unit\xE9s disparaissent, et ses b\xE2timents
-    deviennent de nouveau neutre.\n\nLes autres b\xE2timents sont au nombre de 4:
-    Les Villes produisant de l'Or, les Mine de Fer produisant du Fer, les casernes,
-    permettant de faire apparaitre des unit\xE9s plus proche des ennemies, et enfin
-    les Tour dArcher qui sont des b\xE2timents d\xE9fensifs attaquant les unit\xE9s
-    ennemies a proximit\xE9."
+  m_Text: "Voyons ensuite ces fameux b\xE2timent:\nExcept\xE9 les QG, tous les b\xE2timents
+    commencent neutre. Quand un b\xE2timent est neutre il a la moiti\xE9 de ces Point
+    de Vie Maximum, et ses dernier ne se r\xE9g\xE9n\xE8rent pas contrairement aux
+    b\xE2timents captur\xE9\nVous commencer la partie avec un QG qui sera votre b\xE2timent
+    principal, non seulement il produit des ressources, mais en plus permet de faire
+    appara\xEEtre des unit\xE9s. Le but du jeu est de d\xE9truire les QG adverse,
+    vous Gagnez quand tous les ennemies ont perdu leur QG initial ( Si vous avez
+    donc captur\xE9 un autre QG que le votre, et que vous perdez votre QG initial,
+    vous perdez m\xEAme si vous poss\xE9dez encore un QG ). Quand un ennemie perd
+    son QG principal, toutes ses unit\xE9s disparaissent, et ses b\xE2timents deviennent
+    de nouveau neutre.\n\nLes autres b\xE2timents sont au nombre de 4: Les Villes
+    produisant de l'or, les Mine de Fer produisant du Fer, les casernes, permettant
+    de faire appara\xEEtre des unit\xE9s plus proche des ennemies, et enfin les Tour
+    d'archer qui sont des b\xE2timents d\xE9fensifs attaquant les unit\xE9s ennemies
+    a proximit\xE9."
 --- !u!222 &742004129
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37140,7 +37140,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966208592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00014805794}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.100001246, y: 0.14999905, z: 1}
   m_Children: []
   m_Father: {fileID: 948504321}
@@ -37148,7 +37148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.36, y: -11.4}
+  m_AnchoredPosition: {x: 28.5, y: -15.4}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &966208594
@@ -39236,23 +39236,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Et Enfin, parlont des am\xE9lioration pour conclure ce tutoriel:\n\nDans
-    le jeu vous pouvez am\xE9liroer les unit\xE9s, gr\xE2ce aux boutons en haut a
-    droite de l'ecran, cela coute de l'Or, mais permet d'am\xE9liorer les statisqtique
-    d'une unit\xE9. Cela comprend, les Points de Vie, les D\xE9gats et la vitesse.
+  m_Text: "Et Enfin, parlons des am\xE9lioration pour conclure ce tutoriel:\n\nDans
+    le jeu vous pouvez am\xE9liorer les unit\xE9s, gr\xE2ce aux boutons en haut a
+    droite de l'\xE9cran, cela co\xFBte de l'or, mais permet d'am\xE9liorer les statistique
+    d'une unit\xE9. Cela comprend, les Points de Vie, les D\xE9g\xE2ts et la vitesse.
     Mais cependant, am\xE9liorer une unit\xE9, augmente son co\xFBt de cr\xE9ation,
-    alors r\xE9fl\xE9chissez a deux fois avant d'ameliorer une unit\xE9, car il n'y
-    a aucun retour en arri\xE8re possible.\n\nVous avez \xE9galement la possibilit\xE9
-    d'am\xE9liorer les batiments, pour am\xE9liorer leurs Points de Vie, leurs D\xE9gats,et/ou
-    leurs productions de ressource ejn fonction du b\xE2timent en question. Chaque
-    B\xE2timent peu \xEAtre am\xE9liorer 2 fois, du niveau 1 vers le niveau 3. A
-    noter que quand un b\xE2timent est captur\xE9, il retourne a son niveau initial,
-    qu'il avait quand il \xE9tait neutre. Pour am\xE9liorer un b\xE2timent il suffit
-    d'appyer sur le bouton Upgrade en dessous de couleur viollette. Am\xE9liorer
-    un b\xE2timent coute des ressources:\nPour am\xE9liorer au niveau 2, il faut
-    200    , et 50   \nPour am\xE9liorer au niveau 3, il faut 500    , et 150 \n\n\nMaintenant
-    que vous savez tout sur le jeu, amusez vous et \xE9radiquez les advaisraires
-    se trouvant sur votre route! Bonne chanche!"
+    alors r\xE9fl\xE9chissez a deux fois avant d'am\xE9liorer une unit\xE9, car il
+    n'y a aucun retour en arri\xE8re possible.\n\nVous avez \xE9galement la possibilit\xE9
+    d'am\xE9liorer les b\xE2timents, pour am\xE9liorer leurs Points de Vie, leurs
+    D\xE9g\xE2ts,et/ou leurs productions de ressource en fonction du b\xE2timent
+    en question. Chaque B\xE2timent peu \xEAtre am\xE9liorer 2 fois, du niveau 1
+    vers le niveau 3. A noter que quand un b\xE2timent est captur\xE9, il retourne
+    a son niveau initial, qu'il avait quand il \xE9tait neutre. Pour am\xE9liorer
+    un b\xE2timent il suffit d'appuyer sur le bouton Upgrade en dessous de couleur
+    violette. Am\xE9liorer un b\xE2timent co\xFBte des ressources:\nPour am\xE9liorer
+    au niveau 2, il faut 200    , et 50   \nPour am\xE9liorer au niveau 3, il faut
+    500    , et 150 "
 --- !u!222 &1035182491
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39817,17 +39816,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Voyons a pr\xE9sent les unit\xE9s: Elles sont au nombre de 5. Nous avons:\n\n\nL'infantry,
-    une unit\xE9 coutant peut ch\xE8re, attaquant en m\xE9l\xE9e, assez \xE9quillibr\xE9
-    niveau statistiques\nL'archery, une unit\xE9 coutant un prix mod\xE9r\xE9, assez
-    vuln\xE9rable niveau point de vie, mais puissante niveau d\xE9gats attaquant
-    a distance.\nLa cavalery, une unit\xE9 d'intervention rapide assez \xE9quillibr\xE9
-    attaquant en m\xE9l\xE9e.\nLa catapulte, une unit\xE9 assez lente, et ch\xE8re,
-    mais faisant d'enorme d\xE9gats contre une vitesse d'attaque r\xE9duite et une
-    immense port\xE9e.\nL'\xE9claireur, se d\xE9pla\xE7ant vite et coutant peu cher,
-    utile pour capturer les b\xE2timents, mais ne pouvant pas attaquer les autres
-    unit\xE9s\n\n\nDe plus, sur la carte se trouve des marais ralentissant fortment
-    les unit\xE9s se trouvant dessus, qu'il faudra prendre en compte dans votre strat\xE9gie."
+  m_Text: "Voyons a pr\xE9sent les unit\xE9s: Elles sont au nombre de 5. Nous avons:\n\n\nL'infanterie,
+    une unit\xE9 co\xFBtant peut ch\xE8re, attaquant en m\xEAl\xE9e, assez \xE9quilibr\xE9
+    niveau statistiques\nL'archerie, une unit\xE9 co\xFBtant un prix mod\xE9r\xE9,
+    assez vuln\xE9rable niveau point de vie, mais puissante niveau d\xE9g\xE2ts attaquant
+    a distance.\nLa cavalerie, une unit\xE9 d'intervention rapide assez \xE9quilibr\xE9
+    attaquant en m\xEAl\xE9e.\nLa catapulte, une unit\xE9 assez lente, et ch\xE8re,
+    mais faisant d'\xE9norme d\xE9g\xE2ts contre une vitesse d'attaque r\xE9duite
+    et une immense port\xE9e.\nL'\xE9claireur, se d\xE9pla\xE7ant vite et co\xFBtant
+    peu cher, utile pour capturer les b\xE2timents, mais ne pouvant pas attaquer
+    les autres unit\xE9s\n\n\nDe plus, sur la carte se trouve des marais ralentissant
+    fortement les unit\xE9s se trouvant dessus, qu'il faudra prendre en compte dans
+    votre strat\xE9gie."
 --- !u!222 &1046824281
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41270,7 +41270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.76, y: -14.75}
+  m_AnchoredPosition: {x: 29.9, y: -18.3}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1101547168
@@ -44473,13 +44473,13 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Pour commencer, voyons en premier les ressources: elles sont au nombre
-    de deux :\nL'Or:        qui sert a acheter de nouvelles unit\xE9s, am\xE9liorer
-    les unit\xE9s en questions, et am\xE9liorer les b\xE2timents.\nLe Fer:       
-    qui sert uniquement a am\xE9liorer les b\xE2timents.\n\nPour produire ces ressources,
-    vous allez avoir besoin de capturer des b\xE2timents neutre ou ennemies qui,
-    une fois vous appartenant vous produiront des ressources. Ces b\xE2timents sont
-    : Les QG qui produisent De l'Or        et du Fer        , les villes, produisant
-    uniquement de l'Or        , et les Mine De Fer, produisant du Fer        "
+    de deux :\\\\\nL'or:        qui sert a acheter de nouvelles unit\xE9s, am\xE9liorer
+    les unit\xE9s en questions, et am\xE9liorer les b\xE2timents.\\\\\nLe Fer:        
+    qui sert uniquement a am\xE9liorer les b\xE2timents.\\\\\n\nPour produire ces
+    ressources, vous allez avoir besoin de capturer des b\xE2timents neutre ou ennemies
+    qui, une fois vous appartenant vous produiront des ressources. Ces b\xE2timents
+    sont : Les QG qui produisent de L'or        et du Fer        , les villes, produisant
+    uniquement de L'or        , et les Mine De Fer, produisant du Fer         "
 --- !u!222 &1173448791
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61070,7 +61070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.66, y: -11.29}
+  m_AnchoredPosition: {x: 18.3, y: -15.6}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1658339229
@@ -69826,7 +69826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1874552092
 RectTransform:
   m_ObjectHideFlags: 0

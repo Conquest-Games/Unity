@@ -6,7 +6,7 @@ public class OpenLink : MonoBehaviour
 {
     public void SiteInternet()
     {
-        Application.OpenURL("https://worldsconqueror.000webhostapp.com/#");
+        Application.OpenURL("https://worldconqueror1.000webhostapp.com/#");
     }
 
 
