@@ -331,14 +331,14 @@ namespace Joueur
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKey("o"))
+            /*if (Input.GetKey("o"))
             {
                 or = 9999;
             }
             if (Input.GetKey("p"))
             {
                 fer = 9999;
-            }
+            }*/
 
             IsWin();
             IsLoosed();
