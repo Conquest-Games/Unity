@@ -165,6 +165,8 @@ namespace Building
 
             if (CeBatiment.tag == "Neutral" && heals >= maxNeutralHeals)
                 heals = maxNeutralHeals;
+            else if (heals > maxHeals)
+                heals = maxHeals;
         }
 
         public void Initiate()
@@ -355,8 +357,47 @@ namespace Building
         {
             actualLevel++;
             ActualiseLevel();
+
+            switch (type)
+            {
+                case BuildingType.Ville:
+                    this.maxHeals = healsListVille[ActualLevel];
+                    this.maxNeutralHeals = maxHeals / 2;
+                    break;
+
+
+                case BuildingType.MineDeFer:
+                    this.maxHeals = healsListMineDeFer[ActualLevel];
+                    this.maxNeutralHeals = maxHeals / 2;
+                    break;
+
+                case BuildingType.Caserne:
+                    this.maxHeals = healsListCaserne[actualLevel];
+                    this.maxNeutralHeals = maxHeals / 2;
+                    break;
+
+                case BuildingType.TourDarcher:
+                    this.maxHeals = healsListTourDarcher[ActualLevel];
+                    this.maxNeutralHeals = maxHeals / 2;
+                    break;
+
+                case BuildingType.QG:
+
+                case BuildingType.QG_Captured:
+                    this.maxHeals = healsListQG[actualLevel];
+                    if (type == BuildingType.QG_Captured)
+                        this.maxHeals = healsListQG_Captured[actualLevel];
+                    break;
+
+                default:
+
+                    break;
+            }
+
             heals = maxHeals;
         }
+
+
         public void upgradeBuilding()
         {
             if (actualLevel >= 2)
@@ -407,6 +448,47 @@ namespace Building
             if (gameObject.tag == "Neutral" && heals > maxNeutralHeals)
                 this.heals = maxNeutralHeals;
 
+
+            switch (type)
+            {
+                case BuildingType.Ville:
+                    this.maxHeals = healsListVille[ActualLevel];
+                    this.maxNeutralHeals = maxHeals / 2;
+                    break;
+
+
+                case BuildingType.MineDeFer:
+                    this.maxHeals = healsListMineDeFer[ActualLevel];
+                    this.maxNeutralHeals = maxHeals / 2;
+                    break;
+
+                case BuildingType.Caserne:
+                    this.maxHeals = healsListCaserne[actualLevel];
+                    this.maxNeutralHeals = maxHeals / 2;
+                    break;
+
+                case BuildingType.TourDarcher:
+                    this.maxHeals = healsListTourDarcher[ActualLevel];
+                    this.maxNeutralHeals = maxHeals / 2;
+                    break;
+
+                case BuildingType.QG:
+
+                case BuildingType.QG_Captured:
+                    this.maxHeals = healsListQG[actualLevel];
+                    if (type == BuildingType.QG_Captured)
+                        this.maxHeals = healsListQG_Captured[actualLevel];
+                    break;
+
+                default:
+
+                    break;
+            }
+
+            if (CeBatiment.tag == "Neutral" && heals >= maxNeutralHeals)
+                heals = maxNeutralHeals;
+            else if (heals > maxHeals)
+                heals = maxHeals;
 
             if (actualLevel > 2)
                 actualLevel = 2;
